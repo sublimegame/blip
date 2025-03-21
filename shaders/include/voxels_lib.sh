@@ -370,4 +370,8 @@ vec4 getNonVoxelVertexLitColor(vec4 color, float lightValue, vec3 lightRGB, vec3
 	return vec4(final, color.w);
 }
 
+vec4 blendVoxelLight(vec4 base, vec4 add) {
+	return vec4(base.x * add.x, BLEND_SOFT_ADDITIVE(base.yzw, add.yzw));
+}
+
 #endif // __VOXELS_LIB_SH__
