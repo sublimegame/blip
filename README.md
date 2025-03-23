@@ -1,40 +1,34 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="misc/Github_Banner_Transparent_Dark.jpg">
-  <source media="(prefers-color-scheme: light)" srcset="misc/Github_Banner_Transparent_Light.jpg">
 <p align="center">
-  <img width=100% alt="" src="misc/Github_Banner_Transparent_Light.jpg">
+	<img width="400" alt="Blip icon" src="misc/icon.png">
 </p>
-</picture>
 
 <!-- ![CI](https://github.com/bliporg/blip/actions/workflows/ci.yml/badge.svg) -->
-[![Join the chat at https://cu.bzh/discord](https://img.shields.io/discord/355905150528913409?color=%237289DA&label=blip&logo=discord&logoColor=white)](https://cu.bzh/discord)
+[![Join the chat at https://discord.gg/blipgame](https://img.shields.io/discord/355905150528913409?color=%237289DA&label=blip&logo=discord&logoColor=white)](https://discord.gg/blipgame)
 
 ## What is Blip?
 
-Blip is a **User Generated Social Universe**, an online platform where all items, avatars, games, and experiences are made by users from the community.
-
-It's a limitless building environment inspired by Roblox, but designed to be as welcoming and accessible as Minecraft.
-
-### Blip is for all kinds of creators:
-
-- Hobbyists, Experts, Beginners...
-- Developers, Artists, Avatar designers, Home builders, Decorators, etc.
-- For those going solo as well as for those seeking collaboration.
-
-### Fully scriptable
-
-Developers can script right from within Blip, on all platforms (yes, including mobile):
+Blip is a Roblox-like platform tailored for generative AI, empowering a wide audience of creators to make games. It even allows games to be created on mobile:
 
 <p align="center">
-<img width=50% alt="" src="misc/img/bird2.gif">
+<img width="90%" alt="Blip demo" src="misc/img/blip-demo.gif">
 </p>
 
-- All experiences in Blip are scripted in [Lua](https://www.lua.org).
-- Developers can script both client and server sides. (Blip provides a free scalable server infrastructure for real-time multiplayer)
-- Blip system APIs are documented here: [docs.cu.bzh/reference](https://docs.cu.bzh/reference)
-- Higher-level APIs are available in the form of open-source [modules](https://docs.cu.bzh/modules), hosted on GitHub. Here's how you can import them:
+While you can build game logic through natural language, developers still have full access to write and modify code directly.
 
-	```lua
+## Lightweight, All-In-One & Cross-Platform
+
+All features are bundled into a single cross-platform application - there's no need for a separate "studio" app for creators.
+
+**Supported platforms:** iOS/iPadOS, Android, Windows, macOS, Web Browsers & Discord
+
+## Fully scriptable
+
+- Experiences in Blip are scripted in [Luau](https://luau.org), a fast, small, safe, gradually typed embeddable scripting language derived from [Lua](https://www.lua.org)
+- Developers can script both client and server-side logic, with free scalable server infrastructure for real-time multiplayer
+- Core APIs are documented at [docs.blip.game/reference](https://docs.blip.game/reference)
+- Extend functionality with open-source [modules](https://docs.blip.game/modules) hosted on GitHub. Here's an example:
+
+	```luau
 	Modules = {
 		fire = "github.com/aduermael/modzh/fire"
 	}
@@ -43,7 +37,7 @@ Developers can script right from within Blip, on all platforms (yes, including m
 		Player:SetParent(World)
 		Camera:SetModeThirdPerson()
 	
-		f = fire:create()
+		local f = fire:create()
 		f:SetParent(Player)
 		-- now Player is on fire
 	end
@@ -52,35 +46,15 @@ Developers can script right from within Blip, on all platforms (yes, including m
 		<img width=50% alt="" src="misc/img/fire.gif">
 	</p>
 	
-- [Blip API documentation](https://docs.cu.bzh) is generated from the [lua](https://github.com/bliporg/blip/tree/main/lua) folder in that repository.
+- The [API documentation](https://docs.blip.game) is generated from the [lua](https://github.com/bliporg/blip/tree/main/lua) folder in this repository
 	
+## Blip Engine
 
-### Lightweight, All-In-One & Cross-Platform
-
-All features are bundled into one comprehensive cross-platform application; there's no separate "studio" app for creators.
-
-Blip runs on its own in-house C/C++ engine, using the [BGFX](https://github.com/bkaradzic/bgfx) library for cross-platform rendering.
-
-## Supported platforms
-
-- iOS / iPadOS
-- Android
-- Windows
-- macOS
-- Web Browsers (Chrome, Firefox, Safari, Edge)
+Blip is a C/C++ in-house game engine that uses [BGFX](https://github.com/bkaradzic/bgfx) for cross-platform rendering.
+It compiles natively for each platform and uses [WebAssembly](https://webassembly.org) to support web browsers and other web app platforms like [Discord](https://discord.com).
 
 ## Development
 
-Most communication among contributors, players, and creators takes place on the [official Discord server](https://cu.bzh/discord).
+Most communication among contributors, players, and creators takes place on the [official Discord server](https://discord.gg/blipgame).
 
-## Open Source
 
-- The main components of Blip are open source (C engine, CLI, Lua modules, `.3zh` [voxel file format](https://github.com/bliporg/blip/blob/main/cubzh-file-format-3zh.txt)).
-- It's not yet possible to build the app itself; we're actively working on open-sourcing missing parts to allow it.
-- The goal is for Blip to become an engine anyone could fork to deploy their own custom User Generated Content platform.
-
-Please help Blip with a ⭐️!
-
-<p align="center">
-	<img width=600 src="https://api.star-history.com/svg?repos=bliporg/blip&type=Date)](https://star-history.com/#bliporg/blip&Date"/>
-</p>
