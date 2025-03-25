@@ -38,6 +38,22 @@ var (
 	typeRoutes map[string]string
 )
 
+// Redirect middleware docs.cu.bzh -> docs.blip.game
+func redirectMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		hostParts := strings.Split(r.Host, ":") // port may or may not be present
+		if len(hostParts) > 0 && hostParts[0] == "docs.cu.bzh" {
+			target := "https://docs.blip.game" + r.URL.Path
+			if r.URL.RawQuery != "" {
+				target += "?" + r.URL.RawQuery
+			}
+			http.Redirect(w, r, target, http.StatusMovedPermanently)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func main() {
 
 	nbArgs := len(os.Args)
@@ -63,7 +79,6 @@ func main() {
 	if os.Getenv("RELEASE") == "1" {
 		debug = false
 	}
-
 	fmt.Println("debug:", debug)
 
 	err := parseContent()
@@ -71,14 +86,31 @@ func main() {
 		log.Fatalf("%v", err)
 	}
 
+	// --------------------------------------------------
+	// Setup HTTP server
+	// --------------------------------------------------
+
+	// Create the mux
+	mux := http.NewServeMux()
+
+	// Define the routes
 	for _, staticDir := range staticFileDirectories {
-		http.Handle("/"+staticDir+"/", http.StripPrefix("/"+staticDir+"/", http.FileServer(http.Dir(filepath.Join(contentDirectory, staticDir)))))
+		mux.Handle(
+			"/"+staticDir+"/",
+			http.StripPrefix("/"+staticDir+"/", http.FileServer(http.Dir(filepath.Join(contentDirectory, staticDir)))),
+		)
 	}
+	mux.HandleFunc("/", httpHandler)
 
-	http.HandleFunc("/", httpHandler)
+	// Wrap the entire mux with the middleware
+	wrappedMux := redirectMiddleware(mux)
 
-	fmt.Println("✨ Cubzh documentation running...")
-	log.Fatal(http.ListenAndServe(":80", nil))
+	// --------------------------------------------------
+	// Start HTTP server
+	// --------------------------------------------------
+
+	fmt.Println("✨ Blip docs server is running...")
+	log.Fatal(http.ListenAndServe(":80", wrappedMux))
 }
 
 func httpHandler(w http.ResponseWriter, r *http.Request) {
