@@ -12,11 +12,10 @@ RUN find /audio_input -name '*.ogg' -exec sh -c 'ffmpeg -i "$1" "/audio_output/$
 
 #################################
 
-FROM --platform=linux/amd64 golang:1.23.4-alpine3.21 AS build-env
+FROM --platform=linux/amd64 golang:1.24.1-alpine3.21 AS build-env
 
 RUN apk update && apk add --no-cache \
 	git \
-	lua5.3 \
 	&& rm -rf /var/cache/apk/*
 
 COPY ./lua/docs/webserver /webserver
