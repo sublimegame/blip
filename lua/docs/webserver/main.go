@@ -22,8 +22,6 @@ const (
 	templateDir      = "/www/templates"
 	templateFile     = "page.tmpl"
 	templateFileV2   = "pageV2.tmpl"
-	serverCertFile   = "/cubzh/certs/cu.bzh.chained.crt"
-	serverKeyFile    = "/cubzh/certs/cu.bzh.key"
 )
 
 var (
@@ -39,10 +37,6 @@ var (
 	// key: the type, value: the page where it is described
 	typeRoutes map[string]string
 )
-
-func redirectTLS(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "https://docs.cu.bzh:443"+r.RequestURI, http.StatusMovedPermanently)
-}
 
 func main() {
 
@@ -69,10 +63,7 @@ func main() {
 	if os.Getenv("RELEASE") == "1" {
 		debug = false
 	}
-	// secure transport
-	var envSecureTransport bool = os.Getenv("PCUBES_SECURE_TRANSPORT") == "1"
 
-	fmt.Println("secure transport:", envSecureTransport)
 	fmt.Println("debug:", debug)
 
 	err := parseContent()
@@ -87,19 +78,7 @@ func main() {
 	http.HandleFunc("/", httpHandler)
 
 	fmt.Println("✨ Cubzh documentation running...")
-
-	if envSecureTransport {
-		// listen on 80 for traffic to redirect
-		go func() {
-			if err := http.ListenAndServe(":80", http.HandlerFunc(redirectTLS)); err != nil {
-				log.Fatalf("ListenAndServe :80 error: %v", err)
-			}
-		}()
-		// listen for connections on port 443
-		log.Fatal(http.ListenAndServeTLS(":443", serverCertFile, serverKeyFile, nil))
-	} else {
-		log.Fatal(http.ListenAndServe(":80", nil))
-	}
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
 func httpHandler(w http.ResponseWriter, r *http.Request) {
