@@ -71,6 +71,8 @@ float quad_get_9slice_u(const Quad *q);
 float quad_get_9slice_v(const Quad *q);
 void quad_set_9slice_scale(Quad *q, float value);
 float quad_get_9slice_scale(const Quad *q);
+void quad_set_9slice_corner_width(Quad *q, float value);
+float quad_get_9slice_corner_width(const Quad *q);
 
 // MARK: - Utils -
 

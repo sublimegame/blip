@@ -22,6 +22,10 @@
 #define QUAD_FLAG_VCOLOR 32
 #define QUAD_FLAG_9SLICE 64
 
+#define QUAD_DEFAULT_9SLICE_UV 0.5f
+#define QUAD_DEFAULT_9SLICE_SCALE 1.0f
+#define QUAD_DEFAULT_9SLICE_CORNER_WIDTH -1.0f
+
 struct _Quad {
     Transform *transform;
     uint32_t *rgba;
@@ -30,8 +34,9 @@ struct _Quad {
     uint32_t hash;          /* 4 bytes */
     float width, height;    /* 2x4 bytes */
     float anchorX, anchorY; /* 2x4 bytes */
-    float tilingU, tilingV; /* 2x4 bytes */
-    float offsetU, offsetV; /* 2x4 bytes */
+    float tilingU, tilingV; /* 2x4 bytes */ // if 9-slice, used for UV
+    float offsetU;          /* 2x4 bytes */ // if 9-slice, used for scale
+    float offsetV;          /* 2x4 bytes */ // if 9-slice, used for corner width (-1 = automatic)
     float cutout;           /* 4 bytes */
     uint16_t layers;        /* 2 bytes */
     uint8_t flags;          /* 1 byte */
@@ -319,8 +324,9 @@ uint8_t quad_get_sort_order(const Quad *q) {
 
 void quad_set_9slice(Quad *q, bool toggle) {
     if (_quad_get_flag(q, QUAD_FLAG_9SLICE) == false && toggle) {
-        q->tilingU = q->tilingV = 0.5f;
-        q->offsetU = 1.0f;
+        q->tilingU = q->tilingV = QUAD_DEFAULT_9SLICE_UV;
+        q->offsetU = QUAD_DEFAULT_9SLICE_SCALE;
+        q->offsetV = QUAD_DEFAULT_9SLICE_CORNER_WIDTH;
     }
     _quad_toggle_flag(q, QUAD_FLAG_9SLICE, toggle);
 }
@@ -333,29 +339,44 @@ void quad_set_9slice_uv(Quad *q, float u, float v) {
     q->tilingU = u;
     q->tilingV = v;
     if (_quad_get_flag(q, QUAD_FLAG_9SLICE) == false) {
-        q->offsetU = 1.0f;
+        q->offsetU = QUAD_DEFAULT_9SLICE_SCALE;
+        q->offsetV = QUAD_DEFAULT_9SLICE_CORNER_WIDTH;
     }
     _quad_toggle_flag(q, QUAD_FLAG_9SLICE, true);
 }
 
 float quad_get_9slice_u(const Quad *q) {
-    return q->tilingU;
+    return _quad_get_flag(q, QUAD_FLAG_9SLICE) ? q->tilingU : QUAD_DEFAULT_9SLICE_UV;
 }
 
 float quad_get_9slice_v(const Quad *q) {
-    return q->tilingV;
+    return _quad_get_flag(q, QUAD_FLAG_9SLICE) ? q->tilingV : QUAD_DEFAULT_9SLICE_UV;
 }
 
 void quad_set_9slice_scale(Quad *q, float value) {
     q->offsetU = value;
     if (_quad_get_flag(q, QUAD_FLAG_9SLICE) == false) {
-        q->tilingU = q->tilingV = 0.5f;
+        q->tilingU = q->tilingV = QUAD_DEFAULT_9SLICE_UV;
+        q->offsetV = QUAD_DEFAULT_9SLICE_CORNER_WIDTH;
     }
     _quad_toggle_flag(q, QUAD_FLAG_9SLICE, true);
 }
 
 float quad_get_9slice_scale(const Quad *q) {
-    return q->offsetU;
+    return _quad_get_flag(q, QUAD_FLAG_9SLICE) ? q->offsetU : QUAD_DEFAULT_9SLICE_SCALE;
+}
+
+void quad_set_9slice_corner_width(Quad *q, float value) {
+    q->offsetV = value;
+    if (_quad_get_flag(q, QUAD_FLAG_9SLICE) == false) {
+        q->tilingU = q->tilingV = QUAD_DEFAULT_9SLICE_UV;
+        q->offsetU = QUAD_DEFAULT_9SLICE_SCALE;
+    }
+    _quad_toggle_flag(q, QUAD_FLAG_9SLICE, true);
+}
+
+float quad_get_9slice_corner_width(const Quad *q) {
+    return _quad_get_flag(q, QUAD_FLAG_9SLICE) ? q->offsetV : QUAD_DEFAULT_9SLICE_CORNER_WIDTH;
 }
 
 // MARK: - Utils -
