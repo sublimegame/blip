@@ -1,15 +1,15 @@
-keywords: ["cubzh", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
+keywords: ["blip", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
 title: "Introduction"
 blocks:
     - text: |
-        [Cubzh](https://cu.bzh) is a platform where you can quickly build games and distribute them on all platforms (Windows, Mac, iOS, Android, web, Discord, and more).
+        [Blip](https://blip.game) is a platform where you can quickly build games and distribute them on all platforms (iOS, Android, Windows, Mac, web, Discord, and more).
 
-        This documentation contains everything developers need to know to create Cubzh games. 👾
+        This documentation contains everything developers need to know to create Blip games. 👾
 
     - title: "Luau"
 
     - text: |
-        [Cubzh](https://cu.bzh) scripts use the Luau programming language.
+        [Blip](https://blip.game) scripts use the Luau programming language.
 
         [Luau](https://luau.org) is derived from [Lua](https://www.lua.org) (5.1) which is a very solid and lightweight scripting language that's been around since 1993. It's easy to learn and already used by other popular video game platforms like [Roblox](https://www.roblox.com).
     
@@ -48,7 +48,7 @@ blocks:
     - text : |
         Isn't it better when everyone can play? 🙂
 
-        [Cubzh](https://cu.bzh) runs on Windows, Mac, iOS, Android, web browsers, Discord and even more platforms soon (Linux, Telegram, etc.).
+        [Blip](https://blip.game) runs on Windows, Mac, iOS, Android, web browsers, Discord and even more platforms soon (Linux, Telegram, etc.).
 
         The scripting API is designed for developers to worry as little as possible about making sure their games work fine on each platform.
 
@@ -67,16 +67,16 @@ blocks:
         One line of code, like `require("multi")`, and you're good to go! 
         <i style="color: #777;">(other open-source modules can offer real-time multiplayer synchronization too)</i>
 
-        You don't need to worry about servers, Cubzh handles that for you, spawning game server instances on demand.
+        You don't need to worry about servers, Blip handles that for you, spawning game server instances on demand.
     
     - media: "/media/glide-and-dance.mp4"
     
     - title: "Designed for Generative AI"
 
     - text : |
-        We're just starting to scratch the surface of what's possible with generative AI, but Cubzh does intend to be the best gaming platform for it.
+        We're just starting to scratch the surface of what's possible with generative AI, but Blip does intend to be the best gaming platform for it.
 
-        Cubzh's scripting ecosystem is designed for natural integration with AI code generation systems.
+        Blip's scripting ecosystem is designed for natural integration with AI code generation systems.
 
         Get ready to vibe code games directly on your phone!
         This feature is not yet available, but please reach out if you'd like to get early access.

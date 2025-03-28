@@ -1,12 +1,12 @@
-keywords: ["cubzh", "game", "mobile", "scripting", "cube", "voxel", "modules", "lua"]
+keywords: ["blip", "game", "mobile", "scripting", "cube", "voxel", "modules", "lua"]
 title: "Modules"
-description: "A list of modules available in Cubzh."
+description: "A list of modules available in Blip."
 blocks:
     - text: |
         A module is a Lua script that can be loaded into your main script.
         Each module exposes functionalities that can easily be reused from one script to another instead of reimplementing them.
 
-        There are 2 types of modules in Cubzh:
+        There are 2 types of modules in Blip:
     - list:
         - <b>local modules</b>, bundled with the application
         - <b>modules hosted on <a href="https://github.com">github.com</a></b>
@@ -57,12 +57,12 @@ blocks:
         - "<a href=\"/modules/time\">time</a>"
 
     - text: |
-        There are more local modules that are not yet documented, you can check them out [here](https://github.com/cubzh/cubzh/tree/main/lua/modules).
+        There are more local modules that are not yet documented, you can check them out [here](https://github.com/bliporg/blip/tree/main/lua/modules).
 
     - subtitle: "Search Github modules."
 
     - text: |
-        There will soon be a way to search the Github module index. If you're wondering about the existence of a Github module, you can ask for help on [Cubzh's Discord server](https://cu.bzh/discord).
+        There will soon be a way to search the Github module index. If you're wondering about the existence of a Github module, you can ask for help on [Blip's Discord server](https://discord.gg/blipgame).
 
     - subtitle: "Create your own modules."
 
@@ -97,7 +97,7 @@ blocks:
 
         If you put it within child directories, then you'll need to complete the URL with the path to it like `github.com/username/module-repository/path/to/dir`.
 
-        You'll also need to add a `cubzh.mod` JSON file next to your script file(s). For now it doesn't offer much configuration options but you can at least use it to indicate who the contributors are (Cubzh usernames). The information will be used to distribute rewards fairly.
+        You'll also need to add a `cubzh.mod` JSON file next to your script file(s). For now it doesn't offer much configuration options but you can at least use it to indicate who the contributors are (Blip usernames). The information will be used to distribute rewards fairly.
 
         `cubzh.mod` example: `{"contributors": [{ "aduermael": 0.3 }, { "gdevillele": 0.7 } ]}`
 

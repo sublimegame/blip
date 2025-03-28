@@ -1,9 +1,9 @@
 ---
-description: Cubzh
-keywords: cubzh, game, mobile, scripting, cube, voxel, world
+description: Blip
+keywords: blip, game, mobile, scripting, cube, voxel, world
 ---
 
-# .cubzh file structure (V5)
+# .3zh file structure (V5)
 
 ### Header
 
@@ -161,7 +161,7 @@ A chunk can contain anything, including child chunks.
 	
 - Source metadata
 
-	Can be used to represent raw source metadata. Data that's not being considered by Cubzh when importing from a different file format (like Magicavoxel .vox). We want to keep this to be able to rewrite it if the file gets exported back to its original format. 
+	Can be used to represent raw source metadata. Data that's not being considered by Blip when importing from a different file format (like Magicavoxel .vox). We want to keep this to be able to rewrite it if the file gets exported back to its original format. 
 	
 	Note: one metadata chunk can contain metadata from different sources.
 	

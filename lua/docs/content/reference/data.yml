@@ -55,7 +55,7 @@ functions:
         - type: "Data"
       samples:
         - code: |
-            -- display the Cubzh logo from the app bundle
+            -- display the Blip logo from the app bundle
             quad.Image = {
               data=Data:FromBundle("images/logo.png"),
               alpha=true
@@ -73,7 +73,7 @@ functions:
                 local data = result
                 local str = data:ToString()
                 if string.sub(str, 1, 6) == "CUBZH!" then
-                  print("It's a Cubzh file!")
+                  print("It's a Blip file!")
                 end
               end)
     

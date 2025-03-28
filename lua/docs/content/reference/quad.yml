@@ -70,7 +70,7 @@ properties:
           - `data` ([Data](reference/data)) is the image data you would normally set.
           - `9slice` ([boolean](reference/boolean) or [Number2](reference/number2)) can be set to `true` to activate 9-slice with default UV slice (0.5, 0.5), it can also be set to a custom UV slice directly.
           - `9sliceScale` ([number](reference/number)) is the scale of the 9-slice corners. It can be relevant to use points scaling here, with [Screen](reference/screen).[Density](reference/screen#property-density).
-          - `alpha` ([boolean](reference/boolean)) enables alpha-blending transparency, default `false`. Set this to `true` if you want Cubzh to use the image alpha.
+          - `alpha` ([boolean](reference/boolean)) enables alpha-blending transparency, default `false`. Set this to `true` if you want Blip to use the image alpha.
           - `cutout` ([boolean](reference/boolean) or [number](reference/number)) can be set to `true` to enable alpha cutout with default alpha `0.0`, or set to a custom cutout directly. This means all texels from the image with alpha value lower or equal to the cutout value will be ignored. This value is typically redundant with `alpha`, and unless you have a specific use-case in mind, you should use one or the other. Animating the cutout value is a great way of creating interesting visual effects.
 
           Note: you can also enable transparency on a textured quad by giving it an alpha value less than 255, eg. `quad.Color.A = 254`. This however will have it be rendered in an unordered transparency pass.

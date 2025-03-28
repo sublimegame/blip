@@ -1,8 +1,8 @@
-keywords: ["cubzh", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
+keywords: ["blip", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
 title: "Guides"
 blocks:
     - text: |
-        Here's a collection of step-by-step tutorials to get started with Cubzh and get to know how to implement particular features (like playing sounds, adding a UI, etc).
+        Here's a collection of step-by-step tutorials to get started with Blip and get to know how to implement particular features (like playing sounds, adding a UI, etc).
 
         You might also be interested in checking out [Sample Scripts](/sample-scripts) for raw code snippets. 
 
@@ -17,7 +17,7 @@ blocks:
     - subtitle: "Coding Curriculum"
 
     - text: |
-        Cubzh happens to be the perfect environment to learn coding, even for complete beginners.
+        Blip happens to be the perfect environment to learn coding, even for complete beginners.
         Here's a 10-lesson curriculum that will take you from your first line of code to mastering real-time multiplayer game making.
 
         - <b>First script! 📝</b> - Introduction to variables and functions. `coming soon`

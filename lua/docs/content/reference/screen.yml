@@ -7,7 +7,7 @@ description: |
     - render size: the raw resolution of the render buffer, which scales with device properties and quality settings. Notably, higher quality settings will use higher render resolution.
     - points size: a fixed size that depends on device screen density. For this reason, this is generally used to create UI scenes that have a consistent look&feel accross devices.
 
-    In Cubzh, orthographic cameras automatically use points scaling, while perspective cameras use render scaling. This may become an opt-in for coders in the future, instead of being automatic.
+    In Blip, orthographic cameras automatically use points scaling, while perspective cameras use render scaling. This may become an opt-in for coders in the future, instead of being automatic.
     As of version `0.1.1`, the only exception to that rule is if an orthographic camera is forced to render before a perspective camera with [This].[ViewOrder](#property-vieworder), in which case, the orthographic camera will use render scaling. This may be addressed in future updates.
 
 properties:
@@ -32,7 +32,7 @@ properties:
     - name: "Density"
       type: "number"
       description: |
-          Screen's density. This is the factor used for points scaling accross Cubzh.
+          Screen's density. This is the factor used for points scaling accross Blip.
           
           You may use this value as a scaling factor for some UI elements, when their look&feel needs to be consistent accross devices. An example of that would be 9-slice scaling for [Quad](reference/quad) objects.
     - name: "SafeArea"
