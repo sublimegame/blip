@@ -26,8 +26,9 @@ struct _Texture {
     uint32_t height;       /* 4 bytes */
     uint32_t hash;         /* 4 bytes */
     uint16_t refCount;     /* 2 bytes */
+    uint8_t format;        /* 1 byte */
     uint8_t flags;         /* 1 byte */
-    char pad[5];
+    char pad[4];
 };
 
 static void _texture_toggle_flag(Texture *t, const uint8_t flag, const bool toggle) {
@@ -61,6 +62,7 @@ Texture* texture_new_raw(const void* data, const uint32_t size, const TextureTyp
     t->height = 0;
     t->hash = (uint32_t)crc32(0, data, (uInt)size);
     t->refCount = 1;
+    t->format = 0;
     t->flags = (uint8_t)(type << TEXTURE_FLAG_TYPE_SHIFT);
     return t;
 }
@@ -88,7 +90,7 @@ void texture_release(Texture* t) {
     }
 }
 
-void texture_set_parsed_data(Texture* t, const void* data, const uint32_t size, const uint32_t width, const uint32_t height) {
+void texture_set_parsed_data(Texture* t, const void* data, const uint32_t size, const uint32_t width, const uint32_t height, const uint8_t format) {
     if (t->data != NULL) {
         free(t->data);
     }
@@ -99,10 +101,12 @@ void texture_set_parsed_data(Texture* t, const void* data, const uint32_t size, 
         t->size = size;
         t->width = width;
         t->height = height;
+        t->format = format;
     } else {
         t->size = 0;
         t->width = 0;
         t->height = 0;
+        t->format = 0;
     }
 }
 
@@ -128,6 +132,10 @@ uint32_t texture_get_height(const Texture* t) {
 
 TextureType texture_get_type(const Texture* t) {
     return (TextureType)((t->flags & TEXTURE_FLAG_TYPE_MASK) >> TEXTURE_FLAG_TYPE_SHIFT);
+}
+
+uint8_t texture_get_format(const Texture* t) {
+    return t->format;
 }
 
 uint32_t texture_get_data_hash(const Texture* t) {
