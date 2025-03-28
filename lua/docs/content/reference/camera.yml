@@ -108,7 +108,7 @@ properties:
     - name: "ViewOrder"
       type: "integer"
       description: |
-          Integer between 1 and 255 used to order multiple cameras. Additional cameras created in Lua have a default value of `127`. The main `Camera` provided by Cubzh engine has a default value of `0`.
+          Integer between 1 and 255 used to order multiple cameras. Additional cameras created in Lua have a default value of `127`. The main `Camera` provided by Blip engine has a default value of `0`.
 
           Note that as of version `0.1.1`, setting an orthographic camera's view order to be rendered before a perspective camera will make it use render scaling instead of points scaling (see [Camera](reference/camera)). This may be addressed in future updates.
 

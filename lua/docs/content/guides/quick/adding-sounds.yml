@@ -1,6 +1,6 @@
 keywords:
     [
-        "cubzh",
+        "blip",
         "game",
         "mobile",
         "scripting",
@@ -16,7 +16,7 @@ keywords:
 title: "Quick know-how > Adding sounds to your game"
 blocks:
     - text: |
-          Starting from the version 0.0.47, [Cubzh](https://cu.bzh/) has implemented a sound system to help you improve the ambience of your games. You can now pick from a library of built-in musics and sound effects to bring your worlds to life!
+          Starting from the version 0.0.47, [Blip](https://blip.game/) has implemented a sound system to help you improve the ambience of your games. You can now pick from a library of built-in musics and sound effects to bring your worlds to life!
 
           In a nutshell, the sound system works as follows:
 
@@ -100,7 +100,7 @@ blocks:
     - title: Tweaking or disabling spatialization
 
     - text: |
-          Another interesting features of the sounds in Cubzh is that, by default, they are spatialized. This means that you won't hear your `AudioSource` the same depending on where the listener is. For example, the sound will be louder when the listener is closer to it, and you will get a left/right pan effect as the angle between the source and the listener changes. This is a great way to make really believable positional sound source in your world in a flash!
+          Another interesting features of the sounds in Blip is that, by default, they are spatialized. This means that you won't hear your `AudioSource` the same depending on where the listener is. For example, the sound will be louder when the listener is closer to it, and you will get a left/right pan effect as the angle between the source and the listener changes. This is a great way to make really believable positional sound source in your world in a flash!
 
           But of course, sometimes, you might want one of your `AudioSource` instances to be just some ambient sound, or a background music. In that case, the sound should not be spatialized, because it is independent of the position of the listener. This is easy to setup: just turn the `Spatialized` property off like this:
 
@@ -126,7 +126,7 @@ blocks:
     - title: List of available sounds
 
     - text: |
-          Here is a list of all the sounds currently available in Cubzh (they should be pretty self-explanatory, but don't hesitate to try out some "surprising" effects to give a unique style to your world!):
+          Here is a list of all the sounds currently available in Blip (they should be pretty self-explanatory, but don't hesitate to try out some "surprising" effects to give a unique style to your world!):
 
     - audiolist:
           - { file: "/audio/440hz.mp3", title: 440hz }

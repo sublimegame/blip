@@ -32,6 +32,6 @@ functions:
             -- result is a Data instance
             local str = result:ToString()
             if string.sub(str, 1, 6) == "CUBZH!" then
-              print("It's a Cubzh file!")
+              print("It's a Blip file!")
             end
           end)

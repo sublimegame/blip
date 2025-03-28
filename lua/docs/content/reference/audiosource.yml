@@ -3,7 +3,7 @@ type: "AudioSource"
 extends: "Object"
 creatable: true
 description: |
-    An `AudioSource` is a component you can attach to an object in your scene to play back a sound in your world. It allows you to pick one of the built-in Cubzh sound files and play it with or without spatialization.
+    An `AudioSource` is a component you can attach to an object in your scene to play back a sound in your world. It allows you to pick one of the built-in Blip sound files and play it with or without spatialization.
 
     Each `AudioSource` can play one and only one audio file at a time. Moreover, every source can be spatialized or not (note that it is by default), meaning that it can be either a 3D or a 2D sound source. So, when it is spatialized, an `AudioSource` will sound differently depending on where it is relative to the [`AudioListener`](/reference/audiolistener) in the game.
 

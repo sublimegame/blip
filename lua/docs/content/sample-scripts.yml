@@ -1,21 +1,21 @@
-keywords: ["cubzh", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
+keywords: ["blip", "game", "mobile", "scripting", "cube", "voxel", "world", "Minecraft", "Roblox", "code", "documentation", "docs"]
 title: "Sample Scripts"
 blocks:
     - text: |
-        This page contains a collection of sample scripts demoing a good variety of features available in [Cubzh](https://cu.bzh).
+        This page contains a collection of sample scripts demoing a good variety of features available in [Blip](https://blip.game).
 
-        This list is not exaustive but is a great start to learn Cubzh, or even later on when looking for a reference when implementing one new kind of feature.
+        This list is not exaustive but is a great start to learn Blip, or even later on when looking for a reference when implementing one new kind of feature.
 
     - title: "Script Structure"
     - text: |
-        This is the overall structure of a Cubzh script:
+        This is the overall structure of a Blip script:
     - code: |
         -- Config table can be used to define the map, items you want to load, etc.
         Config = { 
             Map = "aduermael.rockies",
         }
 
-        -- A single Cubzh script is by default executed on the client AND server.
+        -- A single Blip script is by default executed on the client AND server.
         -- A variable defined at the root level (local or global)
         -- will exist on both client and server:
         local someVariable = "hello"
