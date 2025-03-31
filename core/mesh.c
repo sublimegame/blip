@@ -71,6 +71,35 @@ Mesh* mesh_new(void) {
     return m;
 }
 
+Mesh* mesh_new_copy(const Mesh* m) {
+    Mesh* copy = (Mesh*)malloc(sizeof(Mesh));
+    copy->transform = transform_new_with_ptr(MeshTransform, m, &_mesh_void_free);
+
+    copy->vb = (Vertex*)malloc(m->vbCount * sizeof(Vertex));
+    memcpy(copy->vb, m->vb, m->vbCount * sizeof(Vertex));
+
+    const uint32_t ibSize = m->ibCount * (m->ibCount < UINT16_MAX ? sizeof(uint16_t) : sizeof(uint32_t));
+    copy->ib = (void*)malloc(ibSize);
+    memcpy(copy->ib, m->ib, ibSize);
+
+    copy->material = m->material;
+    if (copy->material != NULL) {
+        material_retain(copy->material);
+    }
+
+    copy->pivot = float3_new_copy(m->pivot);
+    copy->bb = box_new_copy(m->bb);
+    copy->worldAABB = m->worldAABB != NULL ? box_new_copy(m->worldAABB) : NULL;
+    copy->vbCount = m->vbCount;
+    copy->ibCount = m->ibCount;
+    copy->hash = m->hash;
+    copy->layers = m->layers;
+    copy->primitiveType = m->primitiveType;
+    copy->flags = m->flags;
+
+    return copy;
+}
+
 bool mesh_retain(Mesh *m) {
     return transform_retain(m->transform);
 }

@@ -16,8 +16,6 @@ extern "C" {
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "colors.h"
-
 typedef struct _HashUInt32Int HashUInt32Int;
 
 HashUInt32Int *hash_uint32_int_new(void);
