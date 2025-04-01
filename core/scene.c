@@ -11,6 +11,9 @@
 
 #include "weakptr.h"
 
+#define SCENE_FLAG_NONE 0
+#define SCENE_FLAG_RECURSION_LOCK 1 // prevent transforms removal until toggled OFF
+
 #if DEBUG_SCENE
 static int debug_scene_awake_queries = 0;
 #endif
@@ -27,6 +30,8 @@ struct _Scene {
     // transforms potentially removed from scene since last end-of-frame,
     // relevant for physics & sync, internal transforms do not need to be accounted for here
     FifoList *removed;
+    // transforms waiting to be removed once recursion lock is OFF
+    FifoList *recursionLocked;
 
     // rigidbody couples registered & waiting for a call to end-of-collision callback
     DoublyLinkedList *collisions;
@@ -36,6 +41,8 @@ struct _Scene {
 
     // constant acceleration for the whole Scene (gravity usually)
     float3 constantAcceleration;
+
+    uint8_t flags;
 };
 
 typedef struct {
@@ -43,6 +50,23 @@ typedef struct {
     float3 wNormal;
     bool flag;
 } _CollisionCouple;
+
+typedef struct {
+    Transform *t;
+    bool keepWorld;
+} _DelayedRemoval;
+
+static void _scene_toggle_flag(Scene *sc, const uint8_t flag, const bool toggle) {
+    if (toggle) {
+        sc->flags |= flag;
+    } else {
+        sc->flags &= ~flag;
+    }
+}
+
+static bool _scene_get_flag(const Scene *sc, const uint8_t flag) {
+    return (sc->flags & flag) != 0;
+}
 
 void _scene_collision_couple_free_func(void *ptr) {
     _CollisionCouple *cc = (_CollisionCouple *)ptr;
@@ -135,9 +159,11 @@ Scene *scene_new(Weakptr *g) {
         sc->wptr = NULL;
         sc->game = g;
         sc->removed = fifo_list_new();
+        sc->recursionLocked = fifo_list_new();
         sc->collisions = doubly_linked_list_new();
         sc->awakeBoxes = doubly_linked_list_new();
         float3_set(&sc->constantAcceleration, 0.0f, 0.0f, 0.0f);
+        sc->flags = SCENE_FLAG_NONE;
 
         transform_set_parent(sc->system, sc->root, false);
     }
@@ -153,6 +179,13 @@ void scene_free(Scene *sc) {
     while (t != NULL) {
         transform_release(t); // from scene_register_removed_transform
         t = (Transform *)fifo_list_pop(sc->removed);
+    }
+
+    _DelayedRemoval *dr = (_DelayedRemoval *)fifo_list_pop(sc->recursionLocked);
+    while (dr != NULL) {
+        transform_release(dr->t); // from scene_register_removed_transform (if recursion locked)
+        free(dr);
+        dr = (_DelayedRemoval *)fifo_list_pop(sc->recursionLocked);
     }
 
     transform_release(sc->system);
@@ -402,7 +435,13 @@ bool scene_remove_transform(Scene *sc, Transform *t, const bool keepWorld) {
         return false;
     }
 
-    if (transform_remove_parent(t, keepWorld)) {
+    if (_scene_get_flag(sc, SCENE_FLAG_RECURSION_LOCK)) {
+        transform_retain(t);
+        _DelayedRemoval *dr = (_DelayedRemoval *)malloc(sizeof(_DelayedRemoval));
+        dr->t = t;
+        dr->keepWorld = keepWorld;
+        fifo_list_push(sc->recursionLocked, dr);
+    } else if (transform_remove_parent(t, keepWorld)) {
         _scene_register_removed_transform(sc, t);
 #if DEBUG_SCENE_EXTRALOG
         cclog_debug("🏞 transform %p (id: %d) removed from scene %p", t, transform_get_id(t), sc);
@@ -465,6 +504,23 @@ CollisionCoupleStatus scene_register_collision_couple(Scene *sc,
     doubly_linked_list_push_last(sc->collisions, newCC);
 
     return CollisionCoupleStatus_Begin;
+}
+
+void scene_toggle_recursion_lock(Scene *sc, const bool toggle) {
+    if (_scene_get_flag(sc, SCENE_FLAG_RECURSION_LOCK) && toggle == false) {
+        _DelayedRemoval *dr = (_DelayedRemoval*)fifo_list_pop(sc->recursionLocked);
+        while (dr != NULL) {
+            if (transform_remove_parent(dr->t, dr->keepWorld)) {
+                _scene_register_removed_transform(sc, dr->t);
+#if DEBUG_SCENE_EXTRALOG
+                cclog_debug("🏞 transform %p (id: %d) removed from scene %p", t, transform_get_id(t), sc);
+#endif
+            }
+            free(dr);
+            dr = (_DelayedRemoval*)fifo_list_pop(sc->recursionLocked);
+        }
+    }
+    _scene_toggle_flag(sc, SCENE_FLAG_RECURSION_LOCK, toggle);
 }
 
 // MARK: - Physics -
