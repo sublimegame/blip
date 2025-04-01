@@ -15,6 +15,7 @@ extern "C" {
 
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef struct _HashUInt32Int HashUInt32Int;
 
