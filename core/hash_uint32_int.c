@@ -6,8 +6,10 @@
 
 #include "hash_uint32_int.h"
 
-#include "cclog.h"
 #include <stdio.h>
+
+#include "cclog.h"
+#include "config.h"
 
 #define HASH_UINT32_BIT_SHIFT 2
 // 32 / 2 = 16 levels
