@@ -121,8 +121,8 @@ func downloadCmdFunc(cmd *cobra.Command, args []string) error {
 	return deptool.DownloadArtifacts(objectStorageBuildFunc, depsDirPath, depName, version, platform, forceFlag)
 }
 
-// deptool upload <dependency> <version> <platform>
-// example: deptool upload libluau 0.661 macos
+// deptool activate <dependency> <version>
+// example: deptool activate libluau 0.661
 func activateCmdFunc(cmd *cobra.Command, args []string) error {
 	depName := args[0]
 	version := args[1]

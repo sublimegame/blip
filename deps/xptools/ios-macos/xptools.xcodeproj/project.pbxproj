@@ -86,7 +86,6 @@
 		102145332C75E0C000099E38 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		102145342C75E0C000099E38 /* WSServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3E27E3E4AA000575D5 /* WSServer.cpp */; };
 		102145352C75E0C000099E38 /* WSConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3F27E3E4AA000575D5 /* WSConnection.cpp */; };
-		102145372C75E0C000099E38 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
 		1022D09428AF8EEF00C1F1E9 /* process-ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855CB5E4287320E200072D5F /* process-ios.cpp */; };
 		1022D09728AFBC8E00C1F1E9 /* process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1022D09628AFBB5C00C1F1E9 /* process.cpp */; };
 		1022D09828AFBC8E00C1F1E9 /* process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1022D09628AFBB5C00C1F1E9 /* process.cpp */; };
@@ -113,7 +112,6 @@
 		10847CCA270EE8C6006A5E91 /* device-macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8534FDD5240E97D5004B3494 /* device-macos.mm */; };
 		10847CCC270EE8C6006A5E91 /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10847CCD270EE8C6006A5E91 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; };
-		10847CD0270EE8C6006A5E91 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85351B1B2615E5F900D9A036 /* libpng-macos.a */; };
 		10974C8A244D690C008153FE /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10974C8B244D690C008153FE /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10974C8F244D6AB1008153FE /* device-ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C8C244D6916008153FE /* device-ios.mm */; };
@@ -199,7 +197,6 @@
 		850BDEAB2D19EC0F00A85B76 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		850BDEAC2D19EC0F00A85B76 /* WSServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3E27E3E4AA000575D5 /* WSServer.cpp */; };
 		850BDEAD2D19EC0F00A85B76 /* WSConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3F27E3E4AA000575D5 /* WSConnection.cpp */; };
-		850BDEAF2D19EC0F00A85B76 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
 		850D25BA2AE11C7500B00B13 /* notifications.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85BD47D62A5DABAE00556C6E /* notifications.mm */; };
 		8518D09827BA6D9000A438D6 /* ThreadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8518D09727BA6D9000A438D6 /* ThreadManager.cpp */; };
 		8518D09927BA6D9000A438D6 /* ThreadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8518D09727BA6D9000A438D6 /* ThreadManager.cpp */; };
@@ -253,8 +250,6 @@
 		85471B9227E85AF6000575D5 /* WSService.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85471B9127E85AF6000575D5 /* WSService.hpp */; };
 		85471B9327E85AF6000575D5 /* WSService.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85471B9127E85AF6000575D5 /* WSService.hpp */; };
 		85471B9727E85B03000575D5 /* WSService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B9427E85B03000575D5 /* WSService.cpp */; };
-		8553F4242C074B8D000D53B4 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
-		8553F4272C074BA8000D53B4 /* libpng-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41F2C074705000D53B4 /* libpng-ios.a */; };
 		8559F24E244CFF9A00574528 /* vxlog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8559F24D244CFF9A00574528 /* vxlog.h */; };
 		8559F250244D00C400574528 /* vxlog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8559F24F244D00C400574528 /* vxlog.mm */; };
 		8559F251244D00C400574528 /* vxlog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8559F24F244D00C400574528 /* vxlog.mm */; };
@@ -477,7 +472,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102145372C75E0C000099E38 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +479,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10847CD0270EE8C6006A5E91 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +486,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850BDEAF2D19EC0F00A85B76 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +493,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8553F4242C074B8D000D53B4 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +500,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8553F4272C074BA8000D53B4 /* libpng-ios.a in Frameworks */,
 				850623502877881F00B270A6 /* AVFAudio.framework in Frameworks */,
 				8506234E2877881000B270A6 /* AVFoundation.framework in Frameworks */,
 				8506234C287787F200B270A6 /* AVKit.framework in Frameworks */,
@@ -1245,7 +1235,10 @@
 					"CI_MODULES_PATH=\"\\\"$SRCROOT/../../../../cubzh/lua\\\"\"",
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_ci\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1256,6 +1249,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1275,7 +1269,10 @@
 					"CI_MODULES_PATH=\"\\\"$SRCROOT/../../../../cubzh/lua\\\"\"",
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_ci\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1286,6 +1283,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1304,13 +1302,17 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_gameserver\\\"\"",
 					__VX_USE_LIBWEBSOCKETS,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1329,13 +1331,17 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_gameserver\\\"\"",
 					__VX_USE_LIBWEBSOCKETS,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1353,7 +1359,10 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_epicgamesstore\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1364,6 +1373,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1380,7 +1390,10 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_epicgamesstore\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1391,6 +1404,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1458,10 +1472,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lpng/src",
-					"$(PROJECT_DIR)/../../miniaudio",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../miniaudio";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wshadow",
@@ -1529,10 +1540,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lpng/src",
-					"$(PROJECT_DIR)/../../miniaudio",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../miniaudio";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wshadow",
@@ -1556,10 +1564,14 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_steam\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
+					"-lpng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1567,6 +1579,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1583,10 +1596,14 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_steam\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
+					"-lpng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1594,6 +1611,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1613,7 +1631,11 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"ios_appstore\\\"\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lpng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1621,6 +1643,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/ios/include",
 					"$(PROJECT_DIR)/../../libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1641,7 +1664,11 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"ios_appstore\\\"\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lpng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1649,6 +1676,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/ios/include",
 					"$(PROJECT_DIR)/../../libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

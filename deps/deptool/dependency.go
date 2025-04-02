@@ -7,8 +7,8 @@ import (
 )
 
 const ( // Supported dependencies
-	DependencyLibLuau = "libluau"
-	// DependencyLibPNG  = "libpng"
+	DependencyLibluau = "libluau"
+	DependencyLibpng  = "libpng"
 
 	// Supported platforms
 	PlatformAll     = "all"
@@ -23,7 +23,7 @@ const ( // Supported dependencies
 )
 
 var (
-	supportedDependencies = []string{DependencyLibLuau}
+	supportedDependencies = []string{DependencyLibluau, DependencyLibpng}
 	supportedPlatforms    = []string{PlatformSource, PlatformAndroid, PlatformIOS, PlatformMacos, PlatformWindows, PlatformLinux}
 )
 
@@ -41,6 +41,7 @@ func constructDepArtifactsPath(depName, version, platform string) string {
 
 // TODO: make the testing more robust
 func areDependencyFilesInstalled(depsDirPath, depName, version, platform string) (string, bool) {
+	// check if the dependency files exist
 	fullDepPath := filepath.Join(depsDirPath, constructDepArtifactsPath(depName, version, platform))
 	_, err := os.Stat(fullDepPath)
 	exists := err == nil

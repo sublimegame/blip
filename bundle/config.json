@@ -4,6 +4,12 @@
     "Version": "0.1.18",
     "Commit": "",
     "Deps": {
-        "libluau": "0.665"
+        "libluau": {
+            "version": "0.665"
+        },
+        "libpng": {
+            "version": "1.6.47", 
+            "use_source": ["windows"] 
+        }
     }
 }
