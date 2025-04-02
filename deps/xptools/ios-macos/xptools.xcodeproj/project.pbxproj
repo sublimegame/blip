@@ -306,72 +306,6 @@
 		85FED02E2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85FED02B2B0B5C6A00C68F6D /* HttpRequestOpts.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		102144F72C75E0C000099E38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		106ADEDB2C616F9A00964E91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		850BDE6E2D19EC0F00A85B76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F41A2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D07F2C80486CC7A007CD1D0;
-			remoteInfo = "mac-libpng";
-		};
-		8553F41C2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A55DFB7815EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F41E2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A5A58CFD17CF7FBE00B64330;
-			remoteInfo = "ios-static-libpng";
-		};
-		8553F4202C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A5BFDB9C1A97359D007A9234;
-			remoteInfo = "libpng-test";
-		};
-		8553F4222C074B7D000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F4252C074BA2000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A5A58CE517CF7FBE00B64330;
-			remoteInfo = "ios-static-libpng";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		8598D6C5240EF3FD008A6D4C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -438,7 +372,6 @@
 		853C93AC25A384290030C45D /* tracking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tracking.cpp; sourceTree = "<group>"; };
 		853C93F825A3C2330030C45D /* crypto.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = crypto.hpp; sourceTree = "<group>"; };
 		853C93FE25A3C2470030C45D /* crypto.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crypto.cpp; sourceTree = "<group>"; };
-		853C9829286CEDD70072F14A /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../../lpng/src/projects/xcode/libpng.xcodeproj; sourceTree = "<group>"; };
 		85471B2D27E3E006000575D5 /* Connection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Connection.hpp; sourceTree = "<group>"; };
 		85471B2E27E3E006000575D5 /* LocalConnection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LocalConnection.hpp; sourceTree = "<group>"; };
 		85471B2F27E3E006000575D5 /* WSConnection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WSConnection.hpp; sourceTree = "<group>"; };
@@ -541,7 +474,6 @@
 		8534FDBE240E92C1004B3494 = {
 			isa = PBXGroup;
 			children = (
-				853C9829286CEDD70072F14A /* libpng.xcodeproj */,
 				8534FDCE240E96D8004B3494 /* include */,
 				8534FDCF240E9708004B3494 /* common */,
 				8534FDD0240E9723004B3494 /* ios-macos */,
@@ -662,17 +594,6 @@
 				100512092CC6A77500B16FB1 /* WSConnection.mm */,
 			);
 			name = "ios-macos";
-			sourceTree = "<group>";
-		};
-		8553F4142C074705000D53B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8553F41B2C074705000D53B4 /* libpng.framework */,
-				8553F41D2C074705000D53B4 /* libpng-macos.a */,
-				8553F41F2C074705000D53B4 /* libpng-ios.a */,
-				8553F4212C074705000D53B4 /* libpng-test.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		85D4D01A243E0E6600FFFB58 /* Frameworks */ = {
@@ -840,7 +761,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				102144F62C75E0C000099E38 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-ci";
 			productName = xptools;
@@ -858,7 +778,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				106ADEDC2C616F9A00964E91 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-gameserver";
 			productName = xptools;
@@ -876,7 +795,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				850BDE6D2D19EC0F00A85B76 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-epicgames";
 			productName = xptools;
@@ -894,7 +812,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8553F4232C074B7D000D53B4 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-steam";
 			productName = xptools;
@@ -912,7 +829,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8553F4262C074BA2000D53B4 /* PBXTargetDependency */,
 			);
 			name = "xptools-ios-appstore";
 			productName = "xptools-ios";
@@ -948,12 +864,6 @@
 			mainGroup = 8534FDBE240E92C1004B3494;
 			productRefGroup = 8534FDC8240E92C1004B3494 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8553F4142C074705000D53B4 /* Products */;
-					ProjectRef = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8534FDC6240E92C1004B3494 /* xptools-macos-steam */,
@@ -964,37 +874,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8553F41B2C074705000D53B4 /* libpng.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = libpng.framework;
-			remoteRef = 8553F41A2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F41D2C074705000D53B4 /* libpng-macos.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpng-macos.a";
-			remoteRef = 8553F41C2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F41F2C074705000D53B4 /* libpng-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpng-ios.a";
-			remoteRef = 8553F41E2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F4212C074705000D53B4 /* libpng-test.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "libpng-test.xctest";
-			remoteRef = 8553F4202C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		102145122C75E0C000099E38 /* Sources */ = {
@@ -1223,34 +1102,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		102144F62C75E0C000099E38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 102144F72C75E0C000099E38 /* PBXContainerItemProxy */;
-		};
-		106ADEDC2C616F9A00964E91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 106ADEDB2C616F9A00964E91 /* PBXContainerItemProxy */;
-		};
-		850BDE6D2D19EC0F00A85B76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 850BDE6E2D19EC0F00A85B76 /* PBXContainerItemProxy */;
-		};
-		8553F4232C074B7D000D53B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 8553F4222C074B7D000D53B4 /* PBXContainerItemProxy */;
-		};
-		8553F4262C074BA2000D53B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ios-static-libpng";
-			targetProxy = 8553F4252C074BA2000D53B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		102145392C75E0C000099E38 /* Debug */ = {
