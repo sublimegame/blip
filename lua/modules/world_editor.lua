@@ -11,7 +11,7 @@ local ccc = require("ccc")
 local NEW_OBJECT_MAX_DISTANCE = 50
 local THIRD_PERSON_CAMERA_DISTANCE = 40
 
-local defaultAmbience = { 
+local defaultAmbienceGeneration = { 
 	sky = { 
 		skyColor = {0,168,255}, 
 		horizonColor = {137,222,229}, 
@@ -33,7 +33,7 @@ local defaultAmbience = {
 	ambient = { 
 		skyLightFactor = 0.1, 
 		dirLightFactor = 0.2 
-	} 
+	}
 }
 
 function requireSkybox()
@@ -171,11 +171,28 @@ local cameraBtn
 local transformGizmo
 local objectInfoFrame
 local physicsBtn
+local addObjectBtn
 
 local trail
 
 local TRAIL_COLOR = Color.White
-local OBJECTS_COLLISION_GROUP = CollisionGroups(7)
+
+local COLLISION_GROUP_OBJECT = CollisionGroups(3)
+local COLLISION_GROUP_MAP = CollisionGroups(1)
+local COLLISION_GROUP_PLAYER = CollisionGroups(2)
+
+local function hideAllPanels()
+	if ambiencePanel ~= nil then
+		ambiencePanel:hide()
+	end
+	if worldEditor.gallery ~= nil then
+		worldEditor.gallery:hide()
+	end
+	ambienceBtn:show()
+	cameraBtn:show()
+	addObjectBtn:show()
+	require("controls"):turnOn()
+end
 
 local function setCameraMode(mode)
 	if cameraMode == mode then
@@ -187,7 +204,7 @@ local function setCameraMode(mode)
 		Camera:SetModeFree()
 		ccc:set({
 			target = Player,
-			cameraColliders = OBJECTS_COLLISION_GROUP,
+			cameraColliders = COLLISION_GROUP_OBJECT,
 		})
 		Player.Physics = PhysicsMode.Dynamic
 		Player.IsHidden = false
@@ -237,23 +254,6 @@ local states = {
 local setState
 local state
 
-local function clearWorld()
-	Player:RemoveFromParent()
-	if map then
-		map:RemoveFromParent()
-		map = nil
-	end
-	for _, o in pairs(objects) do
-		o:RemoveFromParent()
-	end
-	objects = {}
-	objectsByUUID = {}
-	mapName = nil
-	
-	worldEditorCommon.updateAmbience(defaultAmbience)
-	require("ai_ambience"):loadGeneration(defaultAmbience)
-end
-
 local function setObjectPhysicsMode(obj, physicsMode)
 	if not obj then
 		print("⚠️ can't set physics mode on nil object")
@@ -279,7 +279,7 @@ local function setObjectPhysicsMode(obj, physicsMode)
 end
 
 function objectHitTest(pe)
-	local impact = pe:CastRay(OBJECTS_COLLISION_GROUP)
+	local impact = pe:CastRay(COLLISION_GROUP_OBJECT)
 	local obj = impact.Object
 	-- obj can be a sub-Shape of an object,
 	-- find first parent node that's editable:
@@ -365,8 +365,8 @@ local unfreezeObject = function(obj)
 		if typeof(o) == "Object" then
 			return
 		end
-		o.CollisionGroups = OBJECTS_COLLISION_GROUP
-		o.CollidesWithGroups = Map.CollisionGroups + Player.CollisionGroups + OBJECTS_COLLISION_GROUP
+		o.CollisionGroups = COLLISION_GROUP_OBJECT
+		o.CollidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER + COLLISION_GROUP_OBJECT
 	end, { includeRoot = true })
 end
 
@@ -380,8 +380,8 @@ local spawnObject = function(data, onDone)
 			if typeof(o) == "Object" then
 				return
 			end
-			o.CollisionGroups = CollisionGroups(3) + OBJECTS_COLLISION_GROUP
-			o.CollidesWithGroups = Map.CollisionGroups + Player.CollisionGroups + OBJECTS_COLLISION_GROUP
+			o.CollisionGroups = COLLISION_GROUP_OBJECT
+			o.CollidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER + COLLISION_GROUP_OBJECT
 			o:ResetCollisionBox()
 		end, { includeRoot = true })
 		if obj.uuid ~= -1 then
@@ -425,8 +425,8 @@ local spawnObject = function(data, onDone)
 			if typeof(o) == "Object" then
 				return
 			end
-			o.CollisionGroups = CollisionGroups(3) + OBJECTS_COLLISION_GROUP
-			o.CollidesWithGroups = Map.CollisionGroups + Player.CollisionGroups + OBJECTS_COLLISION_GROUP
+			o.CollisionGroups = COLLISION_GROUP_OBJECT
+			o.CollidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER + COLLISION_GROUP_OBJECT
 			o:ResetCollisionBox()
 		end, { includeRoot = true })
 
@@ -504,12 +504,11 @@ local statesSettings = {
 	},
 	[states.PICK_WORLD] = {
 		onStateBegin = function()
-			uiShowWorldPicker()
 			require("controls"):turnOff()
 			Player.Motion:Set(Number3.Zero)
+			loadEditedWorld()
 		end,
 		onStateEnd = function()
-			uiRemoveWorldPicker()
 		end,
 	},
 	[states.DEFAULT] = {
@@ -518,7 +517,7 @@ local statesSettings = {
 			uiShowDefaultMenu()
 		end,
 		onStateEnd = function()
-			uiHideDefaultMenu()
+			hideAllPanels()
 		end,
 		pointerDown = function(pe)
 			tryPickObjectDown(pe)
@@ -529,14 +528,17 @@ local statesSettings = {
 	},
 	[states.GALLERY] = {
 		onStateBegin = function()
+			hideAllPanels()
+			addObjectBtn:hide()
+			ambienceBtn:hide()
+			cameraBtn:hide()
 			worldEditor.gallery:show()
 			worldEditor.gallery:bounce()
 			require("controls"):turnOff()
 			Player.Motion = { 0, 0, 0 }
 		end,
 		onStateEnd = function()
-			worldEditor.gallery:hide()
-			require("controls"):turnOn()
+			hideAllPanels()
 		end,
 	},
 	[states.SPAWNING_OBJECT] = {
@@ -559,7 +561,7 @@ local statesSettings = {
 			-- When in first person, or mobile, we can  use pointer move event to place the object.
 			-- So just dropping the object at point of impact with camera forward ray.
 			if cameraMode == CameraMode.FREE or Client.IsMobile then
-				local impact = Camera:CastRay(Map.CollisionGroups + OBJECTS_COLLISION_GROUP, obj)
+				local impact = Camera:CastRay(COLLISION_GROUP_MAP + COLLISION_GROUP_OBJECT, obj)
 				putObjectAtImpact(obj, Camera.Position, Camera.Forward, impact.Distance)
 				obj.Rotation.Y = worldEditor.rotationShift
 				dropNewObject() -- ends state
@@ -570,7 +572,7 @@ local statesSettings = {
 		end,
 		pointerMove = function(pe)
 			local placingObj = worldEditor.placingObj
-			local impact = pe:CastRay(Map.CollisionGroups + OBJECTS_COLLISION_GROUP, placingObj)
+			local impact = pe:CastRay(COLLISION_GROUP_MAP + COLLISION_GROUP_OBJECT, placingObj)
 			putObjectAtImpact(placingObj, pe.Position, pe.Direction, impact.Distance)
 			placingObj.Rotation.Y = worldEditor.rotationShift
 		end,
@@ -593,6 +595,10 @@ local statesSettings = {
 			worldEditor.nameInput.Text = obj.Name
 			worldEditor.nameInput.onTextChange = function(o)
 				selectedObject.Name = o.Text
+				worldEditorCommon.updateObject({
+					uuid = obj.uuid,
+					name = o.Text,
+				})
 			end
 			objectInfoFrame:bump()
 
@@ -639,6 +645,9 @@ local statesSettings = {
 			tryPickObjectUp(pe)
 		end,
 		onStateEnd = function()
+			worldEditor.nameInput.onTextChange = nil
+			worldEditor.nameInput.Text = ""
+
 			if transformGizmo then
 				transformGizmo:remove()
 				transformGizmo = nil
@@ -761,69 +770,46 @@ for localEventName, listenerName in pairs(listeners) do
 	end, { topPriority = false })
 end
 
-local worldPicker
-function uiShowWorldPicker()
-	if worldPicker ~= nil then
-		return
-	end
-	local content
-	worldPicker, content = require("creations"):createModal({
-		uikit = ui,
-		categories = { "worlds" },
-		title = "Open World...",
-		onOpen = function(_, cell)
-			require("api"):getWorld(cell.id, { "mapBase64" }, function(data, err)
-				if err then
-					print(err)
-					return
-				end
+function loadEditedWorld()
+	local worldID = Environment["EDITED_WORLD_ID"]
+	require("api"):getWorld(worldID, { "mapBase64", "title" }, function(data, err)
+		if err then
+			print(err)
+			return
+		end
 
-				loadWorld({
-					b64 = data.mapBase64,
-					title = cell.title,
-					worldID = cell.id,
-					onDone = function()
-						setState(states.DEFAULT)
-						startDefaultMode()
-					end,
-					onLoad = function(obj, data)
-						if data == "Map" then
-							if map then
-								map:RemoveFromParent()
-							end
-							map = obj
-							return
-						end
-						data.obj = obj
-						spawnObject(data)
-					end,
-				})
-
+		loadWorld({
+			b64 = data.mapBase64,
+			title = data.title,
+			worldID = worldID,
+			addBasePlateIfNeeded = true,
+			onDone = function(info)
+				local ambienceAdded = false
 				local ambience = worldEditorCommon.getAmbience()
 				if ambience == nil then
-					worldEditorCommon.updateAmbience(defaultAmbience)
-					require("ai_ambience"):loadGeneration(defaultAmbience)
+					ambienceAdded = true
+					local a = require("ai_ambience"):loadGeneration(defaultAmbienceGeneration)
+					worldEditorCommon.updateAmbience(a)
 				end
-
-				
-				-- local textureURL = "https://i.ibb.co/hgRhk0t/Standard-Cube-Map.png"
-				-- local textureURL = "https://files.cu.bzh/skyboxes/green-mushrooms512.png"
-				-- local textureURL = "https://files.cu.bzh/skyboxes/skybox_2.png"
-				-- skybox.load({ url = textureURL }, function(obj) end)
-			end)
-		end,
-	})
-	-- content.tabs[3].selected = true
-	-- content.tabs[3].action()
-	-- worldEditor.uiPickWorld = uiPickWorld
-end
-
-function uiRemoveWorldPicker()
-	if worldPicker == nil then
-		return
-	end
-	worldPicker:remove()
-	worldPicker = nil
+				setState(states.DEFAULT)
+				startDefaultMode()
+				if info.basePlateAdded or ambienceAdded then
+					saveWorld()
+				end
+			end,
+			onLoad = function(obj, data)
+				if data == "Map" then
+					if map then
+						map:RemoveFromParent()
+					end
+					map = obj
+					return
+				end
+				data.obj = obj
+				spawnObject(data)
+			end,
+		})
+	end)
 end
 
 startDefaultMode = function()
@@ -856,16 +842,13 @@ startDefaultMode = function()
 	end
 end
 
-local uiDefaultMenu
 function uiShowDefaultMenu()
-	if uiDefaultMenu ~= nil then
-		uiDefaultMenu:show()
+	if addObjectBtn ~= nil then
+		addObjectBtn:show()
 		return
 	end
 
-	uiDefaultMenu = ui:createNode()
-
-	local addObjectBtn = ui:buttonSecondary({ 
+	addObjectBtn = ui:buttonSecondary({ 
 		content = "➕ Object", 
 		padding = padding,
 		textSize = "small",
@@ -879,7 +862,6 @@ function uiShowDefaultMenu()
 	addObjectBtn.onRelease = function()
 		setState(states.GALLERY)
 	end
-	addObjectBtn:setParent(uiDefaultMenu)
 
 	-- Gallery
 	local galleryOnOpen = function(cell)
@@ -1043,6 +1025,9 @@ function uiShowDefaultMenu()
 		textSize = "small",
 	})
 	ambienceBtn.onRelease = function(self)
+		hideAllPanels()
+
+		require("controls"):turnOff()
 		ambienceBtn:hide()
 		cameraBtn:hide()
 
@@ -1306,9 +1291,7 @@ function uiShowDefaultMenu()
 		aiBtn.onRelease = generate
 
 		btnClose.onRelease = function()
-			ambiencePanel:hide()
-			ambienceBtn:show()
-			cameraBtn:show()
+			hideAllPanels()
 		end
 
 		local scroll = ui:createScroll({
@@ -1418,12 +1401,6 @@ function uiShowDefaultMenu()
 		}
 	end
 	cameraBtn:parentDidResize()
-end
-
-function uiHideDefaultMenu()
-	if uiDefaultMenu ~= nil then
-		uiDefaultMenu:hide()
-	end
 end
 
 -- Auto-save timer

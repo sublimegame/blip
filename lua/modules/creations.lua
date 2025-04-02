@@ -221,13 +221,20 @@ creations.createModalContent = function(_, config)
 							world = world,
 							uikit = ui,
 						})
+						worldDetailsContent.onContentUpdate = function(updatedWorld)
+							gridNeedRefresh = true
+							worldDetailsContent.title = updatedWorld.title
+							if worldDetailsContent.refreshModal then
+								worldDetailsContent:refreshModal()
+							end
+						end
 
-						local btnEditCode = ui:buttonNeutral({ content = "🤓 Code", textSize = "default" })
+						local btnEditCode = ui:buttonSecondary({ content = "🤓 Code", textSize = "default" })
 						btnEditCode.onRelease = function()
 							System.EditWorldCode(world.id)
 						end
 
-						local btnEdit = ui:buttonNeutral({ content = "✏️ Edit", textSize = "big" })
+						local btnEdit = ui:buttonNeutral({ content = "✏️ Edit", textSize = "default" })
 						btnEdit.onRelease = function()
 							System.EditWorld(world.id)
 						end

@@ -696,6 +696,30 @@ mod.get = function(self, config, _, didLoadCallback_deprecated)
 	mt.__index = function(t, k)
 		if k == "Shadow" then
 			return mt[k]
+		elseif k == "LeftArm" then
+			return t:FindFirst(function(o) return o.Name == "LeftArm" end)
+		elseif k == "RightArm" then
+			return t:FindFirst(function(o) return o.Name == "RightArm" end)
+		elseif k == "LeftLeg" then
+			return t:FindFirst(function(o) return o.Name == "LeftLeg" end)
+		elseif k == "RightLeg" then
+			return t:FindFirst(function(o) return o.Name == "RightLeg" end)
+		elseif k == "LeftFoot" then
+			return t:FindFirst(function(o) return o.Name == "LeftFoot" end)
+		elseif k == "RightFoot" then
+			return t:FindFirst(function(o) return o.Name == "RightFoot" end)
+		elseif k == "Body" then
+			return t:FindFirst(function(o) return o.Name == "Body" end)
+		elseif k == "Head" then
+			return t:FindFirst(function(o) return o.Name == "Head" end)
+		elseif k == "LeftHand" then
+			return t:FindFirst(function(o) return o.Name == "LeftHand" end)
+		elseif k == "RightHand" then
+			return t:FindFirst(function(o) return o.Name == "RightHand" end)
+		elseif k == "EyeLidRight" then
+			return t:FindFirst(function(o) return o.Name == "EyeLidRight" end)
+		elseif k == "EyeLidLeft" then
+			return t:FindFirst(function(o) return o.Name == "EyeLidLeft" end)
 		end
 		return objectIndex(t, k)
 	end

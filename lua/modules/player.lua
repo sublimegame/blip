@@ -599,6 +599,11 @@ local playerCall = function(_, playerID, username, userID, isLocal)
 
 	local objectIndex = mt.__index
 	mt.__index = function(t, k)
+
+		if k == "ID" then -- legacy
+			k = "ConnectionID"
+		end
+
 		if
 			k == "ConnectionID"
 			or k == "Avatar"
@@ -635,8 +640,8 @@ local playerCall = function(_, playerID, username, userID, isLocal)
 		if k == "Animations" then
 			return t.Avatar.Animations
 		end
-		if k == "Head" then
-			return t.Avatar.Head
+		if k == "Head" or k == "Body" or k == "RightArm" or k == "LeftArm" or k == "RightHand" or k == "LeftHand" or k == "RightLeg" or k == "LeftLeg" or k == "RightFoot" or k == "LeftFoot" or k == "EyeLidRight" or k == "EyeLidLeft" then
+			return t.Avatar[k]
 		end
 		if k == "IsHandleShown" then
 			local privateFields = privateFields[t]

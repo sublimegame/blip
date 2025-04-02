@@ -99,6 +99,11 @@ Client.OnStart = function()
 			avatar():centerBodyWithExtraRoomAbove()
 			vCover = 0.9
 			hCover = 1.2
+		elseif avatarCameraFocus == "body_demo" then
+			box = avatarBox()
+			avatar():centerBodyWithExtraRoomAbove()
+			vCover = 0.7
+			hCover = 1.0
 		elseif avatarCameraFocus == "bodyAndItem" then
 			box = avatarBox()
 			avatar():centerBodyWithExtraRoomAbove()
@@ -231,28 +236,22 @@ Client.OnStart = function()
 		layoutCamera()
 	end)
 
-	LocalEvent:Listen("signup_flow_avatar_preview", function()
-		avatar():removeItem()
-		titleScreen():hide()
-		avatar():show({ mode = "demo" })
-	end)
-
-	LocalEvent:Listen("signup_flow_avatar_editor", function()
+	LocalEvent:Listen("signup_flow_dob", function()
+		setHomeBackground()
 		avatar():removeItem()
 		titleScreen():hide()
 		avatar():show({ mode = "user" })
-	end)
-
-	LocalEvent:Listen("signup_flow_dob", function()
-		avatar():removeItem()
 		avatarCameraFocus = "body"
 		layoutCamera()
 	end)
 
 	LocalEvent:Listen("signup_flow_start_or_login", function()
+		setTitleScreenBackground()
 		avatar():removeItem()
 		titleScreen():show()
-		avatar():hide()
+		avatar():show({ mode = "demo" })
+		avatarCameraFocus = "body_demo"
+		layoutCamera()
 	end)
 
 	LocalEvent:Listen("signup_drawer_height_update", function(height)
@@ -261,6 +260,7 @@ Client.OnStart = function()
 	end)
 
 	LocalEvent:Listen("signup_flow_login_success", function(_)
+		setHomeBackground()
 		avatar():removeItem()
 		drawerHeight = 0
 		titleScreen():hide()
@@ -274,17 +274,25 @@ Client.OnStart = function()
 	light.On = true
 	light.Type = LightType.Directional
 	World:AddChild(light)
-	light.Rotation:Set(math.rad(5), math.rad(-20), 0)
+	light.Rotation:Set(math.rad(5), math.rad(20), 0)
 
 	Light.Ambient.SkyLightFactor = 0.2
 	Light.Ambient.DirectionalLightFactor = 0.5
 
-	local logoTile = Data:FromBundle("images/logo-tile-rotated.png")
+	local gameGridImage = Data:FromBundle("images/games-background.png")
+
+	local currentGradientFrom = Color(20, 20, 20)
+	local currentGradientTo = Color(50, 50, 50)
+	local currentGameGridAlpha = 0
+
+	-- local currentGradientFrom = Color(13, 28, 35)
+	-- local currentGradientTo = Color(44,74,90)
+	-- local currentGameGridAlpha = 0.5
 
 	backgroundQuad = Quad()
 	backgroundQuad.IsUnlit = true
 	backgroundQuad.IsDoubleSided = false
-	backgroundQuad.Color = { gradient = "V", from = Color(208, 97, 255), to = Color(63, 95, 232) }
+	backgroundQuad.Color = { gradient = "V", from = currentGradientFrom, to = currentGradientTo }
 
 	backgroundQuad.Width = Screen.RenderWidth
 	backgroundQuad.Height = Screen.RenderHeight
@@ -293,34 +301,72 @@ Client.OnStart = function()
 	World:AddChild(backgroundQuad)
 	backgroundQuad.Position.Z = 2
 
-	backgroundLogo = Quad()
-	backgroundLogo.IsUnlit = true
-	backgroundLogo.IsDoubleSided = false
-	backgroundLogo.Color = { Color(17, 42, 150, 0.2), alpha = true }
-	backgroundLogo.Image = logoTile
-	backgroundLogo.Width = math.max(Screen.RenderWidth, Screen.RenderHeight)
-	backgroundLogo.Height = backgroundLogo.Width
-	backgroundLogo.Tiling = backgroundLogo.Width / Number2(100, 100)
-	backgroundLogo.Anchor = { 0.5, 0.5 }
-	backgroundLogo.Layers = { 6 }
-	World:AddChild(backgroundLogo)
-	backgroundLogo.Position.Z = 1
+	gameGridQuad = Quad()
+	gameGridQuad.IsUnlit = true
+	gameGridQuad.IsDoubleSided = false
+	gameGridQuad.Color = { Color(255, 255, 255, currentGameGridAlpha), alpha = true }
+	gameGridQuad.Image = gameGridImage
+	gameGridQuad.Width = math.max(Screen.RenderWidth, Screen.RenderHeight) * 2
+	gameGridQuad.Height = gameGridQuad.Width * (4.0 / 3.0)
+	gameGridQuad.Tiling = gameGridQuad.Width / Number2(1000, 1000 * (1176 / 882)) -- 882 / 1176
+	gameGridQuad.Anchor = { 0.5, 0.5 }
+	gameGridQuad.Layers = { 6 }
+	World:AddChild(gameGridQuad)
+	gameGridQuad.Position.Z = 1
+	gameGridQuad.Rotation.Z = math.rad(-30)
 
-	local delta = Number2(-1, 1)
-	speed = 0.2
-	local _x = 0
-	local _y = 0
+	local delta = Number2(0, 1)
+	speed = 0.05
+
+	local colorLerpDt = 1.0
+	local gradientStart = { from = nil, to = nil }
+	local gradientEnd = { from = nil, to = nil }
+
+	local targetGameGridAlpha = 0.5
+	local targetGradientFrom = Color(0, 0, 0)
+	local targetGradientTo = Color(0, 0, 0)
+	local to = Color(0, 0, 0)
+	local from = Color(0, 0, 0)
+	local gameGridAlpha = currentGameGridAlpha
+
+	local function startBackgroundLerp(newGradientFrom, newGradientTo, newGameGridAlpha)
+		currentGradientFrom:Lerp(currentGradientFrom, newGradientFrom, colorLerpDt)	
+		currentGradientTo:Lerp(currentGradientTo, newGradientTo, colorLerpDt)
+		currentGameGridAlpha = currentGameGridAlpha + (targetGameGridAlpha - currentGameGridAlpha) * colorLerpDt
+		targetGradientFrom = newGradientFrom
+		targetGradientTo = newGradientTo
+		targetGameGridAlpha = newGameGridAlpha
+		gradientStart = { from = currentGradientFrom, to = targetGradientFrom }
+		gradientEnd = { from = currentGradientFrom, to = targetGradientTo }
+		colorLerpDt = 0.0
+	end
+
+	function setTitleScreenBackground()
+		startBackgroundLerp(Color(13, 28, 35), Color(44,74,90), 0.5)
+		Menu.BottomBar:show()
+	end		
+
+	function setHomeBackground()
+		startBackgroundLerp(Color(20, 20, 20), Color(50, 50, 50), 0.0)
+		Menu.BottomBar:hide()
+	end
+
 	LocalEvent:Listen(LocalEvent.Name.Tick, function(dt)
-		-- _x += delta.X * dt * speed
-		-- _y += delta.Y * dt * speed
-		-- backgroundLogo.Offset = { _x, _y }
-
-		-- both lines below should work but for some reason it doesn't
-		backgroundLogo.Offset += delta * dt * speed
-		-- backgroundLogo.Offset = backgroundLogo.Offset + delta * dt * speed
-
-		-- backgroundLogo.Offset = backgroundLogo.Offset
-		-- print(backgroundLogo.Offset)
+		if colorLerpDt < 1.0 then
+			colorLerpDt = math.min(1.0, colorLerpDt + dt * 2.0)
+			from:Lerp(currentGradientFrom, targetGradientFrom, colorLerpDt) 
+			to:Lerp(currentGradientTo, targetGradientTo, colorLerpDt) 
+			backgroundQuad.Color = { 
+				gradient = "V", 
+				from = from,
+				to = to
+			}
+			gameGridAlpha = math.max(0.0, math.min(1.0, currentGameGridAlpha + (targetGameGridAlpha - currentGameGridAlpha) * colorLerpDt))
+			gameGridQuad.Color = { Color(255, 255, 255, gameGridAlpha), alpha = true }
+		end
+		if gameGridAlpha > 0.0 then
+			gameGridQuad.Offset += delta * dt * speed
+		end
 	end)
 
 	if Client.LoggedIn then
@@ -335,9 +381,10 @@ Screen.DidResize = function()
 	if backgroundQuad then
 		backgroundQuad.Width = Screen.RenderWidth
 		backgroundQuad.Height = Screen.RenderHeight
-		backgroundLogo.Width = math.max(Screen.RenderWidth, Screen.RenderHeight)
-		backgroundLogo.Height = backgroundLogo.Width
-		backgroundLogo.Tiling = backgroundLogo.Width / Number2(100, 100)
+
+		gameGridQuad.Width = math.max(Screen.RenderWidth, Screen.RenderHeight) * 2
+		gameGridQuad.Height = gameGridQuad.Width * (4.0 / 3.0)
+		gameGridQuad.Tiling = gameGridQuad.Width / Number2(1000, 1000)
 	end
 end
 
@@ -365,194 +412,13 @@ function titleScreen()
 		layoutCamera({ noAnimation = true })
 
 		local logo = Object()
-		local c = bundle:Shape("shapes/cubzh_logo_c")
-		c.Shadow = true
-		c.Pivot:Set(c.Width * 0.5, c.Height * 0.5, c.Depth * 0.5)
-		c:SetParent(logo)
-
-		local u = bundle:Shape("shapes/cubzh_logo_u")
-		u.Pivot:Set(u.Width * 0.5, u.Height * 0.5, u.Depth * 0.5)
-		u:SetParent(logo)
-
-		local b = bundle:Shape("shapes/cubzh_logo_b")
-		b.Pivot:Set(b.Width * 0.5, b.Height * 1.5 / 4.0, b.Depth * 0.5)
-		b:SetParent(logo)
-
-		local z = bundle:Shape("shapes/cubzh_logo_z")
-		z.Pivot:Set(z.Width * 0.5, z.Height * 0.5, z.Depth * 0.5)
-		z:SetParent(logo)
-
-		local h = bundle:Shape("shapes/cubzh_logo_h")
-		h.Pivot:Set(h.Width * 0.5, h.Height * 1.5 / 4.0, h.Depth * 0.5)
-		h:SetParent(logo)
-
-		local titleShapes = {}
-
-		local function addShape(name, config)
-			local s = bundle:Shape(name)
-			s:SetParent(root)
-			s.Pivot:Set(s.Size * 0.5)
-			s.Scale = config.scale or 1
-			s.LocalPosition:Set(config.position or Number3.Zero)
-			s.rot = config.rotation or Rotation(0, 0, 0)
-			s.Rotation:Set(s.rot)
-			table.insert(titleShapes, s)
-			return s
-		end
-
-		addShape(
-			"shapes/giraffe_head",
-			{ scale = 1, position = Number3(0, 0, 12), rotation = Rotation(0, 0, math.rad(20)) }
-		)
-
-		local chest = addShape(
-			"shapes/chest",
-			{ scale = 0.7, position = Number3(7, -18, -7), rotation = Rotation(0, math.rad(25), math.rad(-5)) }
-		)
-		local chestLid = chest.Lid
-		chest.Coins.IsUnlit = true
-		local chestLidRot = chest.Lid.LocalRotation:Copy()
-
-		addShape(
-			"shapes/pezh_coin_2",
-			{ scale = 0.7, position = Number3(-5, -12, -7), rotation = Rotation(0, 0, math.rad(20)) }
-		)
-
-		addShape(
-			"shapes/cube",
-			{ scale = 0.7, position = Number3(18, -9, -12), rotation = Rotation(0, 0, math.rad(20)) }
-		)
-
-		addShape("shapes/paint_set", {
-			scale = 0.7,
-			position = Number3(-22, 12, 6),
-			rotation = Rotation(math.rad(-60), math.rad(20), math.rad(-20)),
-		})
-
-		addShape(
-			"shapes/pizza_slice",
-			{ scale = 0.7, position = Number3(12, 8, -5), rotation = Rotation(math.rad(-40), math.rad(-20), 0) }
-		)
-
-		addShape("shapes/smartphone", {
-			scale = 0.7,
-			position = Number3(30, 8, 20),
-			rotation = Rotation(math.rad(10), math.rad(30), math.rad(-20)),
-		})
-
-		addShape(
-			"shapes/sword",
-			{ scale = 0.7, position = Number3(-14, -12, 7), rotation = Rotation(0, 0, math.rad(-45)) }
-		)
-
-		addShape("shapes/spaceship_2", {
-			scale = 0.5,
-			position = Number3(-15, -22, -14),
-			rotation = Rotation(math.rad(-10), math.rad(-30), math.rad(-30)),
-		})
-
-		local space = 2
-		local totalWidth = c.Width + u.Width + b.Width + z.Width + h.Width + space * 4
-
-		c.LocalPosition.X = -totalWidth * 0.5 + c.Width * 0.5
-		u.LocalPosition:Set(
-			c.LocalPosition.X + c.Width * 0.5 + space + u.Width * 0.5,
-			c.LocalPosition.Y,
-			c.LocalPosition.Z
-		)
-		b.LocalPosition:Set(
-			u.LocalPosition.X + u.Width * 0.5 + space + b.Width * 0.5,
-			c.LocalPosition.Y,
-			c.LocalPosition.Z
-		)
-		z.LocalPosition:Set(
-			b.LocalPosition.X + b.Width * 0.5 + space + z.Width * 0.5,
-			c.LocalPosition.Y,
-			c.LocalPosition.Z
-		)
-		h.LocalPosition:Set(
-			z.LocalPosition.X + z.Width * 0.5 + space + h.Width * 0.5,
-			c.LocalPosition.Y,
-			c.LocalPosition.Z
-		)
-
-		cRot = Rotation(0, 0, math.rad(10))
-		uRot = Rotation(0, 0, math.rad(-10))
-		bRot = Rotation(0, 0, math.rad(10))
-		zRot = Rotation(0, 0, math.rad(-10))
-		hRot = Rotation(0, 0, math.rad(10))
-
-		c.Rotation = cRot
-		u.Rotation = uRot
-		b.Rotation = bRot
-		z.Rotation = zRot
-		h.Rotation = hRot
-
-		local t = 0
-		local t2 = 1
-		local d1, d2, d3, d4, d5
-
-		local modifiers = {}
-		local nbModifiers = 5
-		local modifier
-		local r
-		for i = 1, nbModifiers do
-			r = math.random(1, 2)
-			modifier = {
-				t = 0,
-				dtCoef = 1 + math.random() * 0.10,
-				amplitude = math.rad(math.random(5, 10)),
-			}
-			if r == 1 then
-				modifier.fn1 = math.cos
-				modifier.fn2 = math.sin
-			else
-				modifier.fn1 = math.sin
-				modifier.fn2 = math.cos
-			end
-			modifiers[i] = modifier
-		end
-
-		tickListener = LocalEvent:Listen(LocalEvent.Name.Tick, function(dt)
-			t = t + dt
-			t2 = t2 + dt * 1.05
-			d1 = math.sin(t) * math.rad(10)
-			d2 = math.cos(t2) * math.rad(10)
-			d3 = math.sin(t2) * math.rad(10)
-			d4 = math.cos(t) * math.rad(10)
-
-			d5 = math.sin(t) * math.rad(5)
-
-			c.Rotation = cRot * Rotation(d1, d2, 0)
-			u.Rotation = uRot * Rotation(d2, d1, 0)
-			b.Rotation = bRot * Rotation(d3, d4, 0)
-			z.Rotation = zRot * Rotation(d4, d3, 0)
-			h.Rotation = hRot * Rotation(d1, d3, 0)
-
-			chestLid.LocalRotation = chestLidRot * Rotation(d5, 0, 0)
-
-			for _, modifier in ipairs(modifiers) do
-				modifier.t = t + dt * modifier.dtCoef
-				modifier.rot = Rotation(
-					modifier.fn1(modifier.t) * modifier.amplitude,
-					modifier.fn2(modifier.t) * modifier.amplitude,
-					0
-				)
-			end
-
-			for i, s in ipairs(titleShapes) do
-				modifier = modifiers[(i % nbModifiers) + 1]
-				s.Rotation = s.rot * modifier.rot
-			end
-		end)
-
 		logo:SetParent(root)
 
 		didResizeFunction = function()
 			layoutCamera({ noAnimation = true })
-			local box = Box()
-			box:Fit(logo, { recursive = true })
-			Camera:FitToScreen(box, 0.8)
+			-- local box = Box()
+			-- box:Fit(logo, { recursive = true })
+			-- Camera:FitToScreen(box, 0.8)
 		end
 
 		didResizeListener = LocalEvent:Listen(LocalEvent.Name.ScreenDidResize, didResizeFunction)
@@ -563,9 +429,14 @@ function titleScreen()
 		if root == nil then
 			return
 		end
-		tickListener:Remove()
-		tickListener = nil
-		didResizeListener:Remove()
+		if tickListener then
+			tickListener:Remove()
+			tickListener = nil
+		end
+		if didResizeListener then
+			didResizeListener:Remove()
+			didResizeListener = nil
+		end
 		didResizeFunction = nil
 
 		root:Destroy()
@@ -994,12 +865,6 @@ function avatar()
 		table.insert(listeners, l)
 
 		l = LocalEvent:Listen("avatar_editor_should_focus_on_body", function()
-			avatarCameraFocus = "body"
-			layoutCamera()
-		end)
-		table.insert(listeners, l)
-
-		l = LocalEvent:Listen("signup_flow_avatar_preview", function()
 			avatarCameraFocus = "body"
 			layoutCamera()
 		end)
@@ -1523,18 +1388,22 @@ function home()
 					cell.loadingAnimation = loadingAnimation
 
 					cell.loadThumbnailTimer = Timer(CONFIG.LOAD_CONTENT_DELAY, function()
-						cell.req = api:getWorldThumbnail(world.id, function(img, err)
-							recycleCellLoadingAnimation(cell)
-							if err ~= nil then
-								return
-							end
+						cell.req = api:getWorldThumbnail({ 
+							worldID = world.id,
+							width = 250,
+							callback = function(img, err)
+								recycleCellLoadingAnimation(cell)
+								if err ~= nil then
+									return
+								end
 
-							local thumbnail = ui:frame({ image = img })
-							thumbnail:setParent(cell)
-							cell.thumbnail = thumbnail
-							worldThumbnails[cell.category .. "_" .. world.id] = thumbnail
-							worldCellResizeFn(cell)
-						end)
+								local thumbnail = ui:frame({ image = img })
+								thumbnail:setParent(cell)
+								cell.thumbnail = thumbnail
+								worldThumbnails[cell.category .. "_" .. world.id] = thumbnail
+								worldCellResizeFn(cell)
+							end
+						})
 						table.insert(httpRequests, cell.req)
 					end)
 				end
@@ -2222,34 +2091,13 @@ function home()
 							end)
 						end
 
-						local editAvatarBtn = ui:buttonNeutral({ content = "✏️ Edit avatar" })
+						local editAvatarBtn = ui:buttonSecondary({ content = "✏️ Edit avatar", textSize = "default" })
 						editAvatarBtn:setParent(profileCell)
 
 						editAvatarBtn.onRelease = function(_)
 							Menu:sendHomeDebugEvent("User presses EDIT AVATAR button")
 							editAvatarFn()
 						end
-
-						local visitHouseBtn = ui:buttonNeutral({
-							content = "🏠 Visit house",
-							-- displayAsDisabled = true,
-						})
-						local comingSoonAlert
-						visitHouseBtn.onRelease = function(_)
-							Menu:sendHomeDebugEvent("User presses VISIT HOUSE button")
-							if comingSoonAlert ~= nil then
-								return
-							end
-							comingSoonAlert = require("alert"):create(
-								"House customization is coming soon! Stay tuned to personalize your house and invite friends. 👥"
-							)
-
-							comingSoonAlert:setPositiveCallback("OK", function()
-								comingSoonAlert:remove()
-								comingSoonAlert = nil
-							end)
-						end
-						visitHouseBtn:setParent(profileCell)
 
 						profileCell.parentDidResize = function(self)
 							self.Width = self.parent.Width
@@ -2266,10 +2114,10 @@ function home()
 								usernameHeight = math.max(usernameHeight, editUsernameBtn.Height)
 							end
 
-							local infoWidth = math.max(usernameWidth, editAvatarBtn.Width, visitHouseBtn.Width)
+							local infoWidth = math.max(usernameWidth, editAvatarBtn.Width)
 
 							local infoHeight =
-								math.max(usernameHeight + editAvatarBtn.Height + visitHouseBtn.Height + padding * 2)
+								math.max(usernameHeight + editAvatarBtn.Height + padding)
 
 							local avatarWidth = CONFIG.PROFILE_CELL_AVATAR_WIDTH
 
@@ -2295,8 +2143,6 @@ function home()
 
 							y = y - padding - editAvatarBtn.Height
 							editAvatarBtn.pos = { x, y }
-							y = y - padding - visitHouseBtn.Height
-							visitHouseBtn.pos = { x, y }
 
 							if previousAvatarCameraX ~= avatarCameraX then
 								layoutCamera()
