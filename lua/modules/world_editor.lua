@@ -859,6 +859,7 @@ function uiShowDefaultMenu()
 			Screen.Height - Screen.SafeArea.Top - self.Height - padding 
 		}
 	end
+	addObjectBtn:parentDidResize()
 	addObjectBtn.onRelease = function()
 		setState(states.GALLERY)
 	end
