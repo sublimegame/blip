@@ -2102,8 +2102,8 @@ function home()
 						profileCell.parentDidResize = function(self)
 							self.Width = self.parent.Width
 
-							usernameFrame.Width = username.Width + theme.paddingTiny * 2
-							usernameFrame.Height = username.Height + theme.paddingTiny * 2
+							usernameFrame.Width = username.Width
+							usernameFrame.Height = username.Height
 
 							local usernameWidth = usernameFrame.Width
 							local usernameHeight = usernameFrame.Height
@@ -2132,7 +2132,15 @@ function home()
 							local previousAvatarCameraX = avatarCameraX
 							avatarCameraX = padding + avatarWidth * 0.5
 
-							usernameFrame.pos = { x + infoWidth - usernameFrame.Width, y + usernameHeight * 0.5 - usernameFrame.Height * 0.5 }
+							editAvatarBtn.pos = { 
+								avatarTransparentFrame.pos.X - editAvatarBtn.Width,
+								padding * 3
+							}
+
+							usernameFrame.pos = { 
+								avatarTransparentFrame.pos.X - usernameFrame.Width - padding, 
+								editAvatarBtn.pos.Y + editAvatarBtn.Height + theme.paddingTiny
+							}
 
 							if editUsernameBtn then
 								editUsernameBtn.pos = {
@@ -2140,9 +2148,6 @@ function home()
 									y + usernameHeight * 0.5 - editUsernameBtn.Height * 0.5,
 								}
 							end
-
-							y = y - padding - editAvatarBtn.Height
-							editAvatarBtn.pos = { x, y }
 
 							if previousAvatarCameraX ~= avatarCameraX then
 								layoutCamera()
