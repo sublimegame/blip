@@ -100,7 +100,7 @@ func (m *Blip) FormatCore(
 		// -i: apply changes
 		// --Werror: consider warnings as errors
 		// -style-file: follow the rules from the .clang-format file
-		script = `echo 'set -e ; set -o pipefail ; find ./core -maxdepth 2 -regex '^.*\\.\\(cpp\\|hpp\\|c\\|h\\)$' -print0 | xargs -0 clang-format -i --Werror -style=file' > script.sh; exit 1`
+		script = `set -e ; set -o pipefail ; find ./core -maxdepth 2 -regex '^.*\\.\\(cpp\\|hpp\\|c\\|h\\)$' -print0 | xargs -0 clang-format -i --Werror -style=file`
 	}
 	output := dag.
 		Container().
