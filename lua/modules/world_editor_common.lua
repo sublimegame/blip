@@ -927,32 +927,50 @@ common.objectsToJSON = function()
 				}
 				
 				if object.Position and object.Position ~= Number3(0, 0, 0) then
-					entity.position = { object.Position.X, object.Position.Y, object.Position.Z }
+					entity.Position = { object.Position.X, object.Position.Y, object.Position.Z }
 				end
 				
 				if object.Rotation and object.Rotation ~= Rotation(0, 0, 0) then
-					entity.rotation = { object.Rotation.X, object.Rotation.Y, object.Rotation.Z }
+					entity.Rotation = { object.Rotation.X, object.Rotation.Y, object.Rotation.Z }
 				end
 				
 				if object.Scale and object.Scale ~= Number3(1, 1, 1) then
-					entity.scale = { object.Scale.X, object.Scale.Y, object.Scale.Z }
+					entity.Scale = { object.Scale.X, object.Scale.Y, object.Scale.Z }
 				end
 				
 				if object.Name and object.Name ~= object.fullname then
-					entity.name = object.Name
+					entity.Name = object.Name
 				else
-					entity.name = object.fullname
+					entity.Name = object.fullname
 				end
 				
 				if object.Physics ~= nil then
 					if object.Physics == PhysicsMode.StaticPerBlock then
-						entity.physics = "staticPerBlock"
+						entity.Physics = "StaticPerBlock"
 					elseif object.Physics == PhysicsMode.Dynamic then
-						entity.physics = "dynamic"
+						entity.Physics = "Dynamic"
 					elseif object.Physics == PhysicsMode.Trigger then
-						entity.physics = "trigger"
+						entity.Physics = "Trigger"
 					else
-						entity.physics = "static"
+						entity.Physics = "Static"
+					end
+					
+					entity.CollisionGroups = {}
+					local collisionGroups = object.CollisionGroups
+					if collisionGroups == nil then
+						collisionGroups = COLLISION_GROUP_OBJECT
+					end
+					for _, cg in collisionGroups do
+						table.insert(entity.CollisionGroups, cg)
+					end
+
+					entity.CollidesWithGroups = {}
+					local collidesWithGroups = object.CollidesWithGroups
+					if collidesWithGroups == nil then
+						collidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER
+					end
+					for _, cg in collidesWithGroups do
+						table.insert(entity.CollidesWithGroups, cg)
 					end
 				end
 
