@@ -40,7 +40,7 @@ function setupNodeAvatar(node, avatar, config)
 	local uiAvatar = ui:createShape(avatar, { spherized = config.spherized or false })
 
 	uiAvatar:setParent(node)
-	uiAvatar.Head.LocalRotation:Set(Number3.Zero)
+	avatar.Head.LocalRotation:Set(Number3.Zero)
 	node.body = uiAvatar
 	node.body.pivot.LocalRotation:Set(rotation)
 	-- node.body.pivot.LocalRotation = rotation

@@ -117,6 +117,53 @@ properties:
       description: |
           Whether the camera is active or not.
 
+    - name: "Behavior"
+      type: "table"
+      description: |
+          A table that can be set to describe how the camera should behave: how it moves, rotates, collides with other objects, etc.
+          It can be set to `nil` to disable current behavior.
+
+          Fields accepted:
+          - `positionTarget`: [Object] to follow, or [Number3] position to go to.
+          - `positionTargetOffset`: Fixed [Number3] offset to apply to the target position.
+          - `positionTargetBackoffDistance`: distance ([number]) to backoff from the target position (considering collisions and current rotation).
+          - `positionTargetMinBackoffDistance`: minimum distance ([number]) to backoff from the target, going through colliders if needed, also the minimum distance user can set using mouse wheel or pinch gesture.
+          - `positionTargetMaxBackoffDistance`: maximum distance ([number]) user can set using mouse wheel or pinch gesture.
+          - `rotationTarget`: [Object]'s rotation or [Rotation] to rotate to.
+          - `rigidity`: [number], generally between 0 and 1, setting how fast the camera moves to the target.
+          - `collidesWithGroups`: [CollisionGroups] that the camera will collide with.
+
+          More fields will be added in future updates! But this set already allows to create a lot of different camera behaviors.
+          Also, you can always set `Camera.Behavior = nil` and implement your own logic manipulating `Camera` as any other [Object].
+
+      samples:
+        - code: |
+            -- a "third person" camera, following the player and looking in the same direction as its head
+            Camera.Behavior = {
+              positionTarget = Player, -- camera goes to that position (or position of given object)
+              positionTargetOffset = { 0, 14, 0 }, -- applying offset (looking right above the head)
+              positionTargetBackoffDistance = 40, -- camera tries to backoff that distance, considering collisions
+              positionTargetMinBackoffDistance = 20,
+              positionTargetMaxBackoffDistance = 100,
+              rotationTarget = Player.Head, -- camera rotates to that rotation (or rotation of given object)
+              rigidity = 0.5, -- how fast the camera moves to the target
+              collidesWithGroups = nil, -- camera collides with objects in these groups
+            }
+
+            -- a camera to follow vehicles, less rigid and looking a bit from above the vehicle
+            Camera.Behavior = {
+              positionTarget = plane,
+              positionTargetOffset = { 0, 5, 0 },
+              positionTargetBackoffDistance = 70,
+              positionTargetMinBackoffDistance = 20,
+              positionTargetMaxBackoffDistance = 200,
+              rotationTarget = plane,
+              rotationTargetOffset = Rotation(math.rad(10), 0, 0), -- tilting 10 degrees down
+              rigidity = 0.25,
+              collidesWithGroups = nil,
+            }
+
+
 functions:
     - name: "CastRay"
       argument-sets: 
@@ -156,104 +203,6 @@ functions:
             if impact.Block ~= nil then
               print("block hit:", impact.Block)
             end
-
-    - name: "SetModeFirstPerson"
-      argument-sets: 
-        -
-        -
-          - name: "target"
-            type: "Object"
-        -
-          - name: "target"
-            type: "Object"
-          - name: "offset"
-            type: "number"
-        -
-          - name: "target"
-            type: "Object"
-          - name: "offset"
-            type: "Number3"
-      description: |
-          Puts Camera in "first person" mode. Looking at the world from `target`'s perspective.
-
-          When calling `SetModeFirstPerson` without parameters, the target defaults to [Player] (local player).
-
-          When `offset` is set to an [number], the offset is set on the vertical axis only, (`Number3(0, offset, 0)`) 
-
-      samples:
-        - code: |
-            Camera:SetModeFirstPerson(Player, 3.0)
-
-    - name: "SetModeThirdPerson"
-      argument-sets: 
-        -
-        -
-          - name: "target"
-            type: "Object"
-        -
-          - name: "target"
-            type: "Object"
-          - name: "minDist"
-            type: "number"
-          - name: "maxDist"
-            type: "number"
-          - name: "offset"
-            type: "number"
-        -
-          - name: "target"
-            type: "Object"
-          - name: "minDist"
-            type: "number"
-          - name: "maxDist"
-            type: "number"
-          - name: "offset"
-            type: "Number3"
-      description: |
-          Puts Camera in "third person" mode. (looking at Camera's target, from a behind-the-shoulder perspective)
-
-          When calling `SetModeThirdPerson` without parameters, the target defaults to [Player] (local player).
-
-          By default, the Camera is placed beind its target. But it's then possible to change its [LocalRotation](#property-localrotation) to look at the target from a different angle.
-
-          `minDist`, `maxDist` and `offset` settings are optional but can be provided to tweak positioning.
-
-      samples:
-        - code: |
-            Camera:SetModeThirdPerson()
-
-            Camera:SetModeThirdPerson(someShape)
-
-    - name: "SetModeSatellite"
-      argument-sets: 
-          -
-          -
-            - name: "target"
-              type: "Object"
-          -
-            - name: "target"
-              type: "Number3"
-          -
-            - name: "target"
-              type: "Object"
-            - name: "distance"
-              type: "number"
-          -
-            - name: "target"
-              type: "Number3"
-            - name: "distance"
-              type: "number"
-      description: |
-          When in that mode, the camera rotates around its target, maintaining its distance from it.
-
-          When calling `SetModeSatellite` without parameters, the target defaults the current position of the camera.
-
-          `SetModeSatellite` can be called several time to update the `distance`.
-
-          Once the "satellite mode" is set, [Camera.LocalRotation](#property-localrotation) can be used to rotate around the target.
-
-      samples:
-        - code: |
-            Camera:SetModeSatellite(Player, 10.0)
 
     - name: "FitToScreen"
       description: |

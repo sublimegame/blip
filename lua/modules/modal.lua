@@ -184,12 +184,8 @@ modal.createContent = function(_)
 							self:willResignActive()
 						end
 						local toRemove = #modal.contentStack
-						modal:push(content, true)
+						modal:push(content)
 						modal:pop(toRemove)
-						modal:refreshContent()
-						if content.didBecomeActive ~= nil then
-							content:didBecomeActive()
-						end
 					else
 						error("pushAndRemoveSelf: caller is not active content", 2)
 						return

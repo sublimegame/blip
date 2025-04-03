@@ -8,6 +8,10 @@ local common = {}
 local MAP_SCALE_DEFAULT = 5
 local SERIALIZE_VERSION = 3
 
+local COLLISION_GROUP_OBJECT = CollisionGroups(3)
+local COLLISION_GROUP_MAP = CollisionGroups(1)
+local COLLISION_GROUP_PLAYER = CollisionGroups(2)
+
 -- Chunk identifiers for serialization
 local SERIALIZED_CHUNKS_ID = {
 	MAP = 0,
@@ -622,9 +626,18 @@ local loadObject = function(obj, objInfo)
 	obj.Rotation = objInfo.Rotation or Rotation(0, 0, 0)
 	obj.Scale = objInfo.Scale or 0.5
 	obj.uuid = objInfo.uuid
-	obj.CollidesWithGroups = Map.CollisionGroups + Player.CollisionGroups
+	obj.CollisionGroups = COLLISION_GROUP_OBJECT
+	obj.CollidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER
 	obj.Name = objInfo.Name or objInfo.fullname
 	obj.fullname = objInfo.fullname
+
+	local physics = objInfo.Physics or PhysicsMode.StaticPerBlock
+	obj:Recurse(function(o)
+		if o.Physics == nil then
+			return
+		end
+		o.Physics = physics
+	end, { includeRoot = true })
 
 	common.updateShadow(obj)
 end
@@ -759,7 +772,7 @@ end
 
 -- Get current ambience settings
 common.getAmbience = function()
-	return loaded.world and loaded.world.ambience or nil
+	return loaded.world.ambience
 end
 
 -- Public API for serialization/deserialization
@@ -795,6 +808,7 @@ common.loadWorld = function(config)
 				worldID = { "string" },
 				onLoad = { "function" },
 				onDone = { "function" },
+				addBasePlateIfNeeded = { "boolean" },
 			},
 		})
 	end)
@@ -806,7 +820,8 @@ common.loadWorld = function(config)
 	local world = common.deserializeWorld(config.b64)
 
 	-- Create a base plate if no map or objects exist
-	if world.mapName == nil and (world.objects == nil or #world.objects == 0) then
+	local basePlateAdded = false
+	if config.addBasePlateIfNeeded and world.mapName == nil and (world.objects == nil or #world.objects == 0) then
 		local scale = MAP_SCALE_DEFAULT
 		local basePlate = {
 			fullname = "aduermael.baseplate",
@@ -818,6 +833,13 @@ common.loadWorld = function(config)
 		}
 		world.objects = world.objects or {}
 		table.insert(world.objects, basePlate)
+		basePlateAdded = true
+	end
+
+	local onDone = function()
+		if config.onDone then
+			config.onDone({ basePlateAdded = basePlateAdded })
+		end
 	end
 
 	-- Setup loaded state
@@ -863,7 +885,7 @@ common.loadWorld = function(config)
 			end
 			
 			local massLoadingConfig = {
-				onDone = config.onDone,
+				onDone = onDone,
 				onLoad = onLoad,
 				fullnameItemKey = "fullname",
 			}
@@ -877,8 +899,8 @@ common.loadWorld = function(config)
 		end
 		
 		-- Call onDone if no objects to load
-		if not objects and config.onDone then
-			config.onDone()
+		if not objects then
+			onDone()
 		end
 	end
 	
@@ -888,6 +910,76 @@ common.loadWorld = function(config)
 	else
 		loadObjectsAndAmbience()
 	end
+end
+
+common.objectsToJSON = function()
+	local toEncode = {}
+
+	local objects = loaded.world.objects
+	if objects then
+		local objectsGrouped = groupObjects(objects)
+		local nbObjects = #objects
+	
+		for fullname, group in pairs(objectsGrouped) do
+			for _, object in ipairs(group) do
+				local entity = {
+					itemName = fullname,
+				}
+				
+				if object.Position and object.Position ~= Number3(0, 0, 0) then
+					entity.Position = { object.Position.X, object.Position.Y, object.Position.Z }
+				end
+				
+				if object.Rotation and object.Rotation ~= Rotation(0, 0, 0) then
+					entity.Rotation = { object.Rotation.X, object.Rotation.Y, object.Rotation.Z }
+				end
+				
+				if object.Scale and object.Scale ~= Number3(1, 1, 1) then
+					entity.Scale = { object.Scale.X, object.Scale.Y, object.Scale.Z }
+				end
+				
+				if object.Name and object.Name ~= object.fullname then
+					entity.Name = object.Name
+				else
+					entity.Name = object.fullname
+				end
+				
+				if object.Physics ~= nil then
+					if object.Physics == PhysicsMode.StaticPerBlock then
+						entity.Physics = "StaticPerBlock"
+					elseif object.Physics == PhysicsMode.Dynamic then
+						entity.Physics = "Dynamic"
+					elseif object.Physics == PhysicsMode.Trigger then
+						entity.Physics = "Trigger"
+					else
+						entity.Physics = "Static"
+					end
+					
+					entity.CollisionGroups = {}
+					local collisionGroups = object.CollisionGroups
+					if collisionGroups == nil then
+						collisionGroups = COLLISION_GROUP_OBJECT
+					end
+					for _, cg in collisionGroups do
+						table.insert(entity.CollisionGroups, cg)
+					end
+
+					entity.CollidesWithGroups = {}
+					local collidesWithGroups = object.CollidesWithGroups
+					if collidesWithGroups == nil then
+						collidesWithGroups = COLLISION_GROUP_MAP + COLLISION_GROUP_PLAYER
+					end
+					for _, cg in collidesWithGroups do
+						table.insert(entity.CollidesWithGroups, cg)
+					end
+				end
+
+				table.insert(toEncode, entity)
+			end
+		end
+	end
+
+	return JSON:Encode(toEncode)
 end
 
 -- Save the current world state

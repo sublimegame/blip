@@ -86,7 +86,6 @@
 		102145332C75E0C000099E38 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		102145342C75E0C000099E38 /* WSServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3E27E3E4AA000575D5 /* WSServer.cpp */; };
 		102145352C75E0C000099E38 /* WSConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3F27E3E4AA000575D5 /* WSConnection.cpp */; };
-		102145372C75E0C000099E38 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
 		1022D09428AF8EEF00C1F1E9 /* process-ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855CB5E4287320E200072D5F /* process-ios.cpp */; };
 		1022D09728AFBC8E00C1F1E9 /* process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1022D09628AFBB5C00C1F1E9 /* process.cpp */; };
 		1022D09828AFBC8E00C1F1E9 /* process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1022D09628AFBB5C00C1F1E9 /* process.cpp */; };
@@ -113,7 +112,6 @@
 		10847CCA270EE8C6006A5E91 /* device-macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8534FDD5240E97D5004B3494 /* device-macos.mm */; };
 		10847CCC270EE8C6006A5E91 /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10847CCD270EE8C6006A5E91 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; };
-		10847CD0270EE8C6006A5E91 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85351B1B2615E5F900D9A036 /* libpng-macos.a */; };
 		10974C8A244D690C008153FE /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10974C8B244D690C008153FE /* filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C89244D690C008153FE /* filesystem.mm */; };
 		10974C8F244D6AB1008153FE /* device-ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10974C8C244D6916008153FE /* device-ios.mm */; };
@@ -199,7 +197,6 @@
 		850BDEAB2D19EC0F00A85B76 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C63D2A246C4F61003DEC3E /* strings.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		850BDEAC2D19EC0F00A85B76 /* WSServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3E27E3E4AA000575D5 /* WSServer.cpp */; };
 		850BDEAD2D19EC0F00A85B76 /* WSConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B3F27E3E4AA000575D5 /* WSConnection.cpp */; };
-		850BDEAF2D19EC0F00A85B76 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
 		850D25BA2AE11C7500B00B13 /* notifications.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85BD47D62A5DABAE00556C6E /* notifications.mm */; };
 		8518D09827BA6D9000A438D6 /* ThreadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8518D09727BA6D9000A438D6 /* ThreadManager.cpp */; };
 		8518D09927BA6D9000A438D6 /* ThreadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8518D09727BA6D9000A438D6 /* ThreadManager.cpp */; };
@@ -253,8 +250,6 @@
 		85471B9227E85AF6000575D5 /* WSService.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85471B9127E85AF6000575D5 /* WSService.hpp */; };
 		85471B9327E85AF6000575D5 /* WSService.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85471B9127E85AF6000575D5 /* WSService.hpp */; };
 		85471B9727E85B03000575D5 /* WSService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85471B9427E85B03000575D5 /* WSService.cpp */; };
-		8553F4242C074B8D000D53B4 /* libpng-macos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41D2C074705000D53B4 /* libpng-macos.a */; };
-		8553F4272C074BA8000D53B4 /* libpng-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553F41F2C074705000D53B4 /* libpng-ios.a */; };
 		8559F24E244CFF9A00574528 /* vxlog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8559F24D244CFF9A00574528 /* vxlog.h */; };
 		8559F250244D00C400574528 /* vxlog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8559F24F244D00C400574528 /* vxlog.mm */; };
 		8559F251244D00C400574528 /* vxlog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8559F24F244D00C400574528 /* vxlog.mm */; };
@@ -290,78 +285,26 @@
 		85E6380D28F703C3001FC12F /* device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E6380B28F703C3001FC12F /* device.cpp */; };
 		85E6380E28F703C3001FC12F /* device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85E6380B28F703C3001FC12F /* device.cpp */; };
 		85E9224D24111875008B5D81 /* filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E9224C24111875008B5D81 /* filesystem.h */; };
+		85F95C322D97381100374D5F /* passkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F95C2F2D97380D00374D5F /* passkey.cpp */; };
+		85F95C332D97381100374D5F /* passkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F95C2F2D97380D00374D5F /* passkey.cpp */; };
+		85F95C342D97381100374D5F /* passkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F95C2F2D97380D00374D5F /* passkey.cpp */; };
+		85F95C352D97381100374D5F /* passkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F95C2F2D97380D00374D5F /* passkey.cpp */; };
+		85F95C362D97381100374D5F /* passkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F95C2F2D97380D00374D5F /* passkey.cpp */; };
+		85FA71DB2D97084200CBD3F7 /* passkey.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FA71DA2D97083400CBD3F7 /* passkey.hpp */; };
+		85FA71DC2D97084200CBD3F7 /* passkey.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FA71DA2D97083400CBD3F7 /* passkey.hpp */; };
+		85FA71DD2D97084200CBD3F7 /* passkey.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FA71DA2D97083400CBD3F7 /* passkey.hpp */; };
+		85FA71DE2D97084200CBD3F7 /* passkey.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FA71DA2D97083400CBD3F7 /* passkey.hpp */; };
+		85FA71E02D9709D100CBD3F7 /* passkey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85FA71DF2D9709CC00CBD3F7 /* passkey.mm */; };
+		85FA71E12D9709D100CBD3F7 /* passkey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85FA71DF2D9709CC00CBD3F7 /* passkey.mm */; };
+		85FA71E22D9709D100CBD3F7 /* passkey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85FA71DF2D9709CC00CBD3F7 /* passkey.mm */; };
+		85FA71E32D9709D100CBD3F7 /* passkey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85FA71DF2D9709CC00CBD3F7 /* passkey.mm */; };
+		85FA71E42D9709D100CBD3F7 /* passkey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85FA71DF2D9709CC00CBD3F7 /* passkey.mm */; };
 		85FCECA528072D3200CD6115 /* WSBackend.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FCECA128072D3200CD6115 /* WSBackend.hpp */; };
 		85FCECA628072D3200CD6115 /* WSBackend.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 85FCECA128072D3200CD6115 /* WSBackend.hpp */; };
 		85FED02C2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85FED02B2B0B5C6A00C68F6D /* HttpRequestOpts.cpp */; };
 		85FED02D2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85FED02B2B0B5C6A00C68F6D /* HttpRequestOpts.cpp */; };
 		85FED02E2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85FED02B2B0B5C6A00C68F6D /* HttpRequestOpts.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		102144F72C75E0C000099E38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		106ADEDB2C616F9A00964E91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		850BDE6E2D19EC0F00A85B76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F41A2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D07F2C80486CC7A007CD1D0;
-			remoteInfo = "mac-libpng";
-		};
-		8553F41C2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A55DFB7815EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F41E2C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A5A58CFD17CF7FBE00B64330;
-			remoteInfo = "ios-static-libpng";
-		};
-		8553F4202C074705000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A5BFDB9C1A97359D007A9234;
-			remoteInfo = "libpng-test";
-		};
-		8553F4222C074B7D000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A55DFB7715EBB44B007CCF00;
-			remoteInfo = "mac-static-libpng";
-		};
-		8553F4252C074BA2000D53B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A5A58CE517CF7FBE00B64330;
-			remoteInfo = "ios-static-libpng";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8598D6C5240EF3FD008A6D4C /* CopyFiles */ = {
@@ -429,7 +372,6 @@
 		853C93AC25A384290030C45D /* tracking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tracking.cpp; sourceTree = "<group>"; };
 		853C93F825A3C2330030C45D /* crypto.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = crypto.hpp; sourceTree = "<group>"; };
 		853C93FE25A3C2470030C45D /* crypto.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = crypto.cpp; sourceTree = "<group>"; };
-		853C9829286CEDD70072F14A /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../../lpng/src/projects/xcode/libpng.xcodeproj; sourceTree = "<group>"; };
 		85471B2D27E3E006000575D5 /* Connection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Connection.hpp; sourceTree = "<group>"; };
 		85471B2E27E3E006000575D5 /* LocalConnection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LocalConnection.hpp; sourceTree = "<group>"; };
 		85471B2F27E3E006000575D5 /* WSConnection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WSConnection.hpp; sourceTree = "<group>"; };
@@ -467,6 +409,9 @@
 		85D52F6A29D9EE2900070F19 /* URL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = URL.cpp; sourceTree = "<group>"; };
 		85E6380B28F703C3001FC12F /* device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = device.cpp; sourceTree = "<group>"; };
 		85E9224C24111875008B5D81 /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
+		85F95C2F2D97380D00374D5F /* passkey.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = passkey.cpp; sourceTree = "<group>"; };
+		85FA71DA2D97083400CBD3F7 /* passkey.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = passkey.hpp; sourceTree = "<group>"; };
+		85FA71DF2D9709CC00CBD3F7 /* passkey.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = passkey.mm; sourceTree = "<group>"; };
 		85FCECA128072D3200CD6115 /* WSBackend.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WSBackend.hpp; sourceTree = "<group>"; };
 		85FED0252B0AB80F00C68F6D /* HttpRequestOpts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HttpRequestOpts.hpp; sourceTree = "<group>"; };
 		85FED02B2B0B5C6A00C68F6D /* HttpRequestOpts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequestOpts.cpp; sourceTree = "<group>"; };
@@ -477,7 +422,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102145372C75E0C000099E38 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +429,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10847CD0270EE8C6006A5E91 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +436,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850BDEAF2D19EC0F00A85B76 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +443,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8553F4242C074B8D000D53B4 /* libpng-macos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +450,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8553F4272C074BA8000D53B4 /* libpng-ios.a in Frameworks */,
 				850623502877881F00B270A6 /* AVFAudio.framework in Frameworks */,
 				8506234E2877881000B270A6 /* AVFoundation.framework in Frameworks */,
 				8506234C287787F200B270A6 /* AVKit.framework in Frameworks */,
@@ -534,7 +474,6 @@
 		8534FDBE240E92C1004B3494 = {
 			isa = PBXGroup;
 			children = (
-				853C9829286CEDD70072F14A /* libpng.xcodeproj */,
 				8534FDCE240E96D8004B3494 /* include */,
 				8534FDCF240E9708004B3494 /* common */,
 				8534FDD0240E9723004B3494 /* ios-macos */,
@@ -577,6 +516,7 @@
 				858ABB892A52F5E6007AE641 /* Macros.h */,
 				85BD47D32A5DAB7A00556C6E /* notifications.hpp */,
 				858ABB8C2A52F5EE007AE641 /* OperationQueue.hpp */,
+				85FA71DA2D97083400CBD3F7 /* passkey.hpp */,
 				85AF77412AA1C40F007480C2 /* preferences.hpp */,
 				855CB5DA28731FFE00072D5F /* process.hpp */,
 				10C63D2F246C59FD003DEC3E /* strings.h */,
@@ -588,7 +528,6 @@
 				85D52F6729D9EE1500070F19 /* URL.hpp */,
 				8559F24D244CFF9A00574528 /* vxlog.h */,
 				1033951C25626D130083F4C0 /* vxtime.h */,
-				8534FDD1240E9762004B3494 /* xptools.h */,
 				10EE2BC3272C080000EC374C /* web.hpp */,
 				85FCECA128072D3200CD6115 /* WSBackend.hpp */,
 				85471B2F27E3E006000575D5 /* WSConnection.hpp */,
@@ -596,6 +535,7 @@
 				85471B3027E3E006000575D5 /* WSServerConnection.hpp */,
 				85471B9127E85AF6000575D5 /* WSService.hpp */,
 				85471B6C27E4C99E000575D5 /* WSTypes.hpp */,
+				8534FDD1240E9762004B3494 /* xptools.h */,
 			);
 			name = include;
 			path = ../include;
@@ -619,6 +559,7 @@
 				85471B3C27E3E4A9000575D5 /* LocalConnection.cpp */,
 				101758B82C99C24E008318A8 /* notifications.cpp */,
 				858ABB862A52F5CD007AE641 /* OperationQueue.cpp */,
+				85F95C2F2D97380D00374D5F /* passkey.cpp */,
 				1022D09628AFBB5C00C1F1E9 /* process.cpp */,
 				10C63D2A246C4F61003DEC3E /* strings.cpp */,
 				10FF177F2BC3F02000A8E2E7 /* textinput.cpp */,
@@ -641,28 +582,18 @@
 				8534FDD5240E97D5004B3494 /* device-macos.mm */,
 				10974C89244D690C008153FE /* filesystem.mm */,
 				10C541282CA70FBD008CB6C7 /* HttpRequest.mm */,
-				100512092CC6A77500B16FB1 /* WSConnection.mm */,
 				850623592877898C00B270A6 /* miniaudio_impl.mm */,
 				85BD47D62A5DABAE00556C6E /* notifications.mm */,
+				85FA71DF2D9709CC00CBD3F7 /* passkey.mm */,
 				855CB5E4287320E200072D5F /* process-ios.cpp */,
 				855CB5E12873204100072D5F /* process-macos.cpp */,
 				8559F24F244D00C400574528 /* vxlog.mm */,
 				1033952225626D220083F4C0 /* vxtime.cpp */,
 				10EE2BCA272C099000EC374C /* web-ios.mm */,
 				10EE2BC4272C091100EC374C /* web-macos.mm */,
+				100512092CC6A77500B16FB1 /* WSConnection.mm */,
 			);
 			name = "ios-macos";
-			sourceTree = "<group>";
-		};
-		8553F4142C074705000D53B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8553F41B2C074705000D53B4 /* libpng.framework */,
-				8553F41D2C074705000D53B4 /* libpng-macos.a */,
-				8553F41F2C074705000D53B4 /* libpng-ios.a */,
-				8553F4212C074705000D53B4 /* libpng-test.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		85D4D01A243E0E6600FFFB58 /* Frameworks */ = {
@@ -711,6 +642,7 @@
 				1021450D2C75E0C000099E38 /* process.hpp in Headers */,
 				1021450E2C75E0C000099E38 /* WSServerConnection.hpp in Headers */,
 				1021450F2C75E0C000099E38 /* Macros.h in Headers */,
+				85FA71DC2D97084200CBD3F7 /* passkey.hpp in Headers */,
 				102145102C75E0C000099E38 /* json.hpp in Headers */,
 				102145112C75E0C000099E38 /* filesystem.h in Headers */,
 			);
@@ -743,6 +675,7 @@
 				10847CBF270EE8C6006A5E91 /* filesystem.hpp in Headers */,
 				855CB5DF28731FFE00072D5F /* process.hpp in Headers */,
 				85471B3827E3E006000575D5 /* WSServerConnection.hpp in Headers */,
+				85FA71DD2D97084200CBD3F7 /* passkey.hpp in Headers */,
 				8518D0A427BA6DF100A438D6 /* json.hpp in Headers */,
 				10847CC1270EE8C6006A5E91 /* filesystem.h in Headers */,
 			);
@@ -775,6 +708,7 @@
 				850BDE842D19EC0F00A85B76 /* process.hpp in Headers */,
 				850BDE852D19EC0F00A85B76 /* WSServerConnection.hpp in Headers */,
 				850BDE862D19EC0F00A85B76 /* Macros.h in Headers */,
+				85FA71DB2D97084200CBD3F7 /* passkey.hpp in Headers */,
 				850BDE872D19EC0F00A85B76 /* json.hpp in Headers */,
 				850BDE882D19EC0F00A85B76 /* filesystem.h in Headers */,
 			);
@@ -807,6 +741,7 @@
 				855CB5DE28731FFE00072D5F /* process.hpp in Headers */,
 				85471B3727E3E006000575D5 /* WSServerConnection.hpp in Headers */,
 				858ABB8A2A52F5E6007AE641 /* Macros.h in Headers */,
+				85FA71DE2D97084200CBD3F7 /* passkey.hpp in Headers */,
 				8518D0A227BA6DF100A438D6 /* json.hpp in Headers */,
 				85E9224D24111875008B5D81 /* filesystem.h in Headers */,
 			);
@@ -826,7 +761,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				102144F62C75E0C000099E38 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-ci";
 			productName = xptools;
@@ -844,7 +778,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				106ADEDC2C616F9A00964E91 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-gameserver";
 			productName = xptools;
@@ -862,7 +795,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				850BDE6D2D19EC0F00A85B76 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-epicgames";
 			productName = xptools;
@@ -880,7 +812,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8553F4232C074B7D000D53B4 /* PBXTargetDependency */,
 			);
 			name = "xptools-macos-steam";
 			productName = xptools;
@@ -898,7 +829,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8553F4262C074BA2000D53B4 /* PBXTargetDependency */,
 			);
 			name = "xptools-ios-appstore";
 			productName = "xptools-ios";
@@ -934,12 +864,6 @@
 			mainGroup = 8534FDBE240E92C1004B3494;
 			productRefGroup = 8534FDC8240E92C1004B3494 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8553F4142C074705000D53B4 /* Products */;
-					ProjectRef = 853C9829286CEDD70072F14A /* libpng.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8534FDC6240E92C1004B3494 /* xptools-macos-steam */,
@@ -950,37 +874,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8553F41B2C074705000D53B4 /* libpng.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = libpng.framework;
-			remoteRef = 8553F41A2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F41D2C074705000D53B4 /* libpng-macos.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpng-macos.a";
-			remoteRef = 8553F41C2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F41F2C074705000D53B4 /* libpng-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpng-ios.a";
-			remoteRef = 8553F41E2C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8553F4212C074705000D53B4 /* libpng-test.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "libpng-test.xctest";
-			remoteRef = 8553F4202C074705000D53B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		102145122C75E0C000099E38 /* Sources */ = {
@@ -997,9 +890,11 @@
 				1021451A2C75E0C000099E38 /* json.cpp in Sources */,
 				1021451B2C75E0C000099E38 /* filesystem.cpp in Sources */,
 				1021451C2C75E0C000099E38 /* notifications.mm in Sources */,
+				85FA71E02D9709D100CBD3F7 /* passkey.mm in Sources */,
 				1021451D2C75E0C000099E38 /* audio.cpp in Sources */,
 				1021451E2C75E0C000099E38 /* HttpCookie.cpp in Sources */,
 				1021451F2C75E0C000099E38 /* HttpClient.cpp in Sources */,
+				85F95C342D97381100374D5F /* passkey.cpp in Sources */,
 				102145202C75E0C000099E38 /* WSServerConnection.cpp in Sources */,
 				1005120D2CC6A77500B16FB1 /* WSConnection.mm in Sources */,
 				102145212C75E0C000099E38 /* tracking.cpp in Sources */,
@@ -1049,10 +944,12 @@
 				10847CC8270EE8C6006A5E91 /* crypto.cpp in Sources */,
 				10847CC9270EE8C6006A5E91 /* vxlog.mm in Sources */,
 				10C5412B2CA70FBD008CB6C7 /* HttpRequest.mm in Sources */,
+				85F95C332D97381100374D5F /* passkey.cpp in Sources */,
 				1005120C2CC6A77500B16FB1 /* WSConnection.mm in Sources */,
 				85471B4227E3E4AA000575D5 /* LocalConnection.cpp in Sources */,
 				10EE2BC9272C098A00EC374C /* web-macos.mm in Sources */,
 				85BB0193279F3B56000F1B10 /* HttpRequest.cpp in Sources */,
+				85FA71E42D9709D100CBD3F7 /* passkey.mm in Sources */,
 				85471B4527E3E4AA000575D5 /* Connection.cpp in Sources */,
 				85FED02E2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */,
 				101554E72C04D57E001E9057 /* cJSON.c in Sources */,
@@ -1073,6 +970,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F95C352D97381100374D5F /* passkey.cpp in Sources */,
 				850BDE8A2D19EC0F00A85B76 /* HttpRequestOpts.cpp in Sources */,
 				850BDE8B2D19EC0F00A85B76 /* ThreadManager.cpp in Sources */,
 				850BDE8C2D19EC0F00A85B76 /* HttpResponse.cpp in Sources */,
@@ -1109,6 +1007,7 @@
 				850BDEAB2D19EC0F00A85B76 /* strings.cpp in Sources */,
 				850BDEAC2D19EC0F00A85B76 /* WSServer.cpp in Sources */,
 				850BDEAD2D19EC0F00A85B76 /* WSConnection.cpp in Sources */,
+				85FA71E32D9709D100CBD3F7 /* passkey.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1015,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F95C362D97381100374D5F /* passkey.cpp in Sources */,
 				85FED02C2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */,
 				8518D09827BA6D9000A438D6 /* ThreadManager.cpp in Sources */,
 				85BB0195279F3BAD000F1B10 /* HttpResponse.cpp in Sources */,
@@ -1152,6 +1052,7 @@
 				10C63D2C246C4F61003DEC3E /* strings.cpp in Sources */,
 				85471B4627E3E4AA000575D5 /* WSServer.cpp in Sources */,
 				100512112CC6BECB00B16FB1 /* WSConnection.cpp in Sources */,
+				85FA71E12D9709D100CBD3F7 /* passkey.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1060,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F95C322D97381100374D5F /* passkey.cpp in Sources */,
 				85FED02D2B0B5C6A00C68F6D /* HttpRequestOpts.cpp in Sources */,
 				8506235A2877898C00B270A6 /* miniaudio_impl.mm in Sources */,
 				8518D09927BA6D9000A438D6 /* ThreadManager.cpp in Sources */,
@@ -1195,38 +1097,11 @@
 				85471B4727E3E4AA000575D5 /* WSServer.cpp in Sources */,
 				1022D09428AF8EEF00C1F1E9 /* process-ios.cpp in Sources */,
 				100512122CC6BECB00B16FB1 /* WSConnection.cpp in Sources */,
+				85FA71E22D9709D100CBD3F7 /* passkey.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		102144F62C75E0C000099E38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 102144F72C75E0C000099E38 /* PBXContainerItemProxy */;
-		};
-		106ADEDC2C616F9A00964E91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 106ADEDB2C616F9A00964E91 /* PBXContainerItemProxy */;
-		};
-		850BDE6D2D19EC0F00A85B76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 850BDE6E2D19EC0F00A85B76 /* PBXContainerItemProxy */;
-		};
-		8553F4232C074B7D000D53B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "mac-static-libpng";
-			targetProxy = 8553F4222C074B7D000D53B4 /* PBXContainerItemProxy */;
-		};
-		8553F4262C074BA2000D53B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ios-static-libpng";
-			targetProxy = 8553F4252C074BA2000D53B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		102145392C75E0C000099E38 /* Debug */ = {
@@ -1245,7 +1120,10 @@
 					"CI_MODULES_PATH=\"\\\"$SRCROOT/../../../../cubzh/lua\\\"\"",
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_ci\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1256,6 +1134,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1275,7 +1154,10 @@
 					"CI_MODULES_PATH=\"\\\"$SRCROOT/../../../../cubzh/lua\\\"\"",
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_ci\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1286,6 +1168,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1304,13 +1187,17 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_gameserver\\\"\"",
 					__VX_USE_LIBWEBSOCKETS,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1329,13 +1216,17 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_gameserver\\\"\"",
 					__VX_USE_LIBWEBSOCKETS,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1353,7 +1244,10 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_epicgamesstore\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1364,6 +1258,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1380,7 +1275,10 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_epicgamesstore\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
@@ -1391,6 +1289,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1458,10 +1357,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lpng/src",
-					"$(PROJECT_DIR)/../../miniaudio",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../miniaudio";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wshadow",
@@ -1529,10 +1425,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lpng/src",
-					"$(PROJECT_DIR)/../../miniaudio",
-				);
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../miniaudio";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wshadow",
@@ -1556,10 +1449,14 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_steam\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
+					"-lpng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1567,6 +1464,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -1583,10 +1481,14 @@
 					__VX_PLATFORM_MACOS,
 					"__VX_APP_BUILD_TARGET=\"\\\"darwin_steam\\\"\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../deps/libwebsockets/output_macos/lib",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+				);
 				OTHER_LDFLAGS = (
 					"-lcrypto",
 					"-lssl",
+					"-lpng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1594,6 +1496,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/macos/include",
 					"$(PROJECT_DIR)/../../libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
@@ -1613,7 +1516,11 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"ios_appstore\\\"\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lpng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1621,6 +1528,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/ios/include",
 					"$(PROJECT_DIR)/../../libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1641,7 +1549,11 @@
 					"__VX_APP_BUILD_TARGET=\"\\\"ios_appstore\\\"\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lpng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1649,6 +1561,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libssl/ios/include",
 					"$(PROJECT_DIR)/../../libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../libpng/_active_/prebuilt/ios/arm64/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

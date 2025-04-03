@@ -52,19 +52,25 @@ mod.createModalContent = function(_, config)
 	content.icon = "🙂"
 	content.node = node
 
-	local text = ui:createText(config.text, Color.White, "default")
+	local text = ui:createText(config.text, {
+		color = Color.White, 
+		size = "default",
+		alignment = "center",
+	})
 	text:setParent(node)
 
 	local instructions =
 		ui:createText("It must start with a letter (a-z) and can include letters (a-z) and numbers (0-9).", {
-			color = Color(200, 200, 200),
+			color = Color(150, 150, 150),
 			size = "small",
+			alignment = "center",
 		})
 	instructions:setParent(node)
 
 	local statusMessage = ui:createText("...", {
 		color = Color.White,
 		size = "small",
+		alignment = "center",
 	})
 	statusMessage:setParent(nil)
 
@@ -97,6 +103,7 @@ mod.createModalContent = function(_, config)
 	local warning = ui:createText("⚠️ Choose carefully, this username can't be changed afterwards.", {
 		color = Color(251, 206, 0),
 		size = "small",
+		alignment = "center",
 	})
 	warning:setParent(node)
 
