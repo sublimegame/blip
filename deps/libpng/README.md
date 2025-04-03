@@ -27,3 +27,9 @@ bazel build --platforms=//:android_arm64 //deps/libpng:png
 bazel build --platforms=//:android_x86 //deps/libpng:png
 bazel build --platforms=//:android_x86_64 //deps/libpng:png
 ```
+
+```sh
+# linux
+# From cubzh/cubzh repo root dir
+docker run --rm -v $(pwd):/cubzh -w /cubzh/deps/libpng --entrypoint /bin/bash --platform linux/amd64 voxowl/bazel:8.1.1 ./build.sh -p linux -v 1.6.47
+```

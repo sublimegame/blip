@@ -26,10 +26,10 @@ const (
 	NB_MAX_BUILD_ERRORS string = "999"
 )
 
-type Cubzh struct{}
+type Blip struct{}
 
 // Run core unit tests
-func (m *Cubzh) TestCore(
+func (m *Blip) TestCore(
 	ctx context.Context,
 	// Source code
 	// +defaultPath="/"
@@ -66,7 +66,7 @@ func (m *Cubzh) TestCore(
 }
 
 // Lint the core source code
-func (m *Cubzh) LintCore(
+func (m *Blip) LintCore(
 	ctx context.Context,
 	// Core source directory
 	// +defaultPath="/"
@@ -78,7 +78,7 @@ func (m *Cubzh) LintCore(
 }
 
 // Format the core source code using clang tools
-func (m *Cubzh) FormatCore(
+func (m *Blip) FormatCore(
 	ctx context.Context,
 	// Source code to format
 	// +defaultPath="/"
@@ -100,7 +100,7 @@ func (m *Cubzh) FormatCore(
 		// -i: apply changes
 		// --Werror: consider warnings as errors
 		// -style-file: follow the rules from the .clang-format file
-		script = `echo 'set -e ; set -o pipefail ; find ./core -maxdepth 2 -regex '^.*\\.\\(cpp\\|hpp\\|c\\|h\\)$' -print0 | xargs -0 clang-format -i --Werror -style=file' > script.sh; exit 1`
+		script = `set -e ; set -o pipefail ; find ./core -maxdepth 2 -regex '^.*\\.\\(cpp\\|hpp\\|c\\|h\\)$' -print0 | xargs -0 clang-format -i --Werror -style=file`
 	}
 	output := dag.
 		Container().
@@ -116,7 +116,7 @@ func (m *Cubzh) FormatCore(
 }
 
 // Build a Lua dev container with modules source code mounted
-func (m *Cubzh) LuaDev(
+func (m *Blip) LuaDev(
 	// Lua modules source code
 	// +defaultPath="/"
 	// +ignore=["*", "!lua/modules"]
@@ -129,7 +129,7 @@ func (m *Cubzh) LuaDev(
 		WithWorkdir("/project")
 }
 
-func (m *Cubzh) LintModules(
+func (m *Blip) LintModules(
 	ctx context.Context,
 	// Modules source directory
 	// +defaultPath="/"
@@ -149,7 +149,7 @@ func (m *Cubzh) LintModules(
 // Performs code formatting on Luau modules
 // Command:
 // dagger call luau-modules-check-format --src=.
-func (m *Cubzh) LuauModulesCheckFormat(
+func (m *Blip) LuauModulesCheckFormat(
 	// +ignore=["*", "!lua/modules"]
 	src *dagger.Directory,
 ) *dagger.Container {
