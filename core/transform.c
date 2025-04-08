@@ -46,6 +46,8 @@
 #define TRANSFORM_FLAG_ANIMATIONS 8
 // helper to debug a specific transform
 #define TRANSFORM_FLAG_DEBUG 16
+#define TRANSFORM_FLAG_DISPLAY_COLLIDER 32
+#define TRANSFORM_FLAG_DISPLAY_BOX 64
 
 #if DEBUG_TRANSFORM
 static int debug_transform_refresh_calls = 0;
@@ -1759,4 +1761,20 @@ void debug_transform_reset_refresh_calls(void) {
 
 void debug_transform_set_debug(Transform *const t, const bool enabled) {
     _transform_toggle_flag(t, TRANSFORM_FLAG_DEBUG, enabled);
+}
+
+bool debug_transform_display_collider(Transform *t) {
+    return _transform_get_flag(t, TRANSFORM_FLAG_DISPLAY_COLLIDER);
+}
+
+void debug_transform_set_display_collider(Transform *t, bool value) {
+    _transform_toggle_flag(t, TRANSFORM_FLAG_DISPLAY_COLLIDER, value);
+}
+
+bool debug_transform_display_box(Transform *t) {
+    return _transform_get_flag(t, TRANSFORM_FLAG_DISPLAY_BOX);
+}
+
+void debug_transform_set_display_box(Transform *t, bool value) {
+    _transform_toggle_flag(t, TRANSFORM_FLAG_DISPLAY_BOX, value);
 }
