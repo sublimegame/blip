@@ -266,10 +266,6 @@ VertexBuffer *shape_get_first_vertex_buffer(const Shape *shape, bool transparent
 
 Rtree *shape_get_rtree(const Shape *shape);
 RigidBody *shape_get_rigidbody(const Shape *s);
-bool shape_ensure_rigidbody(Shape *s,
-                            const uint16_t groups,
-                            const uint16_t collidesWith,
-                            RigidBody **out);
 void shape_fit_collider_to_bounding_box(const Shape *s);
 Box shape_get_model_collider(const Shape *s);
 void shape_compute_world_collider(const Shape *s, Box *box, const bool refreshParents);
