@@ -1223,8 +1223,9 @@ uint32_t chunk_v6_read_shape(Stream *s,
         free(lightingData);
     }
 
-    doubly_linked_list_push_last(shapes, *shape);
-    if (shapes) {
+    if (shapes != NULL) {
+        doubly_linked_list_push_last(shapes, *shape);
+
         int32_t parentIndex = shapeParentId - 1;
         Shape *parent = (Shape *)doubly_linked_list_node_pointer(
             doubly_linked_list_node_at_index(shapes, (size_t)parentIndex));
@@ -1265,12 +1266,7 @@ uint32_t chunk_v6_read_shape(Stream *s,
                                    PHYSICS_COLLIDESWITH_DEFAULT_OBJECT,
                                    &rb);
 
-        // construct new box value
-        Box newCollider = *rigidbody_get_collider(rb);
-        newCollider.min = collisionBoxMin;
-        newCollider.max = collisionBoxMax;
-
-        // set the new box using
+        Box newCollider = { collisionBoxMin, collisionBoxMax };
         rigidbody_set_collider(rb, &newCollider, true);
     }
 

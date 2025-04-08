@@ -1802,20 +1802,6 @@ RigidBody *shape_get_rigidbody(const Shape *s) {
     return transform_get_rigidbody(s->transform);
 }
 
-bool shape_ensure_rigidbody(Shape *s, uint16_t groups, uint16_t collidesWith, RigidBody **out) {
-    vx_assert(s != NULL);
-
-    bool isNew = transform_ensure_rigidbody(s->transform,
-                                            RigidbodyMode_Static,
-                                            groups,
-                                            collidesWith,
-                                            out);
-    if (isNew) {
-        shape_fit_collider_to_bounding_box(s);
-    }
-    return isNew;
-}
-
 void shape_fit_collider_to_bounding_box(const Shape *s) {
     RigidBody *rb = transform_get_rigidbody(s->transform);
     if (rb == NULL || rigidbody_is_collider_custom_set(rb))

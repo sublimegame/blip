@@ -242,7 +242,6 @@ void transform_set_animations_enabled(Transform *const t, const bool enabled);
 bool transform_is_animations_enabled(Transform *const t);
 float transform_get_shadow_decal(Transform *t);
 void transform_set_shadow_decal(Transform *t, float size);
-
 void transform_recycle_id(const uint16_t id);
 
 /// MARK: - Debug -
@@ -251,6 +250,10 @@ int debug_transform_get_refresh_calls(void);
 void debug_transform_reset_refresh_calls(void);
 #endif
 void debug_transform_set_debug(Transform *const t, const bool enabled);
+bool debug_transform_display_collider(Transform *t);
+void debug_transform_set_display_collider(Transform *t, bool value);
+bool debug_transform_display_box(Transform *t);
+void debug_transform_set_display_box(Transform *t, bool value);
 
 #ifdef __cplusplus
 } // extern "C"
