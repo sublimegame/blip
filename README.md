@@ -1,3 +1,9 @@
+## ⚠️ Work In Progress
+
+Resources from the private repository have been recently imported. The build is not yet functional and instructions will be provided once integration is complete.
+
+---
+
 <p align="center">
 	<img width="400" alt="Blip icon" src="misc/icon.png">
 </p>
