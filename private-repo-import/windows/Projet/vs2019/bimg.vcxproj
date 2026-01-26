@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C499947C-B0D0-950D-59BD-7B1045D3110F}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>bimg</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_HAS_EXCEPTIONS=0;BX_CONFIG_DEBUG=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\cubzh\deps\bgfx\bimg\3rdparty;..\..\..\cubzh\deps\bgfx\bx\include;..\..\..\cubzh\deps\bgfx\bimg\include;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\include;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\tinyexr\deps\miniz;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\include;..\..\..\cubzh\deps\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;_HAS_EXCEPTIONS=0;BX_CONFIG_DEBUG=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\cubzh\deps\bgfx\bimg\3rdparty;..\..\..\cubzh\deps\bgfx\bx\include;..\..\..\cubzh\deps\bgfx\bimg\include;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\include;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\tinyexr\deps\miniz;..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\include;..\..\..\cubzh\deps\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_diagnostic_trace.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_internal.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_internal_entry.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_mathlib.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib_avx2_8.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib_common_4.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib_neon_4.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib_none_4.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_vecmathlib_sse_4.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\include\bimg\bimg.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\include\bimg\decode.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\include\bimg\encode.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\src\bimg_p.h" />
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bimg\src\config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_averages_and_directions.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_block_sizes.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_color_quantize.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_color_unquantize.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_compress_symbolic.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_compute_variance.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_decompress_symbolic.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_diagnostic_trace.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_entry.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_find_best_partitioning.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_ideal_endpoints_and_weights.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_image.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_integer_sequence.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_mathlib.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_mathlib_softfloat.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_partition_tables.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_percentile_tables.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_pick_best_endpoint_format.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_quantization.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_symbolic_physical.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_weight_align.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\astc-encoder\source\astcenc_weight_quant_xfer_tables.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\convolve.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\decimate.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\math_utils.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\mse.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\ms_ssim.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\psnr.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\iqa\source\ssim.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\3rdparty\tinyexr\deps\miniz\miniz.c" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\src\image.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\src\image_cubemap_filter.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\src\image_decode.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\src\image_encode.cpp" />
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bimg\src\image_gnf.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -26,14 +26,14 @@ deptool activate libluau 0.665
 
 ## Advanced usage
 
-### Setup access key (optional)
+### Setup access key (required)
 
-Add those lines to your `~/.bashrc` or `~/.zshrc` file:
+Add these lines to your `~/.bashrc` or `~/.zshrc` file, or set them in the `.env` file:
 
 ```bash
-# for read-only access
-export CUBZH_DIGITALOCEAN_SPACES_AUTH_KEY="DO8019TZD8N66GJGUEE3"
-export CUBZH_DIGITALOCEAN_SPACES_AUTH_SECRET="OVVGXIdaEXRG8TPi2/TmI3Ji/h56nZgetMxeYw9aXlk"
+# Get these values from the .env file or team secrets manager
+export DIGITALOCEAN_SPACES_AUTH_KEY="<your_auth_key>"
+export DIGITALOCEAN_SPACES_AUTH_SECRET="<your_auth_secret>"
 ```
 
 ## Upload dependencies

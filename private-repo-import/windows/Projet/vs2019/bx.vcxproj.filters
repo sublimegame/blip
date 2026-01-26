@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bx">
+      <UniqueIdentifier>{F243B8DA-DEFB-F927-4703-D38333DA9418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bx\inline">
+      <UniqueIdentifier>{C07E8C4B-2C95-8AE1-750C-1603E1615B69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\spscqueue.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\string.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\thread.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\timer.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\typetraits.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\uint32_t.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\url.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\allocator.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\bounds.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\bx.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\commandline.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\config.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\constants.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\cpu.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\debug.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\easing.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\endian.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\error.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\file.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\filepath.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\float4x4_t.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\handlealloc.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\hash.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\macros.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\maputil.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\math.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\mpscqueue.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\mutex.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\os.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\pixelformat.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\platform.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\process.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\readerwriter.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\ringbuffer.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\rng.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\semaphore.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\settings.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\simd_t.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\sort.h">
+      <Filter>include\bx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\allocator.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\bounds.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\bx.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\cpu.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\easing.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\endian.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\error.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\float4x4_t.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\handlealloc.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\hash.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\math.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\mpscqueue.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\mutex.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\os.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\pixelformat.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\readerwriter.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\ringbuffer.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\rng.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd_ni.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd128_langext.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd128_neon.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd128_ref.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd128_sse.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd128_swizzle.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd256_avx.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\simd256_ref.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\sort.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\spscqueue.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\string.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\typetraits.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bx\include\bx\inline\uint32_t.inl">
+      <Filter>include\bx\inline</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\bounds.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\bx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\commandline.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\crtnone.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\debug.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\dtoa.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\easing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\file.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\filepath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\hash.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\math.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\mutex.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\os.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\process.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\semaphore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\settings.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\sort.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\string.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\thread.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bx\src\url.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

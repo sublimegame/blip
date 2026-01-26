@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8555922229EED63200471577 /* astcenc_pick_best_endpoint_format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920129EED63200471577 /* astcenc_pick_best_endpoint_format.cpp */; };
+		8555922329EED63200471577 /* astcenc_integer_sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920329EED63200471577 /* astcenc_integer_sequence.cpp */; };
+		8555922429EED63200471577 /* astcenc_compute_variance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920529EED63200471577 /* astcenc_compute_variance.cpp */; };
+		8555922529EED63200471577 /* astcenc_quantization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920629EED63200471577 /* astcenc_quantization.cpp */; };
+		8555922629EED63200471577 /* astcenc_color_unquantize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920729EED63200471577 /* astcenc_color_unquantize.cpp */; };
+		8555922729EED63200471577 /* astcenc_mathlib_softfloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920829EED63200471577 /* astcenc_mathlib_softfloat.cpp */; };
+		8555922829EED63200471577 /* astcenc_weight_quant_xfer_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920929EED63200471577 /* astcenc_weight_quant_xfer_tables.cpp */; };
+		8555922929EED63200471577 /* astcenc_percentile_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920B29EED63200471577 /* astcenc_percentile_tables.cpp */; };
+		8555922A29EED63200471577 /* astcenc_partition_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920C29EED63200471577 /* astcenc_partition_tables.cpp */; };
+		8555922B29EED63200471577 /* astcenc_decompress_symbolic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920D29EED63200471577 /* astcenc_decompress_symbolic.cpp */; };
+		8555922C29EED63200471577 /* astcenc_color_quantize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920E29EED63200471577 /* astcenc_color_quantize.cpp */; };
+		8555922D29EED63200471577 /* astcenc_block_sizes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555920F29EED63200471577 /* astcenc_block_sizes.cpp */; };
+		8555922E29EED63200471577 /* astcenc_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921029EED63200471577 /* astcenc_image.cpp */; };
+		8555922F29EED63200471577 /* astcenc_compress_symbolic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921329EED63200471577 /* astcenc_compress_symbolic.cpp */; };
+		8555923029EED63200471577 /* astcenc_ideal_endpoints_and_weights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921429EED63200471577 /* astcenc_ideal_endpoints_and_weights.cpp */; };
+		8555923129EED63200471577 /* astcenc_mathlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921629EED63200471577 /* astcenc_mathlib.cpp */; };
+		8555923229EED63200471577 /* astcenc_find_best_partitioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921729EED63200471577 /* astcenc_find_best_partitioning.cpp */; };
+		8555923329EED63200471577 /* astcenc_diagnostic_trace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921929EED63200471577 /* astcenc_diagnostic_trace.cpp */; };
+		8555923429EED63200471577 /* astcenc_symbolic_physical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921A29EED63200471577 /* astcenc_symbolic_physical.cpp */; };
+		8555923529EED63200471577 /* astcenc_weight_align.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921B29EED63200471577 /* astcenc_weight_align.cpp */; };
+		8555923629EED63200471577 /* astcenc_entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921D29EED63200471577 /* astcenc_entry.cpp */; };
+		8555923729EED63200471577 /* astcenc_averages_and_directions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555921F29EED63200471577 /* astcenc_averages_and_directions.cpp */; };
+		858CB9D12783517F00B5305D /* miniz.c in Sources */ = {isa = PBXBuildFile; fileRef = 858CB9CA2783517F00B5305D /* miniz.c */; };
+		86D33D13F24193923B2B4E92 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7554356D610F25190AC79D63 /* image.cpp */; };
+		C218D2662EDDD056F7420121 /* image_gnf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1FBC7A29D4CB3E4C6B0A1A6 /* image_gnf.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29CADBE415B19DDCBE0104FA /* decode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = decode.h; sourceTree = "<group>"; };
+		42C871412E0475AB97168DA2 /* bimg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bimg.h; sourceTree = "<group>"; };
+		556EDBDA41559DD2EAA503F0 /* encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
+		5ACAB1E8C601FA7FCF0B5EA3 /* libbimg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbimg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7554356D610F25190AC79D63 /* image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = image.cpp; sourceTree = "<group>"; };
+		855591FF29EED63200471577 /* astcenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc.h; sourceTree = "<group>"; };
+		8555920129EED63200471577 /* astcenc_pick_best_endpoint_format.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_pick_best_endpoint_format.cpp; sourceTree = "<group>"; };
+		8555920229EED63200471577 /* astcenc_diagnostic_trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_diagnostic_trace.h; sourceTree = "<group>"; };
+		8555920329EED63200471577 /* astcenc_integer_sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_integer_sequence.cpp; sourceTree = "<group>"; };
+		8555920429EED63200471577 /* astcenc_vecmathlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib.h; sourceTree = "<group>"; };
+		8555920529EED63200471577 /* astcenc_compute_variance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_compute_variance.cpp; sourceTree = "<group>"; };
+		8555920629EED63200471577 /* astcenc_quantization.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_quantization.cpp; sourceTree = "<group>"; };
+		8555920729EED63200471577 /* astcenc_color_unquantize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_color_unquantize.cpp; sourceTree = "<group>"; };
+		8555920829EED63200471577 /* astcenc_mathlib_softfloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_mathlib_softfloat.cpp; sourceTree = "<group>"; };
+		8555920929EED63200471577 /* astcenc_weight_quant_xfer_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_weight_quant_xfer_tables.cpp; sourceTree = "<group>"; };
+		8555920A29EED63200471577 /* astcenc_vecmathlib_avx2_8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib_avx2_8.h; sourceTree = "<group>"; };
+		8555920B29EED63200471577 /* astcenc_percentile_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_percentile_tables.cpp; sourceTree = "<group>"; };
+		8555920C29EED63200471577 /* astcenc_partition_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_partition_tables.cpp; sourceTree = "<group>"; };
+		8555920D29EED63200471577 /* astcenc_decompress_symbolic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_decompress_symbolic.cpp; sourceTree = "<group>"; };
+		8555920E29EED63200471577 /* astcenc_color_quantize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_color_quantize.cpp; sourceTree = "<group>"; };
+		8555920F29EED63200471577 /* astcenc_block_sizes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_block_sizes.cpp; sourceTree = "<group>"; };
+		8555921029EED63200471577 /* astcenc_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_image.cpp; sourceTree = "<group>"; };
+		8555921129EED63200471577 /* astcenc_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_internal.h; sourceTree = "<group>"; };
+		8555921229EED63200471577 /* astcenc_internal_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_internal_entry.h; sourceTree = "<group>"; };
+		8555921329EED63200471577 /* astcenc_compress_symbolic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_compress_symbolic.cpp; sourceTree = "<group>"; };
+		8555921429EED63200471577 /* astcenc_ideal_endpoints_and_weights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_ideal_endpoints_and_weights.cpp; sourceTree = "<group>"; };
+		8555921529EED63200471577 /* astcenc_vecmathlib_sse_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib_sse_4.h; sourceTree = "<group>"; };
+		8555921629EED63200471577 /* astcenc_mathlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_mathlib.cpp; sourceTree = "<group>"; };
+		8555921729EED63200471577 /* astcenc_find_best_partitioning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_find_best_partitioning.cpp; sourceTree = "<group>"; };
+		8555921829EED63200471577 /* astcenc_vecmathlib_neon_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib_neon_4.h; sourceTree = "<group>"; };
+		8555921929EED63200471577 /* astcenc_diagnostic_trace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_diagnostic_trace.cpp; sourceTree = "<group>"; };
+		8555921A29EED63200471577 /* astcenc_symbolic_physical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_symbolic_physical.cpp; sourceTree = "<group>"; };
+		8555921B29EED63200471577 /* astcenc_weight_align.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_weight_align.cpp; sourceTree = "<group>"; };
+		8555921C29EED63200471577 /* astcenc_vecmathlib_none_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib_none_4.h; sourceTree = "<group>"; };
+		8555921D29EED63200471577 /* astcenc_entry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_entry.cpp; sourceTree = "<group>"; };
+		8555921E29EED63200471577 /* astcenc_vecmathlib_common_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_vecmathlib_common_4.h; sourceTree = "<group>"; };
+		8555921F29EED63200471577 /* astcenc_averages_and_directions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = astcenc_averages_and_directions.cpp; sourceTree = "<group>"; };
+		8555922029EED63200471577 /* astcenc_mathlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = astcenc_mathlib.h; sourceTree = "<group>"; };
+		858CB9CA2783517F00B5305D /* miniz.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miniz.c; sourceTree = "<group>"; };
+		858CB9CE2783517F00B5305D /* miniz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = miniz.h; sourceTree = "<group>"; };
+		B1FBC7A29D4CB3E4C6B0A1A6 /* image_gnf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = image_gnf.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9E98B74B52836F05EAB1222 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		270C1AD993CC950F5C07DF8C /* bimg */ = {
+			isa = PBXGroup;
+			children = (
+				F0604A1ADC5A736CC5C7097D /* 3rdparty */,
+				4E66E84E3A6011A123CDA7B1 /* include */,
+				B18C11A09D70D2F506D1CC48 /* src */,
+			);
+			name = bimg;
+			path = cubzh/deps/bgfx/bimg;
+			sourceTree = "<group>";
+		};
+		4637D8ECB2F753237B329DA0 /* bimg */ = {
+			isa = PBXGroup;
+			children = (
+				270C1AD993CC950F5C07DF8C /* bimg */,
+				D4E0414AC0C402A02925FDF2 /* Products */,
+			);
+			name = bimg;
+			path = ../../../..;
+			sourceTree = "<group>";
+		};
+		4E66E84E3A6011A123CDA7B1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BD12E9F5292017DCB20613C7 /* bimg */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		855591FD29EED63200471577 /* astc-encoder */ = {
+			isa = PBXGroup;
+			children = (
+				855591FE29EED63200471577 /* include */,
+				8555920029EED63200471577 /* source */,
+			);
+			path = "astc-encoder";
+			sourceTree = "<group>";
+		};
+		855591FE29EED63200471577 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				855591FF29EED63200471577 /* astcenc.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8555920029EED63200471577 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				8555920129EED63200471577 /* astcenc_pick_best_endpoint_format.cpp */,
+				8555920229EED63200471577 /* astcenc_diagnostic_trace.h */,
+				8555920329EED63200471577 /* astcenc_integer_sequence.cpp */,
+				8555920429EED63200471577 /* astcenc_vecmathlib.h */,
+				8555920529EED63200471577 /* astcenc_compute_variance.cpp */,
+				8555920629EED63200471577 /* astcenc_quantization.cpp */,
+				8555920729EED63200471577 /* astcenc_color_unquantize.cpp */,
+				8555920829EED63200471577 /* astcenc_mathlib_softfloat.cpp */,
+				8555920929EED63200471577 /* astcenc_weight_quant_xfer_tables.cpp */,
+				8555920A29EED63200471577 /* astcenc_vecmathlib_avx2_8.h */,
+				8555920B29EED63200471577 /* astcenc_percentile_tables.cpp */,
+				8555920C29EED63200471577 /* astcenc_partition_tables.cpp */,
+				8555920D29EED63200471577 /* astcenc_decompress_symbolic.cpp */,
+				8555920E29EED63200471577 /* astcenc_color_quantize.cpp */,
+				8555920F29EED63200471577 /* astcenc_block_sizes.cpp */,
+				8555921029EED63200471577 /* astcenc_image.cpp */,
+				8555921129EED63200471577 /* astcenc_internal.h */,
+				8555921229EED63200471577 /* astcenc_internal_entry.h */,
+				8555921329EED63200471577 /* astcenc_compress_symbolic.cpp */,
+				8555921429EED63200471577 /* astcenc_ideal_endpoints_and_weights.cpp */,
+				8555921529EED63200471577 /* astcenc_vecmathlib_sse_4.h */,
+				8555921629EED63200471577 /* astcenc_mathlib.cpp */,
+				8555921729EED63200471577 /* astcenc_find_best_partitioning.cpp */,
+				8555921829EED63200471577 /* astcenc_vecmathlib_neon_4.h */,
+				8555921929EED63200471577 /* astcenc_diagnostic_trace.cpp */,
+				8555921A29EED63200471577 /* astcenc_symbolic_physical.cpp */,
+				8555921B29EED63200471577 /* astcenc_weight_align.cpp */,
+				8555921C29EED63200471577 /* astcenc_vecmathlib_none_4.h */,
+				8555921D29EED63200471577 /* astcenc_entry.cpp */,
+				8555921E29EED63200471577 /* astcenc_vecmathlib_common_4.h */,
+				8555921F29EED63200471577 /* astcenc_averages_and_directions.cpp */,
+				8555922029EED63200471577 /* astcenc_mathlib.h */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		858CB9C62783517F00B5305D /* tinyexr */ = {
+			isa = PBXGroup;
+			children = (
+				858CB9C82783517F00B5305D /* deps */,
+			);
+			path = tinyexr;
+			sourceTree = "<group>";
+		};
+		858CB9C82783517F00B5305D /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				858CB9C92783517F00B5305D /* miniz */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		858CB9C92783517F00B5305D /* miniz */ = {
+			isa = PBXGroup;
+			children = (
+				858CB9CA2783517F00B5305D /* miniz.c */,
+				858CB9CE2783517F00B5305D /* miniz.h */,
+			);
+			path = miniz;
+			sourceTree = "<group>";
+		};
+		B18C11A09D70D2F506D1CC48 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7554356D610F25190AC79D63 /* image.cpp */,
+				B1FBC7A29D4CB3E4C6B0A1A6 /* image_gnf.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BD12E9F5292017DCB20613C7 /* bimg */ = {
+			isa = PBXGroup;
+			children = (
+				42C871412E0475AB97168DA2 /* bimg.h */,
+				29CADBE415B19DDCBE0104FA /* decode.h */,
+				556EDBDA41559DD2EAA503F0 /* encode.h */,
+			);
+			path = bimg;
+			sourceTree = "<group>";
+		};
+		D4E0414AC0C402A02925FDF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAB1E8C601FA7FCF0B5EA3 /* libbimg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0604A1ADC5A736CC5C7097D /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				855591FD29EED63200471577 /* astc-encoder */,
+				858CB9C62783517F00B5305D /* tinyexr */,
+			);
+			path = 3rdparty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00D72F0FECD05861D53DEF71 /* bimg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E1883113A572D8DE3D909BF /* Build configuration list for PBXNativeTarget "bimg" */;
+			buildPhases = (
+				B0D5798B9C14240745970039 /* Resources */,
+				2859700514981A81BD1AF7B2 /* Sources */,
+				C9E98B74B52836F05EAB1222 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bimg;
+			productName = bimg;
+			productReference = 5ACAB1E8C601FA7FCF0B5EA3 /* libbimg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1510;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "bimg" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4637D8ECB2F753237B329DA0 /* bimg */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00D72F0FECD05861D53DEF71 /* bimg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0D5798B9C14240745970039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2859700514981A81BD1AF7B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8555922529EED63200471577 /* astcenc_quantization.cpp in Sources */,
+				8555922329EED63200471577 /* astcenc_integer_sequence.cpp in Sources */,
+				858CB9D12783517F00B5305D /* miniz.c in Sources */,
+				8555922829EED63200471577 /* astcenc_weight_quant_xfer_tables.cpp in Sources */,
+				8555923329EED63200471577 /* astcenc_diagnostic_trace.cpp in Sources */,
+				86D33D13F24193923B2B4E92 /* image.cpp in Sources */,
+				8555922E29EED63200471577 /* astcenc_image.cpp in Sources */,
+				8555923029EED63200471577 /* astcenc_ideal_endpoints_and_weights.cpp in Sources */,
+				8555922A29EED63200471577 /* astcenc_partition_tables.cpp in Sources */,
+				8555923729EED63200471577 /* astcenc_averages_and_directions.cpp in Sources */,
+				8555922229EED63200471577 /* astcenc_pick_best_endpoint_format.cpp in Sources */,
+				8555922729EED63200471577 /* astcenc_mathlib_softfloat.cpp in Sources */,
+				8555923129EED63200471577 /* astcenc_mathlib.cpp in Sources */,
+				8555922429EED63200471577 /* astcenc_compute_variance.cpp in Sources */,
+				8555922929EED63200471577 /* astcenc_percentile_tables.cpp in Sources */,
+				8555923429EED63200471577 /* astcenc_symbolic_physical.cpp in Sources */,
+				8555922F29EED63200471577 /* astcenc_compress_symbolic.cpp in Sources */,
+				8555922C29EED63200471577 /* astcenc_color_quantize.cpp in Sources */,
+				C218D2662EDDD056F7420121 /* image_gnf.cpp in Sources */,
+				8555923229EED63200471577 /* astcenc_find_best_partitioning.cpp in Sources */,
+				8555923529EED63200471577 /* astcenc_weight_align.cpp in Sources */,
+				8555923629EED63200471577 /* astcenc_entry.cpp in Sources */,
+				8555922629EED63200471577 /* astcenc_color_unquantize.cpp in Sources */,
+				8555922B29EED63200471577 /* astcenc_decompress_symbolic.cpp in Sources */,
+				8555922D29EED63200471577 /* astcenc_block_sizes.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		333CB4721F627ED908A803A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__STDC_LIMIT_MACROS,
+					__STDC_FORMAT_MACROS,
+					__STDC_CONSTANT_MACROS,
+					NDEBUG,
+					"BX_CONFIG_DEBUG=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../cubzh/deps/bgfx/bx/include/compat/osx,
+					../../../../cubzh/deps/bgfx/bx/include,
+					../../../../cubzh/deps/bgfx/bimg/include,
+					"../../../../cubzh/deps/bgfx/bimg/3rdparty/astc-encoder/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OBJROOT = obj/Release/bimg;
+				OTHER_CFLAGS = (
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-Wshadow",
+					"-Wfatal-errors",
+					"-Wunused-value",
+					"-Wundef",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-Wshadow",
+					"-Wfatal-errors",
+					"-Wunused-value",
+					"-Wundef",
+				);
+				SDKROOT = macosx;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = ../../../../bimg/scripts;
+				WARNING_CFLAGS = "-w";
+			};
+			name = Release;
+		};
+		90CDA8AEFCB0B7EE05B4E52A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CONFIGURATION_BUILD_DIR = ../../../deps;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_NAME = bimg;
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../../deps;
+			};
+			name = Debug;
+		};
+		CAE86D323657C3B17F407EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CONFIGURATION_BUILD_DIR = ../../../deps;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_NAME = bimg;
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../../deps;
+			};
+			name = Release;
+		};
+		F8930B9FE44EFB4A8D067495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__STDC_LIMIT_MACROS,
+					__STDC_FORMAT_MACROS,
+					__STDC_CONSTANT_MACROS,
+					_DEBUG,
+					"BX_CONFIG_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../cubzh/deps/bgfx/bx/include/compat/osx,
+					../../../../cubzh/deps/bgfx/bx/include,
+					../../../../cubzh/deps/bgfx/bimg/include,
+					"../../../../cubzh/deps/bgfx/bimg/3rdparty/astc-encoder/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OBJROOT = obj/Debug/bimg;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-Wshadow",
+					"-Wfatal-errors",
+					"-Wunused-value",
+					"-Wundef",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fomit-frame-pointer",
+					"-ffast-math",
+					"-Wshadow",
+					"-Wfatal-errors",
+					"-Wunused-value",
+					"-Wundef",
+				);
+				SDKROOT = macosx;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				SYMROOT = ../../../../bimg/scripts;
+				WARNING_CFLAGS = "-w";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "bimg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8930B9FE44EFB4A8D067495 /* Debug */,
+				333CB4721F627ED908A803A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E1883113A572D8DE3D909BF /* Build configuration list for PBXNativeTarget "bimg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90CDA8AEFCB0B7EE05B4E52A /* Debug */,
+				CAE86D323657C3B17F407EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}

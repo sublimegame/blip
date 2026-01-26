@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3348CB2C-4E60-467C-9024-F783292687F5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sbs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG_LOCAL_GAME;_WINDOWS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_TIMESPEC_DEFINED;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\windows\Projet\VS2019\ParticubesWin;..\..\..\xptools\include;..\..\..\common\ApiClient;..\..\..\common\apiclient_go_lib;..\..\..\common\engine;..\..\..\common\engine\file_format;..\..\..\common\engine\game_items;..\..\..\common\engine\lists;..\..\..\common\engine\maps;..\..\..\common\engine\utils;..\..\..\common\CUtils;..\..\..\common\Lua\src;..\..\..\common\LuaUtils;..\..\..\common\VXLuaSandbox;..\..\..\common\bgfx\bgfx\include;..\..\..\common\bgfx\bx\include;..\..\..\common\bgfx\glfw\include;..\..\..\common\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4068</DisableSpecificWarnings>
+      <ForcedIncludeFiles>..\..\..\..\common\bgfx\bx\include\compat\msvc\inttypes.h;</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG_LOCAL_GAME;_WINDOWS;_DEBUG;_LIB;CLIENT_ENV;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_TIMESPEC_DEFINED</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>..\..\..\..\common\bgfx\bx\include\compat\msvc\inttypes.h;</ForcedIncludeFiles>
+      <DisableSpecificWarnings>4996;4068</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>..\..\..\windows\Projet\VS2019\ParticubesWin;..\..\..\xptools\include;..\..\..\common\ApiClient;..\..\..\common\apiclient_go_lib;..\..\..\common\engine;..\..\..\common\engine\file_format;..\..\..\common\engine\game_items;..\..\..\common\engine\lists;..\..\..\common\engine\maps;..\..\..\common\engine\utils;..\..\..\common\CUtils;..\..\..\common\Lua\src;..\..\..\common\LuaUtils;..\..\..\common\VXLuaSandbox;..\..\..\common\bgfx\bgfx\include;..\..\..\common\bgfx\bx\include;..\..\..\common\bgfx\glfw\include;..\..\..\common\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG_LOCAL_GAME;_WINDOWS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_TIMESPEC_DEFINED;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\windows\Projet\VS2019\ParticubesWin;..\..\..\xptools\include;..\..\..\common\ApiClient;..\..\..\common\apiclient_go_lib;..\..\..\common\engine;..\..\..\common\engine\file_format;..\..\..\common\engine\game_items;..\..\..\common\engine\lists;..\..\..\common\engine\maps;..\..\..\common\engine\utils;..\..\..\common\CUtils;..\..\..\common\Lua\src;..\..\..\common\LuaUtils;..\..\..\common\VXLuaSandbox;..\..\..\common\bgfx\bgfx\include;..\..\..\common\bgfx\bx\include;..\..\..\common\bgfx\glfw\include;..\..\..\common\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4068</DisableSpecificWarnings>
+      <ForcedIncludeFiles>..\..\..\..\common\bgfx\bx\include\compat\msvc\inttypes.h;</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration />
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG_LOCAL_GAME;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions);_USE_MATH_DEFINES;_TIMESPEC_DEFINED;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>..\..\..\..\common\bgfx\bx\include\compat\msvc\inttypes.h;</ForcedIncludeFiles>
+      <DisableSpecificWarnings>4996;4068</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>..\..\..\windows\Projet\VS2019\ParticubesWin;..\..\..\xptools\include;..\..\..\common\ApiClient;..\..\..\common\apiclient_go_lib;..\..\..\common\engine;..\..\..\common\engine\file_format;..\..\..\common\engine\game_items;..\..\..\common\engine\lists;..\..\..\common\engine\maps;..\..\..\common\engine\utils;..\..\..\common\CUtils;..\..\..\common\Lua\src;..\..\..\common\LuaUtils;..\..\..\common\VXLuaSandbox;..\..\..\common\bgfx\bgfx\include;..\..\..\common\bgfx\bx\include;..\..\..\common\bgfx\glfw\include;..\..\..\common\bgfx\bx\include\compat\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\common\CUtils\undefined_api.h" />
+    <ClInclude Include="..\..\..\common\engine\apiMessage.h" />
+    <ClInclude Include="..\..\..\common\engine\block.h" />
+    <ClInclude Include="..\..\..\common\engine\box.h" />
+    <ClInclude Include="..\..\..\common\engine\camera.h" />
+    <ClInclude Include="..\..\..\common\engine\chunk.h" />
+    <ClInclude Include="..\..\..\common\engine\colors.h" />
+    <ClInclude Include="..\..\..\common\engine\config.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\cache.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\resource.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_magicavoxel.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_obj.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v1.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v2.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v3.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v4.h" />
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v5.h" />
+    <ClInclude Include="..\..\..\common\engine\float3.h" />
+    <ClInclude Include="..\..\..\common\engine\float3x3.h" />
+    <ClInclude Include="..\..\..\common\engine\float4.h" />
+    <ClInclude Include="..\..\..\common\engine\flood_fill_lighting.h" />
+    <ClInclude Include="..\..\..\common\engine\function_pointers.h" />
+    <ClInclude Include="..\..\..\common\engine\gameCoordinator.h" />
+    <ClInclude Include="..\..\..\common\engine\game_items\collisions.h" />
+    <ClInclude Include="..\..\..\common\engine\game_items\game.h" />
+    <ClInclude Include="..\..\..\common\engine\game_items\map.h" />
+    <ClInclude Include="..\..\..\common\engine\game_items\scene.h" />
+    <ClInclude Include="..\..\..\common\engine\history.h" />
+    <ClInclude Include="..\..\..\common\engine\index3d.h" />
+    <ClInclude Include="..\..\..\common\engine\inputs.h" />
+    <ClInclude Include="..\..\..\common\engine\int3.h" />
+    <ClInclude Include="..\..\..\common\engine\light.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\distance_sorted_list.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\doubly_linked_list.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\fifo_list.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_box.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_float3.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_int3.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_uint16.h" />
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_uint32.h" />
+    <ClInclude Include="..\..\..\common\engine\maps\map_string_float3.h" />
+    <ClInclude Include="..\..\..\common\engine\matrix4x4.h" />
+    <ClInclude Include="..\..\..\common\engine\movement.h" />
+    <ClInclude Include="..\..\..\common\engine\octree.h" />
+    <ClInclude Include="..\..\..\common\engine\quaternion.h" />
+    <ClInclude Include="..\..\..\common\engine\ray.h" />
+    <ClInclude Include="..\..\..\common\engine\shape.h" />
+    <ClInclude Include="..\..\..\common\engine\shapegroup.h" />
+    <ClInclude Include="..\..\..\common\engine\symmetry.h" />
+    <ClInclude Include="..\..\..\common\engine\vertextbuffer.h" />
+    <ClInclude Include="..\..\..\common\engine\world.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cJSON.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cutil.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cutil_log.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cutil_string.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cutil_stringArray.h" />
+    <ClInclude Include="..\..\..\common\CUtils\cutil_windows.h" />
+    <ClInclude Include="..\..\..\common\CUtils\fifo_list_log.h" />
+    <ClInclude Include="..\..\..\common\CUtils\isnull.h" />
+    <ClInclude Include="..\..\..\common\CUtils\path_separator.h" />
+    <ClInclude Include="..\..\..\common\CUtils\sync.h" />
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_all.h" />
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_function.h" />
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_stack.h" />
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_types.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lapi.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lauxlib.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lcode.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lctype.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\ldebug.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\ldo.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lfunc.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lgc.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\llex.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\llimits.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lmem.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lobject.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lopcodes.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lparser.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lprefix.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lstate.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lstring.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\ltable.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\ltm.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lua.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lua.hpp" />
+    <ClInclude Include="..\..\..\common\Lua\src\luaconf.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lualib.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lundump.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lvm.h" />
+    <ClInclude Include="..\..\..\common\Lua\src\lzio.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_buffer.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_constants.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_LoadingSandbox.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaBlock.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaConfig.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaEnums.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaEvent.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaJson.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaLocal.hpp" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaLogs.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaMap.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaNil.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaNilSilent.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaObjectUtils.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayer.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayers.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaRayImpact.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaRegistry.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaResources.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaSandbox.hpp" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaServer.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaShared.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaType.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaUtils.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_print.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_resource.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_user.h" />
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\scripting.hpp" />
+    <ClInclude Include="windows_compat.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\common\CUtils\undefined_api.c" />
+    <ClCompile Include="..\..\..\common\engine\apiMessage.c" />
+    <ClCompile Include="..\..\..\common\engine\block.c" />
+    <ClCompile Include="..\..\..\common\engine\box.c" />
+    <ClCompile Include="..\..\..\common\engine\camera.c" />
+    <ClCompile Include="..\..\..\common\engine\chunk.c" />
+    <ClCompile Include="..\..\..\common\engine\colors.c" />
+    <ClCompile Include="..\..\..\common\engine\config.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\cache.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\resource.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_magicavoxel.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_obj.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v1.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v2.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v3.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v4.c" />
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v5.c" />
+    <ClCompile Include="..\..\..\common\engine\float3.c" />
+    <ClCompile Include="..\..\..\common\engine\float3x3.c" />
+    <ClCompile Include="..\..\..\common\engine\float4.c" />
+    <ClCompile Include="..\..\..\common\engine\flood_fill_lighting.c" />
+    <ClCompile Include="..\..\..\common\engine\gameCoordinator.c" />
+    <ClCompile Include="..\..\..\common\engine\game_items\collisions.c" />
+    <ClCompile Include="..\..\..\common\engine\game_items\game.c" />
+    <ClCompile Include="..\..\..\common\engine\game_items\map.c" />
+    <ClCompile Include="..\..\..\common\engine\game_items\scene.c" />
+    <ClCompile Include="..\..\..\common\engine\history.c" />
+    <ClCompile Include="..\..\..\common\engine\index3d.c" />
+    <ClCompile Include="..\..\..\common\engine\inputs.c" />
+    <ClCompile Include="..\..\..\common\engine\int3.c" />
+    <ClCompile Include="..\..\..\common\engine\light.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\distance_sorted_list.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\doubly_linked_list.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\fifo_list.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_box.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_float3.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_int3.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_uint16.c" />
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_uint32.c" />
+    <ClCompile Include="..\..\..\common\engine\maps\map_string_float3.c" />
+    <ClCompile Include="..\..\..\common\engine\matrix4x4.c" />
+    <ClCompile Include="..\..\..\common\engine\movement.c" />
+    <ClCompile Include="..\..\..\common\engine\octree.c" />
+    <ClCompile Include="..\..\..\common\engine\quaternion.c" />
+    <ClCompile Include="..\..\..\common\engine\ray.c" />
+    <ClCompile Include="..\..\..\common\engine\shape.c" />
+    <ClCompile Include="..\..\..\common\engine\shapegroup.c" />
+    <ClCompile Include="..\..\..\common\engine\symmetry.c" />
+    <ClCompile Include="..\..\..\common\engine\vertextbuffer.c" />
+    <ClCompile Include="..\..\..\common\engine\world.c" />
+    <ClCompile Include="..\..\..\common\CUtils\cJSON.c" />
+    <ClCompile Include="..\..\..\common\CUtils\cutil_log.c" />
+    <ClCompile Include="..\..\..\common\CUtils\cutil_string.c" />
+    <ClCompile Include="..\..\..\common\CUtils\cutil_stringArray.c" />
+    <ClCompile Include="..\..\..\common\CUtils\cutil_windows.c" />
+    <ClCompile Include="..\..\..\common\CUtils\fifo_list_log.c" />
+    <ClCompile Include="..\..\..\common\CUtils\sync.cpp" />
+    <ClCompile Include="..\..\..\common\LuaUtils\luaUtils_function.c" />
+    <ClCompile Include="..\..\..\common\LuaUtils\luaUtils_types.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lapi.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lbitlib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lcode.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lctype.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ldblib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ldebug.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ldo.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ldump.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lfunc.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lgc.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\linit.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\liolib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\llex.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lmem.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\loadlib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lobject.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\loslib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lparser.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lstate.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lstring.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ltable.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ltablib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\ltm.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lua.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\luac.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lundump.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lvm.c" />
+    <ClCompile Include="..\..\..\common\Lua\src\lzio.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_buffer.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_LoadingSandbox.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaBlock.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaConfig.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaEnums.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaEvent.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaJson.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaLocal.cpp" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaLogs.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaMap.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaNil.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaNilSilent.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaObjectUtils.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayer.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayers.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaRayImpact.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaRegistry.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaResources.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaSandbox.cpp" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaServer.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaShared.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaType.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaUtils.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_print.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_resource.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_user.c" />
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\scripting.cpp" />
+    <ClCompile Include="windows_compat.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

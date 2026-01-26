@@ -1,0 +1,437 @@
+networks:
+    default:
+        name: pcubes_private_network
+        driver: overlay
+        attachable: true
+
+services:
+    game-servers-db:
+        image: redis:7.4.2-alpine
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+    session-db:
+        image: redis:7.4.2-alpine
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    user-db:
+        image: mongo:4.0.10
+        volumes:
+            - type: bind
+              source: /home/ubuntu/db
+              target: /data/db
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    db-admin:
+        image: mongo-express:0.54
+        environment:
+            ME_CONFIG_MONGODB_SERVER: user-db
+            ME_CONFIG_MONGODB_ADMINUSERNAME: root
+            ME_CONFIG_MONGODB_ADMINPASSWORD: root
+            ME_CONFIG_BASICAUTH_USERNAME: voxowl
+            ME_CONFIG_BASICAUTH_PASSWORD: ${ME_CONFIG_BASICAUTH_PASSWORD}
+        ports:
+            - target: 8081
+              published: 3333
+              protocol: tcp
+              mode: host
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    hub-https:
+        build:
+            context: ..
+            dockerfile: dockerfiles/hub-server.Dockerfile
+            platforms:
+                - "linux/amd64"
+        image: registry.digitalocean.com/cubzh/hub-http:latest
+        environment:
+            - PCUBES_SECURE_TRANSPORT=1
+        volumes:
+            - type: bind
+              source: /home/ubuntu/items
+              target: /particubes_items
+            - type: bind
+              source: /home/ubuntu/games
+              target: /particubes_games
+            - type: bind
+              source: /cubzh/secrets
+              target: /cubzh/secrets
+              read_only: true
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            mode: global
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    proxy:
+        image: nginx:1.27.2-alpine
+        ports:
+            - target: 443
+              published: 443
+              protocol: tcp
+              mode: host
+        volumes:
+            - type: bind
+              source: /cubzh/config/nginx.conf
+              target: /etc/nginx/nginx.conf
+              read_only: true
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+            - type: bind
+              source: /cubzh/secrets/CUBZH_SEARCH_SERVER
+              target: /cubzh/secrets/CUBZH_SEARCH_SERVER
+              read_only: true
+            - type: bind
+              source: /cubzh/secrets/CUBZH_SEARCH_APIKEY
+              target: /cubzh/secrets/CUBZH_SEARCH_APIKEY
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    # scheduler services for nodes in Europe
+    gameservers-eu:
+        build:
+            context: ..
+            dockerfile: dockerfiles/scheduler.Dockerfile
+            platforms:
+                - "linux/amd64"
+        image: registry.digitalocean.com/cubzh/scheduler:latest
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.2" # nb of cpus availables to the service
+                    memory: 400M # 400MB
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.gameservers-eu==1"
+
+    # scheduler services for nodes in Europe
+    gameservers-us:
+        build:
+            context: ..
+            dockerfile: dockerfiles/scheduler.Dockerfile
+            platforms:
+                - "linux/amd64"
+        image: registry.digitalocean.com/cubzh/scheduler:latest
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.2" # nb of cpus availables to the service
+                    memory: 400M # 400MB
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.gameservers-us==1"
+
+    # scheduler services for nodes in Europe
+    gameservers-sg:
+        build:
+            context: ..
+            dockerfile: dockerfiles/scheduler.Dockerfile
+            platforms:
+                - "linux/amd64"
+        image: registry.digitalocean.com/cubzh/scheduler:latest
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.2" # nb of cpus availables to the service
+                    memory: 400M # 400MB
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.gameservers-sg==1"
+
+    # --------------------------------------------------
+    # SCYLLADB
+    # --------------------------------------------------
+
+    scylladb:
+        image: scylladb/scylla:6.2.2
+        volumes:
+            - type: bind
+              source: /cubzh/scylla
+              target: /var/lib/scylla
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.scylladb==1"
+
+    # --------------------------------------------------
+    # WASM
+    # --------------------------------------------------
+
+    wasm:
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/wasm.Dockerfile
+            args:
+                - CUBZH_TARGET=wasm
+        image: registry.digitalocean.com/cubzh/wasm
+        # ports:
+        # port 80 is exposed by the container
+        # port 443 is exposed by the container
+        volumes:
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        environment:
+            - CUBZH_NO_HTTPS=1
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.wasm==1"
+
+    # --------------------------------------------------
+    # Front Proxy for web services
+    # --------------------------------------------------
+
+    nginx-web:
+        build:
+            context: ./service-nginx-web
+            dockerfile: nginx-web.Dockerfile
+        image: registry.digitalocean.com/cubzh/nginx-web
+        ports:
+            - target: 443 # port within container
+              published: 443 # external port
+              protocol: tcp
+              mode: host
+            - target: 80 # port within container
+              published: 80 # external port
+              protocol: tcp
+              mode: host
+        volumes:
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.wasm==1"
+
+    # --------------------------------------------------
+    # PARENT DASHBOARD
+    # --------------------------------------------------
+    # NOTE: runs on same machine as wasm, behind nginx (nginx-web)
+    # The plan is to have a node for all small web services at some point.
+
+    parentdashboard:
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/parent-dashboard.Dockerfile
+        image: registry.digitalocean.com/cubzh/parent-dashboard
+        # ports:
+        # port 80 is exposed by the container
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.wasm==1"
+
+    # --------------------------------------------------
+    # DISCORD BOT
+    # --------------------------------------------------
+
+    discordbot:
+        image: registry.digitalocean.com/cubzh/discordbot
+        environment:
+            - TOKEN=${DISCORD_BOT_TOKEN}
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/discordbot.Dockerfile
+        volumes:
+            - type: bind
+              source: /cubzh/secrets/CUBZH_SCYLLADB_USER
+              target: /cubzh/secrets/CUBZH_SCYLLADB_USER
+              read_only: true
+            - type: bind
+              source: /cubzh/secrets/CUBZH_SCYLLADB_PASS
+              target: /cubzh/secrets/CUBZH_SCYLLADB_PASS
+              read_only: true
+            - type: bind
+              source: /cubzh/secrets/firebase/cubzh-firebase.json
+              target: /cubzh/secrets/firebase/cubzh-firebase.json
+              read_only: true
+            - type: bind
+              source: /cubzh/secrets/apns/AuthKey_X48M5UN4U7.p8
+              target: /cubzh/secrets/apns/AuthKey_X48M5UN4U7.p8
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    # --------------------------------------------------
+    # DASHBOARD
+    # --------------------------------------------------
+
+    dashboard:
+        image: registry.digitalocean.com/cubzh/dashboard
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/dashboard.Dockerfile
+        volumes:
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        ports:
+            - target: 80 # port within container
+              published: 3334 # external port
+              protocol: tcp
+              mode: host
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.dashboard==1"
+
+    # --------------------------------------------------
+    # NGINX PROXY for GAME SERVERS & PING
+    # --------------------------------------------------
+
+    nginx-servers:
+        image: nginx:1.27.2-alpine
+        ports:
+            - target: 443
+              published: 443
+              protocol: tcp
+              mode: host
+        volumes:
+            - type: bind
+              source: /cubzh/config/nginx.conf
+              target: /etc/nginx/nginx.conf
+              read_only: true
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.ping==1"
+
+    # --------------------------------------------------
+    # PING SERVICE
+    # --------------------------------------------------
+    # We have 1 container per area (continent).
+    # It's used by game client to know where the closest
+    # gameserver scheduler is located.
+
+    ping:
+        image: registry.digitalocean.com/cubzh/ping
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/ping.Dockerfile
+        # ports:
+        # port 80 is exposed by the container
+        volumes:
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.ping==1"
+
+    # --------------------------------------------------
+    # LINK SERVICE
+    # --------------------------------------------------
+
+    link-service:
+        image: registry.digitalocean.com/cubzh/link
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/link.Dockerfile
+        ports:
+            - target: 80 # port within container
+              published: 80 # external port
+              protocol: tcp
+              mode: host
+            - target: 443 # port within container
+              published: 443 # external port
+              protocol: tcp
+              mode: host
+        volumes:
+            - type: bind
+              source: /cubzh/certificates
+              target: /cubzh/certificates # container
+              read_only: true
+            - type: bind
+              source: /cubzh/link # host
+              target: /cubzh/link # container
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.link_cu_bzh==1"
+
+    # --------------------------------------------------
+    # FILE SERVER
+    # --------------------------------------------------
+
+    fileserver:
+        image: registry.digitalocean.com/cubzh/fileserver
+        build:
+            context: .. # git repo root
+            dockerfile: dockerfiles/fileserver.Dockerfile
+        volumes:
+            - type: bind
+              source: /cubzh/fileserver/files
+              target: /files # container
+              read_only: true
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.wasm==1"

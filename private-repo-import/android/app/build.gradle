@@ -1,0 +1,232 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    // Add the Google services Gradle plugin
+    // Needed for Push Notifications.
+    id 'com.google.gms.google-services'
+    // JSON serialization
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    // Add the Crashlytics Gradle plugin
+    id 'com.google.firebase.crashlytics'
+}
+
+// Parse .env variables (once per gradle sync)
+def envFile = rootProject.file("../.env")
+def env = [:]
+if (envFile.exists()) {
+    envFile.eachLine { line ->
+        //println "LINE: $line"
+        if (line && !line.startsWith("#")) {
+            def (key, value) = line.split("=", 2)
+            env[key.trim()] = value.trim()
+        }
+    }
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('.\\..\\..\\pcubes-keystore.jks')
+            storePassword findProperty("storePassword") // it is in ~/.gradle/gradle.properties
+            keyAlias 'release'
+            keyPassword findProperty("keyPassword") // it is in ~/.gradle/gradle.properties
+        }
+        debug {
+            storeFile file('.\\..\\voxowl_debug.jks')
+            storePassword 'elleestoulapoulette'
+            keyAlias 'debug'
+            keyPassword 'elleestoulapoulette'
+        }
+    }
+    compileSdk = 36
+    buildToolsVersion = "36.0.0"
+    defaultConfig {
+        applicationId "com.voxowl.blip"
+        minSdk 26
+        targetSdk 35
+        versionCode 237 // increment this for each upload through Google Play Console
+        versionName "0.1.26"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+
+                // Forward .env variables to cmake, prefixed w/ "ENVVAR_"
+                arguments += env.collect { k, v -> "-DENVVAR_${k}=${v}" }
+            }
+        }
+    }
+    android.applicationVariants.configureEach { variant ->
+
+        // Detect OS
+        def os = ""
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            os = "windows"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            os = "macos"
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            os = "linux"
+        } else {
+            // TODO: abort build process
+        }
+
+        // Detect native architecture
+        def arch = System.getProperty("os.arch")
+        if (arch == "aarch64") {
+            arch = "arm64"
+        } else if (arch == "amd64") {
+            arch = "x86_64"
+        } else {
+            // TODO: abort build process
+        }
+
+        // Make sure dependencies are up to date (deptool)
+
+        def deptoolCommand = ["./deptool_${os}_${arch}", "autoconfig", "android"]
+        if (os == 'windows') {
+            deptoolCommand[0] = "deptool_${os}_${arch}.exe"
+            deptoolCommand = ['cmd', '/c'] + deptoolCommand
+        }
+        def taskDeptoolAutoconfig = project.tasks.create("deptoolAutoconfig_${variant.name}", Exec)
+        taskDeptoolAutoconfig.workingDir("../../cubzh/deps/deptool/cmd")
+        taskDeptoolAutoconfig.commandLine(deptoolCommand)
+
+        // Update hashes for Luau modules
+
+        def hashCommand = ["./deps/hasher/${os}/${arch}/hasher"]
+        if (os == 'windows') {
+            hashCommand[0] = "deps\\hasher\\${os}\\${arch}\\hasher.exe"
+            hashCommand = ['cmd', '/c'] + hashCommand
+        }
+        def taskHashLuaModules = project.tasks.create("hashModules_${variant.name}", Exec)
+        taskHashLuaModules.workingDir("../..")
+        taskHashLuaModules.commandLine(hashCommand)
+
+        // Update asset bundle
+
+        def taskClean = project.tasks.create("cleanAssets_${variant.name}", Delete)
+        taskClean.delete("./src/main/assets")
+
+        def taskCopy = project.tasks.create("copyAssets_${variant.name}", Copy)
+        taskCopy.from("./../../cubzh/bundle")
+        taskCopy.into("./src/main/assets")
+        taskCopy.dependsOn taskClean
+
+        def taskCopyI18n = project.tasks.create("copyI18nAssets_${variant.name}", Copy)
+        taskCopyI18n.from("./../../cubzh/i18n")
+        taskCopyI18n.into("./src/main/assets/i18n")
+        taskCopyI18n.dependsOn taskCopy
+
+        def taskCopyLuaModules = project.tasks.create("copyAssets_ossLuaModules_${variant.name}", Copy)
+        taskCopyLuaModules.from("./../../cubzh/lua/modules")
+        taskCopyLuaModules.into("./src/main/assets/modules")
+        taskCopyLuaModules.dependsOn taskCopyI18n
+
+        def taskShaders = project.tasks.create("cleanShaders_${variant.name}", Delete)
+        taskShaders.delete("./src/main/assets/shaders/dx9")
+        taskShaders.delete("./src/main/assets/shaders/dx11")
+        taskShaders.delete("./src/main/assets/shaders/glsl")
+        taskShaders.delete("./src/main/assets/shaders/metal")
+        taskShaders.dependsOn taskCopyLuaModules
+
+        def provider = variant.getPreBuildProvider()
+        provider.get().dependsOn taskShaders
+        provider.get().dependsOn taskHashLuaModules
+        provider.get().dependsOn(taskDeptoolAutoconfig)
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig = signingConfigs.release
+            firebaseCrashlytics {
+                // Enable processing and uploading of native symbols to Firebase servers.
+                // By default, this is disabled to improve build speeds.
+                // This flag must be enabled to see properly-symbolicated native
+                // stack traces in the Crashlytics dashboard.
+                nativeSymbolUploadEnabled = true
+            }
+        }
+        debug {
+            // debuggable = true
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type. Make sure to use a build
+            // variant with `debuggable false`.
+            // minifyEnabled = false
+            // Enables resource shrinking, which is performed by the Android Gradle plugin.
+            shrinkResources = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            externalNativeBuild {
+                cmake {
+                    cppFlags += "-DDEBUG=1"
+                    cFlags += "-DDEBUG=1"
+                }
+            }
+            signingConfig = signingConfigs.debug
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version = "3.31.6"
+        }
+    }
+    namespace = 'com.voxowl.blip'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+    ndkVersion = '28.2.13676358'
+    buildFeatures {
+        buildConfig = true
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+tasks.configureEach { task ->
+    bundleRelease
+    if (task.name == 'bundleRelease') {
+        task.finalizedBy uploadCrashlyticsSymbolFileRelease
+    } else if (task.name == 'assembleRelease') {
+        task.finalizedBy uploadCrashlyticsSymbolFileRelease
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("com.android.installreferrer:installreferrer:2.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+    // --- Import the Firebase BoM
+    // when using the BoM, we don't need to specify the version of each dependency
+    implementation platform('com.google.firebase:firebase-bom:34.0.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation("com.google.firebase:firebase-crashlytics-ndk")
+    implementation("com.google.firebase:firebase-analytics")
+
+    // ---
+    implementation "androidx.test:monitor:1.8.0"
+    implementation "androidx.test.ext:junit-ktx:1.3.0"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.13.4"
+    androidTestImplementation "org.junit.jupiter:junit-jupiter:5.13.4"
+    // Credential Manager (for Passkey)
+    implementation "androidx.credentials:credentials:1.5.0"
+    // Google Play Services Auth - provides the credential provider implementation
+    implementation "androidx.credentials:credentials-play-services-auth:1.5.0"
+}
+
+// Report use of deprecated APIs
+allprojects {
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}

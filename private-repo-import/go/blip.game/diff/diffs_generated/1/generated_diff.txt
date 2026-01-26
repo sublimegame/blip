@@ -1,0 +1,9 @@
+```diff
+@@ -24,6 +24,6 @@
+ -- (space bar on PC, button 1 on mobile)
+ Client.Action1 = function()
+     if Player.IsOnGround then
+-        Player.Velocity.Y = 100
++        Player.Velocity.Y = 200
+     end
+ end

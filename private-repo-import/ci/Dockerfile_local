@@ -1,0 +1,76 @@
+# 
+# 
+# 
+
+# --------------------------------------------------
+
+FROM ubuntu:24.04 AS build-tools
+
+RUN apt-get update && apt-get install -y \
+build-essential \
+gdb \
+libreadline-dev
+# valgrind
+
+# TODO: gdevillele: upgrade to cmake + clang
+# RUN apt-get update && apt-get install -y cmake clang
+
+CMD [ "bash" ]
+
+# --------------------------------------------------
+
+FROM build-tools AS builder
+
+# platform of the container itself
+# ex: `linux/arm64`, `linux/amd64`, ...
+# ARG TARGETPLATFORM
+# RUN echo TARGETPLATFORM $TARGETPLATFORM
+
+# arch of the container itself
+# ex: `arm64`, `amd64`, ...
+ARG TARGETARCH
+RUN echo TARGETARCH $TARGETARCH
+ENV CUBZH_TARGETARCH=$TARGETARCH
+
+# Cubzh
+COPY ./cubzh/core /cubzh/core
+COPY ./cubzh/deps /cubzh/deps
+# TODO: make this dynamic
+COPY ./cubzh/deps/libz/linux-x86_64 /cubzh/deps/libz/linux-x86_64
+COPY ./cubzh/deps/libz/linux-aarch64 /cubzh/deps/libz/linux-aarch64
+
+COPY ./common/VXFramework /common/VXFramework
+COPY ./common/VXLuaSandbox /common/VXLuaSandbox
+COPY ./common/VXNetworking /common/VXNetworking
+COPY ./common/VXGameServer /common/VXGameServer
+COPY ./deps /deps
+COPY ./ci/C /ci
+COPY ./ci/storage /storage
+COPY ./ci/bundle /bundle
+COPY ./cubzh/lua/modules /bundle/modules
+COPY ./ci/test.lua /ci/test.lua
+COPY ./ci/ci.sh /ci/ci.sh
+
+WORKDIR /ci
+
+RUN make deps
+RUN make ci
+
+CMD [ "bash" ]
+
+# --------------------------------------------------
+
+FROM builder AS runner
+
+# CMD valgrind --leak-check=full \
+# --show-leak-kinds=all \
+# --track-origins=yes \
+# --verbose \ 
+# ./ci
+
+# CMD valgrind --leak-check=full \
+# --show-leak-kinds=all \
+# --track-origins=yes \
+# ./ci
+
+CMD ./ci

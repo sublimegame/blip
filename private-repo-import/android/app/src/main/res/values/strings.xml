@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Blip</string>
+    <string name="EditTextHint">text field used internally by the app</string>
+    <string name="asset_statements" translatable="false">
+[{
+  \"include\": \"https://blip.game/.well-known/assetlinks.json\"
+}]
+    </string>
+</resources>

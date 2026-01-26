@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{266e4a55-a2d7-443c-9aaa-3589aa10d8b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\lists">
+      <UniqueIdentifier>{81be1b34-54eb-412e-bbb5-928d237d687c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\maps">
+      <UniqueIdentifier>{4b42a1f6-d76a-4b1a-8862-1b6228567f86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaUtils">
+      <UniqueIdentifier>{74dadd21-6c04-4360-adc5-ec0e4e94e1a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua">
+      <UniqueIdentifier>{0d4acee3-e476-4760-8cdf-e13ddc338e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cutils">
+      <UniqueIdentifier>{5aced086-7830-480c-8bea-c817e6a35a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\file_formats">
+      <UniqueIdentifier>{e591ed57-c2f4-4295-bb1f-b193fed97c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\game_items">
+      <UniqueIdentifier>{20f0507b-1a01-4dce-9375-0078a9bbc3b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VXLuaSandbox">
+      <UniqueIdentifier>{83a29265-0207-451a-94b4-8268a9661398}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\common\engine\block.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\box.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\camera.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\chunk.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\colors.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\config.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\float3.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\float3x3.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\float4.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\flood_fill_lighting.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\function_pointers.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\history.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\index3d.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\int3.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\light.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\matrix4x4.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\movement.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\octree.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\quaternion.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\ray.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\shape.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\shapegroup.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\symmetry.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\vertextbuffer.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\world.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\distance_sorted_list.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\doubly_linked_list.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\fifo_list.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_box.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_float3.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_int3.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_uint16.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\lists\filo_list_uint32.h">
+      <Filter>Engine\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\maps\map_string_float3.h">
+      <Filter>Engine\maps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\apiMessage.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\inputs.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\resource.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\cache.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_magicavoxel.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_obj.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v1.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v2.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v3.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v4.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\file_format\serialization_v5.h">
+      <Filter>Engine\file_formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\game_items\collisions.h">
+      <Filter>Engine\game_items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\game_items\game.h">
+      <Filter>Engine\game_items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\game_items\map.h">
+      <Filter>Engine\game_items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\game_items\scene.h">
+      <Filter>Engine\game_items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\engine\gameCoordinator.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows_compat.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cJSON.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cutil.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cutil_log.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cutil_string.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cutil_stringArray.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\cutil_windows.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\fifo_list_log.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\isnull.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\path_separator.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\sync.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lapi.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lauxlib.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lcode.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lctype.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\ldebug.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\ldo.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lfunc.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lgc.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\llex.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\llimits.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lmem.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lobject.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lopcodes.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lparser.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lprefix.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lstate.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lstring.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\ltable.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\ltm.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lua.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lua.hpp">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\luaconf.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lualib.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lundump.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lvm.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\Lua\src\lzio.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_all.h">
+      <Filter>LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_function.h">
+      <Filter>LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_stack.h">
+      <Filter>LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\LuaUtils\luaUtils_types.h">
+      <Filter>LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_buffer.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_constants.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_LoadingSandbox.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaBlock.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaConfig.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaEnums.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaEvent.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaJson.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaLogs.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaMap.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaNil.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaNilSilent.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaObjectUtils.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayer.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayers.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaRayImpact.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaRegistry.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaResources.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaServer.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaShared.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaType.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaUtils.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_print.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_resource.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_user.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\CUtils\undefined_api.h">
+      <Filter>Cutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\scripting.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaSandbox.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\VXLuaSandbox\sbs_luaLocal.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\common\engine\block.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\box.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\camera.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\chunk.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\colors.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\config.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\float3.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\float3x3.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\float4.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\flood_fill_lighting.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\history.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\index3d.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\int3.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\light.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\matrix4x4.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\movement.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\octree.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\quaternion.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\ray.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\shape.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\shapegroup.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\symmetry.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\vertextbuffer.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\world.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\distance_sorted_list.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\doubly_linked_list.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\fifo_list.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_box.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_float3.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_int3.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_uint16.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\lists\filo_list_uint32.c">
+      <Filter>Engine\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\maps\map_string_float3.c">
+      <Filter>Engine\maps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\apiMessage.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\inputs.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\cache.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\resource.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_magicavoxel.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_obj.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v1.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v2.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v3.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v4.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\file_format\serialization_v5.c">
+      <Filter>Engine\file_formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\game_items\collisions.c">
+      <Filter>Engine\game_items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\game_items\game.c">
+      <Filter>Engine\game_items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\game_items\map.c">
+      <Filter>Engine\game_items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\game_items\scene.c">
+      <Filter>Engine\game_items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\engine\gameCoordinator.c">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows_compat.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\cJSON.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\cutil_log.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\cutil_string.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\cutil_stringArray.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\cutil_windows.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\fifo_list_log.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\sync.cpp">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lapi.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lauxlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lbaselib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lbitlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lcode.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lcorolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lctype.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ldblib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ldebug.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ldo.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ldump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lfunc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lgc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\linit.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\liolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\llex.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lmathlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lmem.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\loadlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lobject.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lopcodes.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\loslib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lparser.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lstate.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lstring.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lstrlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ltable.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ltablib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\ltm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lua.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\luac.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lundump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lutf8lib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lvm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\Lua\src\lzio.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\LuaUtils\luaUtils_function.c">
+      <Filter>LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\LuaUtils\luaUtils_types.c">
+      <Filter>LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_buffer.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_LoadingSandbox.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaBlock.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaConfig.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaEnums.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaEvent.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaJson.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaLogs.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaMap.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaNil.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaNilSilent.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaObjectUtils.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayer.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaPlayers.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaRayImpact.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaRegistry.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaResources.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaServer.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaShared.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaType.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaUtils.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_print.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_resource.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_user.c">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\CUtils\undefined_api.c">
+      <Filter>Cutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\scripting.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaSandbox.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\VXLuaSandbox\sbs_luaLocal.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

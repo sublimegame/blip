@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ParticubesWin.cpp" />
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_block.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_block_properties.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_camera.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_client.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_color.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_event.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_inputs.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_map.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_player.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_players.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_pointer.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_pointer_event.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_sandbox.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_sandbox_server.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_server.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_shape.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_time.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_nil.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_nilSilentExtra.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_clouds.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_fog.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\scripting.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\scripting_client.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\scripting_server.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_node.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_config.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_number3.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXPopup.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXPopupEditText.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXMemory.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_mutableShape.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VX_C_interface.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXApplication.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXButton.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXCodeEditor.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXColor.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXConfig.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXEasing.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXFont.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXGameClient.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXGameRenderer.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXHubPrivateClient.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXImGui.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXImGuiTest.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXLabel.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXMenu.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXGameServer\VXMessageQueues.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXNetworkingUtils.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXNode.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXNotifications.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRDDecals.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRDSky.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRDWorldText.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXResource.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXSize.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXTickDispatcher.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXValueAnimator.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_object.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_palette.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRDUtils.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXAccount.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_items.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_point.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_animation.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXGame.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRootNodeCodeEditor.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRootNodeLoading.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_utils.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_dev.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_logs.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXVirtualKeyboardToolbar.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_private.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_ray.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_box.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_collision_groups.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_world.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXLuaExecutionLimiter.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_impact.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_timer.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_face.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_screen.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXHubClient.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXGameServer\VXConnectionHandler.cpp">
+      <Filter>VXGameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXGameServer\VXConnectionHandlerJoin.cpp">
+      <Filter>VXGameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXUpdateManager.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXGameServer\VXGameServer.cpp">
+      <Filter>VXGameServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXHubRequestSender.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_light.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_lightType.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_http.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_json.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_data.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_url.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\sbs_print.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_type.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_environment.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\animation.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\game.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\game_config.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\game_item.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\keyframes.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\timer.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_file.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_projectionMode.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\fileutils.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\cache.c">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXJSON.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXPrefs.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_require.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\audioListener.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\audioSource.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_audioListener.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_audioSource.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_default_colors.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_text.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_textType.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\block.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\blockChange.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\box.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\cclog.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\chunk.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\color_atlas.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\color_palette.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\colors.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\config.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\doubly_linked_list.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\doubly_linked_list_uint8.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\easings.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\fifo_list.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\filo_list.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\filo_list_float3.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\filo_list_int3.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\filo_list_uint16.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\filo_list_uint32.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\float3.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\float4.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\flood_fill_lighting.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\hash_uint32_int.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\history.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\index3d.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\inputs.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\int3.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\map_string_float3.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\matrix4x4.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\octree.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\quaternion.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\ray.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\rigidBody.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\rtree.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\scene.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\serialization.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\serialization_v5.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\serialization_v6.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\shape.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\stream.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\transaction.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\transform.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\utils.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\vertextbuffer.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\weakptr.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_number2.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_assets.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_assetType.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXScrollBar.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_physicsMode.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXLatencyTester.cpp">
+      <Filter>VXNetworking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\cache_cpp.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\mutex.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_ambient.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\plane.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\quad.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_quad.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_ai.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_sky.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_bin_serializer.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_rotation.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_system.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_deprecated.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_modules.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXGameMessage.cpp">
+      <Filter>VXNetworking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_font.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_ostextinput.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\BgfxText\cube_atlas.cpp">
+      <Filter>VXFramework\BgfxText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\BgfxText\font_manager.cpp">
+      <Filter>VXFramework\BgfxText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\BgfxText\text_buffer_manager.cpp">
+      <Filter>VXFramework\BgfxText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\BgfxText\utf8.cpp">
+      <Filter>VXFramework\BgfxText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\GameCoordinator.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\State.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\deps\bgfx\bgfx\examples\common\imgui\bgfx-imgui.cpp">
+      <Filter>dear-imgui\bgfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\deps\bgfx\bgfx\3rdparty\dear-imgui\imgui.cpp">
+      <Filter>dear-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\deps\bgfx\bgfx\3rdparty\dear-imgui\imgui_draw.cpp">
+      <Filter>dear-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\deps\bgfx\bgfx\3rdparty\dear-imgui\imgui_tables.cpp">
+      <Filter>dear-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\deps\bgfx\bgfx\3rdparty\dear-imgui\imgui_widgets.cpp">
+      <Filter>dear-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXLinter.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXNetworking\VXHub.cpp">
+      <Filter>VXNetworking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXFramework\VXRDGif.cpp">
+      <Filter>VXFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\camera.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\light.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\world_text.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\serialization_gltf.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\serialization_vox.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\mesh.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\material.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\VXLuaSandbox\lua_mesh.cpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cubzh\core\texture.c">
+      <Filter>Cubzh Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\common\kiwi\version.h" />
+    <ClInclude Include="ParticubesWin.h" />
+    <ClInclude Include="WinResource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_block.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_block_properties.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_camera.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_client.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_color.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_event.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_inputs.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_map.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_player.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_players.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_pointer.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_pointer_event.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_sandbox.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_sandbox_server.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_server.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_shape.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_time.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_nil.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_nilSilentExtra.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_clouds.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_fog.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_utils.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\sbs.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\scripting.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\scripting_client.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\scripting_server.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_node.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_number3.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXPopup.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXPopupEditText.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXMemory.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_mutableShape.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VX_C_interface.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXApplication.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXAssert.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXButton.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXColor.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXConfig.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXFont.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXGameClient.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXGameRenderer.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXHubPrivateClient.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXImGui.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXImGuiTest.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXInsets.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXLabel.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXMenu.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXMenuConfig.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXGameServer\VXMessageQueues.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXNetworkingUtils.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXNode.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXNotifications.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRDSky.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXResource.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXSize.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_object.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_palette.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRDUtils.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXAccount.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_items.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_constants.h">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXGame.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRootNodeCodeEditor.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRootNodeLoading.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXGame.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRootNodeCodeEditor.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRootNodeLoading.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_dev.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_logs.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXVirtualKeyboardToolbar.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_private.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_animation.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_ray.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_box.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_collision_groups.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_world.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXLuaExecutionLimiter.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_impact.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_timer.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_face.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_screen.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXHubClient.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXGameServer\VXConnectionHandler.hpp">
+      <Filter>VXGameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXGameServer\VXConnectionHandlerJoin.hpp">
+      <Filter>VXGameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXUpdateManager.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXGameServer\VXGameServer.hpp">
+      <Filter>VXGameServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXHubRequestSender.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_light.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_lightType.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_http.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_json.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_data.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_url.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\sbs_print.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_type.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_environment.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\animation.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\game.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\game_item.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\game_config.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\keyframes.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\timer.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_file.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_projectionMode.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\fileutils.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\cache.h">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXJSON.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXPrefs.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_require.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\audioSource.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\audioListener.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_audioSource.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_audioListener.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_default_colors.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_text.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_textType.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\block.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\blockChange.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\box.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\cclog.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\chunk.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\color_atlas.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\color_palette.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\colors.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\config.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\doubly_linked_list.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\doubly_linked_list_uint8.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\easings.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\fifo_list.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\filo_list.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\filo_list_float3.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\filo_list_int3.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\filo_list_uint16.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\filo_list_uint32.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\float3.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\float4.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\flood_fill_lighting.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\function_pointers.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\hash_uint32_int.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\history.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\index3d.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\inputs.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\int3.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\map_string_float3.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\matrix4x4.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\octree.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\quaternion.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\ray.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\rigidBody.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\rtree.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\scene.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\serialization.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\serialization_v5.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\serialization_v6.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\shape.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\stream.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\transaction.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\transform.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\utils.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\vertextbuffer.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\weakptr.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_number2.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_assets.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_assetType.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXScrollBar.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_physicsMode.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXLatencyTester.hpp">
+      <Filter>VXNetworking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXCodeEditor.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\mutex.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_ambient.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\plane.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\quad.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_quad.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_ai.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_sky.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_bin_serializer.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_rotation.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_system.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRDConfig.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_deprecated.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_modules.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXGameMessage.hpp">
+      <Filter>VXNetworking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_font.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_ostextinput.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\GameCoordinator.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\State.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_point.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\deps\bgfx\bgfx\examples\common\imgui\bgfx-imgui.h">
+      <Filter>dear-imgui\bgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imconfig.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imgui.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imgui_internal.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imgui_user.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imstb_rectpack.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imstb_textedit.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imstb_truetype.h">
+      <Filter>dear-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXLinter.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXNetworking\VXHub.hpp">
+      <Filter>VXNetworking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXFramework\VXRDGif.hpp">
+      <Filter>VXFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\camera.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\light.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\world_text.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\serialization_gltf.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\serialization_vox.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\mesh.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\material.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\VXLuaSandbox\lua_mesh.hpp">
+      <Filter>VXLuaSandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cubzh\core\texture.h">
+      <Filter>Cubzh Core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\..\..\..\.clang-format" />
+    <None Include="..\..\..\..\common\bgfx\bgfx\3rdparty\dear-imgui\imgui_user.inl">
+      <Filter>dear-imgui</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="VXLuaSandbox">
+      <UniqueIdentifier>{3f83d985-e1d0-4f08-a2b4-a50733f7fb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{86c7db97-7b38-475e-ace4-a90e4c6a12f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VXFramework">
+      <UniqueIdentifier>{200a5e06-40cc-4f34-9f2d-c1cad668a975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VXGameServer">
+      <UniqueIdentifier>{d926b559-4a63-494b-a76e-b1c29ae96c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VXNetworking">
+      <UniqueIdentifier>{42bd997c-e518-479c-bec4-52a68047326b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cubzh Core">
+      <UniqueIdentifier>{ba8f6998-40d5-49d4-8653-76eba9987c0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VXFramework\BgfxText">
+      <UniqueIdentifier>{6a8035e9-204e-44f0-a2bc-bda92bd03dbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dear-imgui">
+      <UniqueIdentifier>{a507e150-1555-4e8b-8ee3-cd7503fb5107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dear-imgui\bgfx">
+      <UniqueIdentifier>{3e02f8dc-2675-4698-9edc-9cc535d022ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ParticubesWin.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\graphic-assets\app-icon-v3\windows\cubzh.ico" />
+    <Image Include="..\..\..\..\cubzh\misc\icon_circle.ico" />
+  </ItemGroup>
+</Project>

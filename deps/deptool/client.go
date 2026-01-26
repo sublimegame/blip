@@ -2,17 +2,24 @@ package deptool
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/voxowl/objectstorage"
 	"github.com/voxowl/objectstorage/digitalocean"
 )
 
 const (
-	defaultDigitalOceanSpacesAuthKey    = "DO8019TZD8N66GJGUEE3"
-	defaultDigitalOceanSpacesAuthSecret = "OVVGXIdaEXRG8TPi2/TmI3Ji/h56nZgetMxeYw9aXlk"
-	defaultDigitalOceanSpacesRegion     = "nyc3"
-	defaultDigitalOceanSpacesBucket     = "cubzh-deps"
+	defaultDigitalOceanSpacesRegion = "nyc3"
+	defaultDigitalOceanSpacesBucket = "cubzh-deps"
 )
+
+func getDefaultDigitalOceanSpacesAuthKey() string {
+	return os.Getenv("DIGITALOCEAN_SPACES_AUTH_KEY")
+}
+
+func getDefaultDigitalOceanSpacesAuthSecret() string {
+	return os.Getenv("DIGITALOCEAN_SPACES_AUTH_SECRET")
+}
 
 type ObjectStorageBuildFunc func() (objectstorage.ObjectStorage, error)
 
@@ -34,8 +41,8 @@ func NewDigitalOceanObjectStorageClient(opts DigitalOceanObjectStorageClientOpts
 	authKey := opts.AuthKey
 	authSecret := opts.AuthSecret
 	if authKey == "" && authSecret == "" {
-		authKey = defaultDigitalOceanSpacesAuthKey
-		authSecret = defaultDigitalOceanSpacesAuthSecret
+		authKey = getDefaultDigitalOceanSpacesAuthKey()
+		authSecret = getDefaultDigitalOceanSpacesAuthSecret()
 	}
 
 	// region & bucket
