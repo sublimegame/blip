@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin: 10px;
+            padding: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            background-color: #F2F2F2;
+        }
+        .loading {
+            font-size: 14px;
+            color: #555;
+        }
+        .result-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .result-item:hover {
+            background-color: #f0f0f0;
+        }
+        pre {
+            background: #2e2e2e;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+        let searchTimeout;
+        let controller = new AbortController();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                controller.abort();
+                controller = new AbortController();
+                document.getElementById('result').innerHTML = '<div class="loading">Loading...</div>';
+
+                searchTimeout = setTimeout(function() {
+                    const value = searchInput.value;
+                    if (value.length > 2) {
+                        fetch(`/search?value=${value}`, { signal: controller.signal })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (Array.isArray(data)) {
+                                    const resultDiv = document.getElementById('result');
+                                    resultDiv.innerHTML = '';
+                                    data.forEach(user => {
+                                        const item = document.createElement('div');
+                                        item.className = 'result-item';
+                                        item.innerText = `ID: ${user.id}, Username: ${user.username}`;
+                                        item.onclick = () => displayUserDetails(user);
+                                        resultDiv.appendChild(item);
+                                    });
+                                } else {
+                                    displayUserDetails(data);
+                                }
+                            })
+                            .catch(error => {
+                                if (error.name !== 'AbortError') {
+                                    console.error('Error:', error);
+                                    document.getElementById('result').innerHTML = '<div class="loading">No user found.</div>';
+                                }
+                            });
+                    }
+                }, 300);
+            });
+        });
+
+        function displayUserDetails(user) {
+            const resultDiv = document.getElementById('result');
+            const formattedJson = JSON.stringify(user, null, 2);
+            resultDiv.innerHTML = `<pre><code class="json">${formattedJson}</code></pre>`;
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        <form>
+            <input type="text" id="search" name="search" placeholder="Search by ID, Email, Username, or Phone" required>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{2516EBD9-A0DC-4BFE-8EC9-3DA3082F2AC3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xptools</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VX_USE_LIBWEBSOCKETS;__VX_PLATFORM_WINDOWS;_DEBUG;DEBUG;_LIB;_WIN32_WINNT=0x600;__VX_APP_BUILD_TARGET="windows_steam";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\..\..\cubzh\deps\libpng\_active_\prebuilt\source\include;..\..\..\..\cubzh\deps\libssl\windows\include;..\..\..\..\cubzh\deps\libwebsockets\windows\include;..\..\..\..\cubzh\deps\miniaudio;..\..\..\..\cubzh\deps\xptools\deps;..\..\..\..\cubzh\deps\xptools\include;..\..\..\..\grpc\tracking</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>powershell -ExecutionPolicy Unrestricted -Command "&amp; '..\..\..\..\env\convert_env_to_header.ps1'"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VX_USE_LIBWEBSOCKETS;__VX_PLATFORM_WINDOWS;NDEBUG;_LIB;_WIN32_WINNT=0x600;__VX_APP_BUILD_TARGET="windows_steam";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\..\..\cubzh\deps\libpng\_active_\prebuilt\source\include;..\..\..\..\cubzh\deps\libssl\windows\include;..\..\..\..\cubzh\deps\libwebsockets\windows\include;..\..\..\..\cubzh\deps\miniaudio;..\..\..\..\cubzh\deps\xptools\deps;..\..\..\..\cubzh\deps\xptools\include;..\..\..\..\grpc\tracking</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration />
+    </Lib>
+    <PreBuildEvent>
+      <Command>powershell -ExecutionPolicy Unrestricted -Command "&amp; '..\..\..\..\env\convert_env_to_header.ps1'"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\deps\BZMD5.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\deps\cJSON.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\audio.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\Channel.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\compat_android.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\Connection.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\crypto.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\device.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\device.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\encoding_base64.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\filesystem.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\filesystem.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\HttpClient.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\HttpCookie.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\HttpRequest.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\HttpRequestOpts.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\HttpResponse.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\iap.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\JNIUtils.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\json.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\LocalConnection.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\Macros.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\mixpanel.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\notifications.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\OperationQueue.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\passkey.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\preferences.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\process.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\strings.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\strings.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\textinput.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\textinput.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\ThreadManager.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\tracking.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\URL.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\vxlog.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\vxtime.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\web.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSBackend.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSConnection.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSServer.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSServerConnection.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSService.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\WSTypes.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\include\xptools.h" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\windows\bundle_tar_gz.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\windows\icon_16.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\windows\icon_32.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\windows\icon_48.hpp" />
+    <ClInclude Include="..\..\..\..\cubzh\deps\xptools\windows\internal_windows.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\audio.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\Connection.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\crypto.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\device.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\device_c.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\encoding_base64.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\filesystem.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\HttpClient.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\HttpCookie.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\HttpRequest.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\HttpRequestOpts.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\HttpResponse.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\json.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\LocalConnection.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\notifications.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\OperationQueue.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\passkey.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\process.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\strings.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\textinput.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\ThreadManager.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\tracking.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\URL.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\WSConnection.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\WSServer.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\WSServerConnection.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\WSService.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\common\xp_http.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\deps\BZMD5.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\deps\cJSON.c" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\device_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\filesystem_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\HttpRequest_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\iap_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\internal_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\log_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\miniaudio_impl.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\notifications_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\passkey_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\process_windows.cpp" />
+    <ClCompile Include="..\..\..\..\cubzh\deps\xptools\windows\web_windows.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lpng\lpng.vcxproj">
+      <Project>{9f99bfc7-2710-46bc-aed3-49a36d2f1b9a}</Project>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\ParticubesWin\packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets" Condition="Exists('..\ParticubesWin\packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\ParticubesWin\packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\ParticubesWin\packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets'))" />
+  </Target>
+  <Target Name="PrepareForBuild">
+    <Exec Command="$(ProjectDir)..\..\..\..\windows\generate_bundle.bat $(ProjectDir) $(Configuration)" />
+  </Target>
+</Project>

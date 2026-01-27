@@ -1,0 +1,52 @@
+# 
+# 
+# 
+
+# --------------------------------------------------
+
+# TODO: gdevillele: upgrade to voxowl/cpp-build-env:18.1.3
+FROM voxowl/cpp-build-env:gcc-11.3.0 AS builder
+
+# arch of the container itself
+# ex: `arm64`, `amd64`, ...
+ARG TARGETARCH
+RUN echo TARGETARCH $TARGETARCH
+ENV CUBZH_TARGETARCH=$TARGETARCH
+
+# deps
+COPY cubzh/deps/libssl/linux/amd64 /cubzh/deps/libssl/linux/amd64
+COPY cubzh/deps/libwebsockets/linux/amd64 /cubzh/deps/libwebsockets/linux/amd64
+COPY cubzh/deps/libz/linux-x86_64 /cubzh/deps/libz/linux-x86_64
+COPY cubzh/deps/lpng/src /cubzh/deps/lpng/src
+COPY cubzh/deps/miniaudio /cubzh/deps/miniaudio
+COPY cubzh/deps/xptools /cubzh/deps/xptools
+COPY cubzh/deps/libluau/_active_/prebuilt/linux/x86_64 /cubzh/deps/libluau/_active_/prebuilt/linux/x86_64
+
+# Cubzh
+COPY cubzh/core /cubzh/core
+
+COPY ./common/VXFramework /common/VXFramework
+COPY ./common/VXLuaSandbox /common/VXLuaSandbox
+COPY ./common/VXNetworking /common/VXNetworking
+COPY ./common/VXGameServer /common/VXGameServer
+COPY ./ci/C /ci
+COPY ./ci/storage /storage
+COPY ./ci/bundle /bundle
+COPY ./cubzh/lua/modules /bundle/modules
+COPY ./ci/test.lua /ci/test.lua
+COPY ./ci/ci.sh /ci/ci.sh
+
+WORKDIR /ci
+
+CMD ["bash"]
+
+# --------------------------------------------------
+
+FROM builder AS runner
+
+CMD ["bash", "ci.sh"]
+
+# FROM builder AS run
+
+# RUN ./ci.sh
+

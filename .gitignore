@@ -1,3 +1,16 @@
+# Environment variables (contains secrets)
+.env
+.env.local
+.env.*.local
+
+# Firebase/GCP config (contains API keys)
+private-repo-import/android/app/google-services.json
+private-repo-import/ios-macos/GoogleService-Info.plist
+
+# Private keys
+*.p8
+*.pem
+
 # bazel build output
 /bazel-bin
 /bazel-cubzh

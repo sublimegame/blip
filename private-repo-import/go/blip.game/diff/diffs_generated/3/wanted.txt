@@ -1,0 +1,31 @@
+--- diffs_valid/4/file1.txt	2025-03-20 10:28:03
++++ diffs_valid/4/file2.txt	2025-03-20 10:28:46
+@@ -11,11 +11,6 @@
+ 	codeLines := strings.Split(luauCode, "\n")
+ 	diffLines := strings.Split(unifiedDiff, "\n")
+ 
+-	// Basic validation of diff format
+-	if len(diffLines) < 3 { // Minimum: header + hunk header + one change
+-		return false
+-	}
+-
+ 	// Process each line of the diff
+ 	var currentLine int
+ 	for i, line := range diffLines {
+@@ -70,6 +65,8 @@
+ 			continue
+ 		}
+ 
++        fmt.Println("Hello there....")
++
+ 		// Validate context and removal lines match the original code
+ 		if strings.HasPrefix(line, " ") || strings.HasPrefix(line, "-") {
+ 			if currentLine >= len(codeLines) {
+@@ -86,3 +83,7 @@
+ 
+ 	return true
+ }
++
++func foo() {
++    fmt.Println("Hello there....")
++}

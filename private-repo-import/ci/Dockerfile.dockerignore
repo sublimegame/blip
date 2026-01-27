@@ -1,0 +1,13 @@
+*
+!/common/engine
+!/common/Lua
+!/common/VXFramework
+!/common/VXGameServer
+!/common/VXLuaSandbox
+!/common/VXNetworking
+!/deps/lpng
+!/deps/libssl/linux
+!/deps/libwebsockets/linux
+!/deps/libz/linux-debian-x64
+!/deps/miniaudio
+!/ci

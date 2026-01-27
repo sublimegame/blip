@@ -1,0 +1,44 @@
+Welcome to Blip, the ultimate user-generated content (UGC) gaming platform where creativity knows no bounds!
+
+Dive into Blip's universe, featuring hundreds of unique experiences and thousands of 3D items, all crafted by a passionate community of developers and artists. Whether you're a gamer, creator, or just want to hang out with friends, Blip offers endless possibilities!
+
+EXPLORE MINI-GAMES
+
+Discover a vast array of games, from epic adventures to quick challenges. Whether you enjoy solo play or teaming up with friends, there’s always something new to experience. Blip ensures you’ll never get bored with genres like Life Simulation, Vehicle Simulation, Puzzles, Platformers, FPS, and RPGs.
+
+UNLEASH YOUR CREATIVITY
+
+Whether you're a developer or a 3D artist, Blip is the perfect platform to create and share digital experiences, including all related items (3D models, avatar equipment, sounds, images, and more). Earn rewards by contributing to this ever-expanding universe!
+
+CONNECT WITH FRIENDS
+
+Make new friends or reconnect with old ones on Blip. Play games, chat, and explore worlds together. Blip is your social hub for connecting with a global community. Share adventures, collaborate on projects, and build lasting friendships!
+
+CUSTOMIZE YOUR AVATAR
+
+Express yourself with a unique avatar! Choose from a vast library of items to create a look that’s distinctly yours. Mix and match styles, from casual wear to bold costumes, and stand out in every game you play.
+
+CROSS-PLATFORM FUN
+
+Take the Blip experience with you wherever you go. Enjoy seamless cross-platform gameplay on mobile devices, desktops, or web browsers. Play with friends anytime, anywhere!
+
+FEATURES
+
+- Hundreds of Community-Created Games: Endless gaming possibilities crafted by users like you.
+- Unlimited Avatar Customization: Thousands of options to personalize your avatar and showcase your style.
+- Social Hub: Chat, make friends, and play together in a thriving online community.
+- Blip is FREE: Lightweight and runs smoothly on mobile, desktop, and web browsers.
+- All-in-One Application: A seamless experience for players and creators to connect and collaborate.
+- Free Real-Time Multiplayer Servers: Enjoy lag-free multiplayer gaming.
+- Embedded World Editor: Drag, drop, and move items to design your scenes with ease.
+- Embedded Code Editor with AI Assistant: Write code or use prompts to implement logic, directly from your phone!
+- Powerful Game Script Environment: Develop games quickly using Blip's Luau scripting API (the same language used in Roblox).
+- Embedded Voxel Item Editor: Design and share custom items, from wearables to unique in-game objects.
+- Join the Blip community today and start creating, playing, and exploring now!
+
+USEFUL LINKS
+DISCORD: discord.gg/blipgame
+SUPPORT: blip.game/support
+DEVELOPER DOCS: docs.blip.game
+PRIVACY POLICY: blip.game/privacy
+TERMS OF USE: blip.game/terms

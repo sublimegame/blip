@@ -1,0 +1,155 @@
+{
+  "data" : [ {
+    "type" : "appInfos",
+    "id" : "dd8080a7-ebdd-4a99-a1e3-bf5c716616a8",
+    "attributes" : {
+      "appStoreState" : "PREPARE_FOR_SUBMISSION",
+      "state" : "PREPARE_FOR_SUBMISSION",
+      "appStoreAgeRating" : "TWELVE_PLUS",
+      "australiaAgeRating" : null,
+      "brazilAgeRating" : "TWELVE",
+      "brazilAgeRatingV2" : "SELF_RATED_TWELVE",
+      "franceAgeRating" : null,
+      "koreaAgeRating" : "TWELVE",
+      "kidsAgeBand" : null
+    },
+    "relationships" : {
+      "ageRatingDeclaration" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/ageRatingDeclaration",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/ageRatingDeclaration"
+        }
+      },
+      "appInfoLocalizations" : {
+        "meta" : {
+          "paging" : {
+            "total" : 4,
+            "limit" : 10
+          }
+        },
+        "data" : [ {
+          "type" : "appInfoLocalizations",
+          "id" : "9901a415-aef7-4145-ad43-319b48498ddc"
+        }, {
+          "type" : "appInfoLocalizations",
+          "id" : "e0b75bd6-6a38-40a1-b6b6-edc8000b8c8d"
+        }, {
+          "type" : "appInfoLocalizations",
+          "id" : "efb46173-769c-4a07-90eb-d4e18059e03c"
+        }, {
+          "type" : "appInfoLocalizations",
+          "id" : "e2f0d3d0-8e1f-427f-8281-4266ff5f160e"
+        } ],
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/appInfoLocalizations",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/appInfoLocalizations"
+        }
+      },
+      "primaryCategory" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/primaryCategory",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/primaryCategory"
+        }
+      },
+      "primarySubcategoryOne" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/primarySubcategoryOne",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/primarySubcategoryOne"
+        }
+      },
+      "primarySubcategoryTwo" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/primarySubcategoryTwo",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/primarySubcategoryTwo"
+        }
+      },
+      "secondaryCategory" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/secondaryCategory",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/secondaryCategory"
+        }
+      },
+      "secondarySubcategoryOne" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/secondarySubcategoryOne",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/secondarySubcategoryOne"
+        }
+      },
+      "secondarySubcategoryTwo" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/relationships/secondarySubcategoryTwo",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8/secondarySubcategoryTwo"
+        }
+      }
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appInfos/dd8080a7-ebdd-4a99-a1e3-bf5c716616a8"
+    }
+  } ],
+  "included" : [ {
+    "type" : "appInfoLocalizations",
+    "id" : "9901a415-aef7-4145-ad43-319b48498ddc",
+    "attributes" : {
+      "locale" : "ja",
+      "name" : "Blip!",
+      "subtitle" : "友達と遊び作る冒険世界",
+      "privacyPolicyUrl" : "https://blip.game/privacy",
+      "privacyChoicesUrl" : null,
+      "privacyPolicyText" : null
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appInfoLocalizations/9901a415-aef7-4145-ad43-319b48498ddc"
+    }
+  }, {
+    "type" : "appInfoLocalizations",
+    "id" : "e0b75bd6-6a38-40a1-b6b6-edc8000b8c8d",
+    "attributes" : {
+      "locale" : "fr-FR",
+      "name" : "Blip!",
+      "subtitle" : "Joue et Crée avec tes Amis",
+      "privacyPolicyUrl" : "https://blip.game/privacy",
+      "privacyChoicesUrl" : null,
+      "privacyPolicyText" : null
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appInfoLocalizations/e0b75bd6-6a38-40a1-b6b6-edc8000b8c8d"
+    }
+  }, {
+    "type" : "appInfoLocalizations",
+    "id" : "efb46173-769c-4a07-90eb-d4e18059e03c",
+    "attributes" : {
+      "locale" : "es-ES",
+      "name" : "Blip!",
+      "subtitle" : "Juega y Crea con tus Amigos",
+      "privacyPolicyUrl" : "https://blip.game/privacy",
+      "privacyChoicesUrl" : null,
+      "privacyPolicyText" : null
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appInfoLocalizations/efb46173-769c-4a07-90eb-d4e18059e03c"
+    }
+  }, {
+    "type" : "appInfoLocalizations",
+    "id" : "e2f0d3d0-8e1f-427f-8281-4266ff5f160e",
+    "attributes" : {
+      "locale" : "en-US",
+      "name" : "Blip!",
+      "subtitle" : "Play and Create with Friends",
+      "privacyPolicyUrl" : "https://blip.game/privacy",
+      "privacyChoicesUrl" : null,
+      "privacyPolicyText" : null
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appInfoLocalizations/e2f0d3d0-8e1f-427f-8281-4266ff5f160e"
+    }
+  } ],
+  "links" : {
+    "self" : "https://api.appstoreconnect.apple.com/v1/apps/6743716248/appInfos?include=appInfoLocalizations"
+  },
+  "meta" : {
+    "paging" : {
+      "total" : 1,
+      "limit" : 50
+    }
+  }
+}

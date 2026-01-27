@@ -1,0 +1,124 @@
+networks:
+    default:
+        name: pcubes_private_network
+        driver: overlay
+        attachable: true
+
+services:
+    game-servers-db:
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    session-db:
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    user-db:
+        volumes:
+            - type: bind
+              source: ../servers/debug/dump
+              target: /dump
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    db-admin:
+        image: mongo-express:0.54.0
+        environment:
+            ME_CONFIG_MONGODB_SERVER: user-db
+            ME_CONFIG_MONGODB_ADMINUSERNAME: root
+            ME_CONFIG_MONGODB_ADMINPASSWORD: root
+            ME_CONFIG_BASICAUTH_USERNAME: voxowl
+            ME_CONFIG_BASICAUTH_PASSWORD: ${ME_CONFIG_BASICAUTH_PASSWORD}
+        ports:
+            - target: 8081
+              published: 3333
+              protocol: tcp
+              mode: host
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    hub-http:
+        image: czh-hub
+        build:
+            target: build-env
+        stdin_open: true
+        tty: true
+        ports:
+            - target: 80
+              published: 10083
+              protocol: tcp
+              mode: host
+            - target: 10080 # port within container
+              published: 10084 # external port
+              protocol: tcp
+              mode: host
+        volumes:
+            - type: bind
+              source: ../servers/debug/particubes_items
+              target: /particubes_items
+            - type: bind
+              source: ../servers/debug/particubes_games
+              target: /particubes_games
+            - type: bind
+              source: ../go/cu.bzh
+              target: /go/cu.bzh
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+
+    # scheduler services for nodes in Europe
+    gameservers-eu:
+        image: czh-scheduler
+        build:
+            target: build-env
+        stdin_open: true
+        tty: true
+        volumes:
+            - type: bind
+              source: /var/run/docker.sock
+              target: /var/run/docker.sock
+            - type: bind
+              source: ../go/cu.bzh/scheduler
+              target: /go/cu.bzh/scheduler
+        deploy:
+            mode: global # 1 per node (no replicas)
+            placement:
+                constraints:
+                    - "node.labels.master==1"
+# wasm:
+#   build:
+#     context: .. # git repo root
+#     dockerfile: dockerfiles/wasm.Dockerfile
+#   image: registry.digitalocean.com/cubzh/wasm
+#   ports:
+#     - target: 80 # port within container
+#       published: 1080 # external port
+#       protocol: tcp
+#       mode: host
+#     - target: 443 # port within container
+#       published: 1443 # external port
+#       protocol: tcp
+#       mode: host
+#   deploy:
+#     mode: global # 1 per node (no replicas)
+#     placement:
+#       constraints:
+#         - "node.labels.master==1"
+
+# --------------------------------------------------
+# DATABASES
+# --------------------------------------------------

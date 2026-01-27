@@ -1,0 +1,14 @@
+{
+	"141.94.97.66": {
+		"host": "servers-eu-1.cu.bzh",
+		"gameserver-id-prefix": "eu-1-"
+	},
+	"51.222.244.45": {
+		"host": "servers-us-1.cu.bzh",
+		"gameserver-id-prefix": "us-1-"
+	},
+	"15.235.181.168": {
+		"host": "servers-sg-1.cu.bzh",
+		"gameserver-id-prefix": "sg-1-"
+	}
+}

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bgfx">
+      <UniqueIdentifier>{BFCDD869-AB30-680E-54B6-A0C440F83391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bgfx\c99">
+      <UniqueIdentifier>{C3071321-AF00-3273-D832-17F8C48A117F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\include\bgfx\bgfx.h">
+      <Filter>include\bgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\include\bgfx\defines.h">
+      <Filter>include\bgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\include\bgfx\embedded_shader.h">
+      <Filter>include\bgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\include\bgfx\platform.h">
+      <Filter>include\bgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\include\bgfx\c99\bgfx.h">
+      <Filter>include\bgfx\c99</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\bgfx_p.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\charset.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\debug_renderdoc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\dxgi.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\emscripten.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear0.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear1.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear2.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear3.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear4.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear5.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear6.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear7.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_debugfont.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_eagl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_egl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_html5.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_nsgl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_wgl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glimports.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\nvapi.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_d3d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_d3d11.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_d3d12.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_gl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_mtl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_vk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader_dxbc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader_spirv.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\topology.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\version.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vertexlayout.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vs_clear.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vs_debugfont.bin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\bgfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\debug_renderdoc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\dxgi.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_egl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_html5.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_wgl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\nvapi.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_agc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_d3d11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_d3d12.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_gl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_gnm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_noop.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_nvn.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_vk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader_dxbc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\shader_spirv.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\topology.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vertexlayout.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\bgfx.idl.inl">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\bgfx_compute.sh">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\bgfx_shader.sh">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear0.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear1.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear2.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear3.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear4.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear5.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear6.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_clear7.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\fs_debugfont.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_eagl.mm">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\glcontext_nsgl.mm">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\makefile">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\renderer_mtl.mm">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\varying.def.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vs_clear.sc">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\cubzh\deps\bgfx\bgfx\src\vs_debugfont.sc">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>
