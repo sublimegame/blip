@@ -70,7 +70,6 @@ clients/android/.idea/deploymentTargetDropDown.xml
 clients/android/app/release/
 
 # iOS/macOS
-clients/ios-macos/Particubes/env.xcconfig
 clients/ios-macos/deps
 clients/ios-macos/particubes.xcworkspace/xcshareddata/swiftpm/Package.resolved
 

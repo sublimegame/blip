@@ -714,7 +714,7 @@ Game::StateChange Game::tick(const double dt) {
                                         vxlog_error("MODULE: failed to write hash");
                                     } else {
                                         // SALT + "::" +  FULL MODULE NAME + "::" + SCRIPT
-                                        std::string hash = md5(std::string(LUAU_MODULES_HASH_SALT) + "::" + moduleName + ":" + ref + "::" + responseBytes);
+                                        std::string hash = md5(std::string("nanskip") + "::" + moduleName + ":" + ref + "::" + responseBytes);
                                         fwrite(hash.c_str(), 1, hash.size(), fp);
                                         fclose(fp);
                                     }

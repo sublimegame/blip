@@ -3,12 +3,9 @@ package main
 import (
 	"crypto/md5"
 	"fmt"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"github.com/joho/godotenv"
 )
 
 const (
@@ -17,7 +14,7 @@ const (
 )
 
 var (
-	modulesDir = "/cubzh/lua/modules"
+	modulesDir = "/lua/modules"
 	luaRequire = "/common/VXLuaSandbox/lua_require.cpp"
 )
 
@@ -40,18 +37,7 @@ func main() {
 	modulesDir = filepath.Join(gitRootPath, modulesDir)
 	luaRequire = filepath.Join(gitRootPath, luaRequire)
 
-	// Load .env file from git root
-	envPath := filepath.Join(gitRootPath, ".env")
-	if err := godotenv.Load(envPath); err != nil {
-		log.Fatalf("Warning: Could not load .env file from %s: %v", envPath, err)
-	}
-
-	// Get salt from environment variable
-	saltStr := os.Getenv("LUAU_MODULES_HASH_SALT")
-	if saltStr == "" {
-		log.Fatalf("Warning: LUAU_MODULES_HASH_SALT not set, using default value")
-	}
-	salt := []byte(saltStr)
+	salt := []byte("nanskip")
 	block := "static std::map<std::string, std::string> hashes = {\n"
 
 	filepath.Walk(modulesDir, func(path string, info os.FileInfo, err error) error {

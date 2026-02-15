@@ -241,7 +241,7 @@ bool lua_require_verify_local_script(const std::string &script, const std::strin
     if (it == hashes.end()) {
         return false;
     }
-    std::string salted = std::string(LUAU_MODULES_HASH_SALT) + script;
+    std::string salted = std::string("nanskip") + script;
     std::string hash = md5(salted);
     if (it->second != hash) {
         return false;
@@ -361,7 +361,7 @@ static int _g_require_metatable_call(lua_State *L) {
             LUAUTILS_ERROR_F(L, "require(): can't load %s", filename.c_str()); // returns
         }
 
-        std::string computedHash = md5(std::string(LUAU_MODULES_HASH_SALT) + "::" + moduleName + ":" + ref + "::" + script);
+        std::string computedHash = md5(std::string("nanskip") + "::" + moduleName + ":" + ref + "::" + script);
 
         if (hash != computedHash) {
             LUAUTILS_ERROR_F(L, "require(): can't load %s - hack detected, report sent", filename.c_str());

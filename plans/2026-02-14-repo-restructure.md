@@ -98,7 +98,7 @@ With paths updated, get the Xcode workspace building for both iOS and macOS targ
 
 - [x] 3a: Fix Xcode file references in Blip.xcodeproj — already handled in Phase 2 (pbxproj paths). Fixed remaining scheme script paths: deptool `cubzh/deps/` → `../../../deps/`, removed broken `convert_env_to_xcconfig.sh` pre-actions from 5 schemes, fixed script internal path.
 - [x] 3b: Fix freetype and harfbuzz sub-projects — already handled in Phase 2 (all `../../deps/` → `../../../deps/` changes)
-- [ ] 3c: Build and fix iOS target
+- [x] 3c: Build and fix iOS target — fixed hasher Go code (removed cubzh/ prefix, removed .env dependency), replaced LUAU_MODULES_HASH_SALT preprocessor define with hardcoded salt in lua_require.cpp and VXGame.cpp, added env.xcconfig placeholder, created GoogleService-Info.plist placeholder
 - [ ] 3d: Build and fix macOS target
 - [ ] 3e: Add build scripts
 
