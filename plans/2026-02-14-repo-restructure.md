@@ -62,7 +62,7 @@ Move all content from `private-repo-import/` into its target location at the roo
 - [x] 1e: Move `private-repo-import/wasm/` → `clients/wasm/`
 - [x] 1f: Move `private-repo-import/servers/` → `servers/` (no existing servers/ on origin/main)
 - [x] 1g: Move `private-repo-import/go/` → `go/`
-- [ ] 1h: Merge `private-repo-import/deps/` into `deps/` (freetype, harfbuzz, gif_load, hasher, pthread — no conflicts with existing deps)
+- [x] 1h: Merge `private-repo-import/deps/` into `deps/` (freetype, harfbuzz, gif_load, hasher, pthread — no conflicts with existing deps)
 - [ ] 1i: Merge `private-repo-import/ci/` into `ci/`
 - [ ] 1j: Merge `private-repo-import/dockerfiles/` into `dockerfiles/`
 - [ ] 1k: Move `private-repo-import/distribution/` → `distribution/`
