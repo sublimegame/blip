@@ -41,8 +41,7 @@ ADD_DEFINITIONS(-D__VX_APP_BUILD_TARGET="${VX_APP_BUILD_TARGET_LINUX_GAMESERVER}
 
 set(REPO_ROOT_DIR "${CMAKE_CURRENT_BINARY_DIR}/../..")
 
-set(CUBZH_DIR "${REPO_ROOT_DIR}/cubzh")
-set(CUBZH_DEPS_DIR "${CUBZH_DIR}/deps")
+set(CUBZH_DEPS_DIR "${REPO_ROOT_DIR}/deps")
 
 # --------------------------------------------------
 # Dependencies
@@ -55,7 +54,7 @@ set(LIBZ_LIBS_DIR "${LIBZ_DIR}/lib")
 find_library(LIBZ z ${LIBZ_LIBS_DIR})
 
 # libssl / libcrypto (prebuilt)
-set(LIBSSL_DIR "${REPO_ROOT_DIR}/cubzh/deps/libssl/linux/$ENV{CUBZH_TARGETARCH}")
+set(LIBSSL_DIR "${REPO_ROOT_DIR}/deps/libssl/linux/$ENV{CUBZH_TARGETARCH}")
 set(LIBSSL_INCLUDE_DIR "${LIBSSL_DIR}/include")
 set(LIBSSL_LIBS_DIR "${LIBSSL_DIR}/libs")
 find_library(LIBCRYPTO_PATH crypto ${LIBSSL_LIBS_DIR})
@@ -68,7 +67,7 @@ add_library(ssl STATIC IMPORTED)
 set_property(TARGET ssl PROPERTY IMPORTED_LOCATION ${LIBSSL_PATH})
 
 # libwebsockets (prebuilt)
-set(LIBWEBSOCKETS_DIR "${REPO_ROOT_DIR}/cubzh/deps/libwebsockets/linux/$ENV{CUBZH_TARGETARCH}")
+set(LIBWEBSOCKETS_DIR "${REPO_ROOT_DIR}/deps/libwebsockets/linux/$ENV{CUBZH_TARGETARCH}")
 set(LIBWEBSOCKETS_INCLUDE_DIR "${LIBWEBSOCKETS_DIR}/include")
 set(LIBWEBSOCKETS_LIBS_DIR "${LIBWEBSOCKETS_DIR}/libs")
 find_library(LIBWEBSOCKETS_PATH websockets ${LIBWEBSOCKETS_LIBS_DIR})
@@ -82,13 +81,13 @@ set(LIBMINIAUDIO_INC "${REPO_ROOT_DIR}/deps/miniaudio")
 # libluau
 # ----------------------------------------
 set(LIBLUAU_VERSION "_active_")
-set(LIBLUAU_DIR "${REPO_ROOT_DIR}/cubzh/deps/libluau/${LIBLUAU_VERSION}/prebuilt/linux/${CUBZH_TARGET_ARCH}")
+set(LIBLUAU_DIR "${REPO_ROOT_DIR}/deps/libluau/${LIBLUAU_VERSION}/prebuilt/linux/${CUBZH_TARGET_ARCH}")
 add_library(luau STATIC IMPORTED)
 set_property(TARGET luau PROPERTY IMPORTED_LOCATION ${LIBLUAU_DIR}/lib-${CMAKE_BUILD_TYPE}/libluau.a)
 
 # libpng
 # ----------------------------------------
-set(LIBPNG_DIR "${REPO_ROOT_DIR}/cubzh/deps/libpng/_active_/prebuilt/linux/${CUBZH_TARGET_ARCH}")
+set(LIBPNG_DIR "${REPO_ROOT_DIR}/deps/libpng/_active_/prebuilt/linux/${CUBZH_TARGET_ARCH}")
 # Set LIBPNG_BUILD_TYPE based on CMAKE_BUILD_TYPE (Release, RelWithDebInfo, Debug, MinSizeRel, ...)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(LIBPNG_BUILD_TYPE "Debug")
@@ -100,7 +99,7 @@ set_property(TARGET png PROPERTY
         IMPORTED_LOCATION ${LIBPNG_DIR}/lib-${LIBPNG_BUILD_TYPE}/libpng.a)
 
 # bgfx
-set(BGFX_3RD_PARTY_DIR "${REPO_ROOT_DIR}/cubzh/deps/bgfx/bgfx/3rdparty")
+set(BGFX_3RD_PARTY_DIR "${REPO_ROOT_DIR}/deps/bgfx/bgfx/3rdparty")
 
 # --------------------------------------------------
 # Sources
@@ -113,7 +112,7 @@ set(VX_SERVER_DIR "${COMMON_DIR}/VXGameServer")
 set(VXNETWORKING_DIR "${COMMON_DIR}/VXNetworking")
 
 # CUBZH CORE
-set(CUBZH_CORE_DIR "${CUBZH_DIR}/core")
+set(CUBZH_CORE_DIR "${REPO_ROOT_DIR}/core")
 
 set(SOURCE_FILES "")
 
