@@ -14,24 +14,24 @@ VX_APP_BUILD_TARGET_LINUX_LUAUNITTESTS = linux_lua_unit_tests
 
 # --------------------------------------------------
 COMMON_DIR=/common
-LIBLUAU_DIR=/cubzh/deps/libluau
+LIBLUAU_DIR=/deps/libluau
 
-LIBPNG_DIR=/cubzh/deps/lpng/src
-LIBMINIAUDIO_DIR=/cubzh/deps/miniaudio
-LIBWEBSOCKETS_DIR=/cubzh/deps/libwebsockets/linux/$(CUBZH_TARGETARCH)/include
-LIBSSL_DIR=/cubzh/deps/libssl/linux/$(CUBZH_TARGETARCH)/include
-LIBVXTOOLS_DIR=/cubzh/deps/xptools
+LIBPNG_DIR=/deps/lpng/src
+LIBMINIAUDIO_DIR=/deps/miniaudio
+LIBWEBSOCKETS_DIR=/deps/libwebsockets/linux/$(CUBZH_TARGETARCH)/include
+LIBSSL_DIR=/deps/libssl/linux/$(CUBZH_TARGETARCH)/include
+LIBVXTOOLS_DIR=/deps/xptools
 VXLUASANDBOX_DIR=$(COMMON_DIR)/VXLuaSandbox
 VXFRAMEWORK_DIR=$(COMMON_DIR)/VXFramework
 VXGAMESERVER_DIR=$(COMMON_DIR)/VXGameServer
 VXNETWORKING_DIR=$(COMMON_DIR)/VXNetworking
 
 # Cubzh Core
-CUBZH_CORE_DIR=/cubzh/core
+CUBZH_CORE_DIR=/core
 
 # Cubzh Core Dependencies
-LIBZ_INCLUDE_DIR=/cubzh/deps/libz/$(PLATFORM_ARCH_CMAKE)/include
-LIBZ_LIBS_DIR=/cubzh/deps/libz/$(PLATFORM_ARCH_CMAKE)/lib
+LIBZ_INCLUDE_DIR=/deps/libz/$(PLATFORM_ARCH_CMAKE)/include
+LIBZ_LIBS_DIR=/deps/libz/$(PLATFORM_ARCH_CMAKE)/lib
 
 all: deps ci
 
@@ -112,10 +112,10 @@ ci: clean-ci
 	-lz \
 	-L$(LIBPNG_DIR) \
 	-lpng \
-	-L/cubzh/deps/libssl/linux/$(CUBZH_TARGETARCH)/libs \
+	-L/deps/libssl/linux/$(CUBZH_TARGETARCH)/libs \
 	-lcrypto \
 	-lssl \
-	-L/cubzh/deps/libwebsockets/linux/$(CUBZH_TARGETARCH)/libs \
+	-L/deps/libwebsockets/linux/$(CUBZH_TARGETARCH)/libs \
 	-lwebsockets \
 	-L$(LIBLUAU_DIR)/_active_/prebuilt/linux/x86_64/lib-Debug \
 	-lluau \

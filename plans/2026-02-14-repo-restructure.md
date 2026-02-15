@@ -87,7 +87,7 @@ After all directories are moved, systematically update every relative path in ev
 - [x] 2b: Fix Xcode workspace and sub-project references — fixed 84 `cubzh/` refs in 8 bgfx/bx/bimg lib projects (iOS+macOS), 44+15 `../../deps/` refs in freetype+harfbuzz projects. Workspace data was already correct.
 - [x] 2c: Fix `common/VXGameServer/CMakeLists.txt` and xptools.cmake — removed `cubzh/` from all REPO_ROOT_DIR-based paths, eliminated CUBZH_DIR variable
 - [x] 2d: Fix `clients/android/` build paths — fixed `cubzh/` in CMakeLists.txt, xptools.cmake, and build.gradle; adjusted relative depth for all paths
-- [ ] 2e: Fix `ci/C/Makefile`
+- [x] 2e: Fix `ci/C/Makefile` — replaced `/cubzh/` with `/` for all Docker container absolute paths
 - [ ] 2f: Fix CI Dockerfiles
 - [ ] 2g: Fix `dockerfiles/*.Dockerfile`
 - [ ] 2h: Fix remaining path references across the repo
