@@ -170,7 +170,7 @@
 				F57858186104C6DC6A1549D1 /* src */,
 			);
 			name = bx;
-			path = cubzh/deps/bgfx/bx;
+			path = ../deps/bgfx/bx;
 			sourceTree = "<group>";
 		};
 		195A6B7005155B1CAECCD366 /* inline */ = {
@@ -578,9 +578,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bx/3rdparty,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bx/3rdparty,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Release/bx";
@@ -657,9 +657,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bx/3rdparty,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bx/3rdparty,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Debug/bx";

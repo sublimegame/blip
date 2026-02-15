@@ -52,7 +52,7 @@
 				11C91A407D8B4ECAC63BDD56 /* src */,
 			);
 			name = bimg;
-			path = cubzh/deps/bgfx/bimg;
+			path = ../deps/bgfx/bimg;
 			sourceTree = "<group>";
 		};
 		72626488DE24981227D5269F /* Products */ = {
@@ -201,11 +201,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					../../../../cubzh/deps/bgfx/bimg/3rdparty,
-					../../../../cubzh/deps/bgfx/bimg/3rdparty/tinyexr/deps/miniz,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					../../../../../deps/bgfx/bimg/3rdparty,
+					../../../../../deps/bgfx/bimg/3rdparty/tinyexr/deps/miniz,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Release/bimg_decode";
@@ -311,11 +311,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					../../../../cubzh/deps/bgfx/bimg/3rdparty,
-					../../../../cubzh/deps/bgfx/bimg/3rdparty/tinyexr/deps/miniz,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					../../../../../deps/bgfx/bimg/3rdparty,
+					../../../../../deps/bgfx/bimg/3rdparty/tinyexr/deps/miniz,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Debug/bimg_decode";

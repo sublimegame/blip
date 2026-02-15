@@ -197,7 +197,7 @@
 				3BB3C967A7CBB0917078402B /* vertexlayout.h */,
 			);
 			name = src;
-			path = ../../../../cubzh/deps/bgfx/bgfx/src;
+			path = ../../../../../deps/bgfx/bgfx/src;
 			sourceTree = "<group>";
 		};
 		8CFE5F86F8145E1C418CE93D /* scripts */ = {
@@ -206,7 +206,7 @@
 				E60CA7FF52258E291BD21DC3 /* bgfx.natvis */,
 			);
 			name = scripts;
-			path = ../../../../cubzh/deps/bgfx/bgfx/scripts;
+			path = ../../../../../deps/bgfx/bgfx/scripts;
 			sourceTree = "<group>";
 		};
 		96F61A2A02B79660CBF1DFDD /* bgfx */ = {
@@ -244,7 +244,7 @@
 				0B504C4C77BC074740B09FA4 /* bgfx */,
 			);
 			name = include;
-			path = ../../../../cubzh/deps/bgfx/bgfx/include;
+			path = ../../../../../deps/bgfx/bgfx/include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,12 +432,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bgfx/3rdparty,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					../../../../cubzh/deps/bgfx/bgfx/3rdparty/khronos,
-					../../../../cubzh/deps/bgfx/bgfx/include,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bgfx/3rdparty,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					../../../../../deps/bgfx/bgfx/3rdparty/khronos,
+					../../../../../deps/bgfx/bgfx/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Debug/bgfx";
@@ -535,12 +535,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bgfx/3rdparty,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					../../../../cubzh/deps/bgfx/bgfx/3rdparty/khronos,
-					../../../../cubzh/deps/bgfx/bgfx/include,
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bgfx/3rdparty,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					../../../../../deps/bgfx/bgfx/3rdparty/khronos,
+					../../../../../deps/bgfx/bgfx/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Release/bgfx";

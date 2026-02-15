@@ -97,7 +97,7 @@
 				B18C11A09D70D2F506D1CC48 /* src */,
 			);
 			name = bimg;
-			path = cubzh/deps/bgfx/bimg;
+			path = ../deps/bgfx/bimg;
 			sourceTree = "<group>";
 		};
 		4637D8ECB2F753237B329DA0 /* bimg */ = {
@@ -377,10 +377,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					"../../../../cubzh/deps/bgfx/bimg/3rdparty/astc-encoder/include",
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					"../../../../../deps/bgfx/bimg/3rdparty/astc-encoder/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Release/bimg";
@@ -485,10 +485,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/ios,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bimg/include,
-					"../../../../cubzh/deps/bgfx/bimg/3rdparty/astc-encoder/include",
+					../../../../../deps/bgfx/bx/include/compat/ios,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bimg/include,
+					"../../../../../deps/bgfx/bimg/3rdparty/astc-encoder/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OBJROOT = "../../ios-arm/obj/Debug/bimg";

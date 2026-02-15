@@ -170,7 +170,7 @@
 				F57858186104C6DC6A1549D1 /* src */,
 			);
 			name = bx;
-			path = cubzh/deps/bgfx/bx;
+			path = ../deps/bgfx/bx;
 			sourceTree = "<group>";
 		};
 		195A6B7005155B1CAECCD366 /* inline */ = {
@@ -587,9 +587,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/osx,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bx/3rdparty,
+					../../../../../deps/bgfx/bx/include/compat/osx,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bx/3rdparty,
 				);
 				OBJROOT = obj/Release/bx;
 				OTHER_CFLAGS = (
@@ -667,9 +667,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../cubzh/deps/bgfx/bx/include/compat/osx,
-					../../../../cubzh/deps/bgfx/bx/include,
-					../../../../cubzh/deps/bgfx/bx/3rdparty,
+					../../../../../deps/bgfx/bx/include/compat/osx,
+					../../../../../deps/bgfx/bx/include,
+					../../../../../deps/bgfx/bx/3rdparty,
 				);
 				OBJROOT = obj/Debug/bx;
 				ONLY_ACTIVE_ARCH = YES;

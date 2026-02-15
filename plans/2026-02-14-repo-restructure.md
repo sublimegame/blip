@@ -84,7 +84,7 @@ After all directories are moved, systematically update every relative path in ev
 | `private-repo-import/ci/C/` | `ci/C/` | (Docker absolute paths) | (Docker absolute paths) | (Docker absolute paths) |
 
 - [x] 2a: Fix Xcode project paths in `clients/ios-macos/Particubes/Blip.xcodeproj/project.pbxproj` — replaced 175 lines: `../../cubzh/` → `../../../`, `../../deps|common|ci` → `../../../`, fixed group-relative asset paths and absolute `/Users/` paths
-- [ ] 2b: Fix Xcode workspace and sub-project references
+- [x] 2b: Fix Xcode workspace and sub-project references — fixed 84 `cubzh/` refs in 8 bgfx/bx/bimg lib projects (iOS+macOS), 44+15 `../../deps/` refs in freetype+harfbuzz projects. Workspace data was already correct.
 - [ ] 2c: Fix `common/VXGameServer/CMakeLists.txt` and xptools.cmake
 - [ ] 2d: Fix `clients/android/` build paths
 - [ ] 2e: Fix `ci/C/Makefile`

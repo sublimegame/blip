@@ -44,19 +44,19 @@
 		8583252B2DE7AF930063C0EB /* libfreetype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libfreetype.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		858325352DE7B3820063C0EB /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../freetype/freetype.xcodeproj; sourceTree = SOURCE_ROOT; };
 		85C721E12DE7985F00E95B69 /* libharfbuzz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libharfbuzz.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		85C721E82DE7AC7F00E95B69 /* harfbuzz.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = harfbuzz.cc; path = ../../deps/harfbuzz/src/harfbuzz.cc; sourceTree = SOURCE_ROOT; };
-		85C721F12DE7AD0300E95B69 /* hb-subset.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset.cc"; path = "../../deps/harfbuzz/src/hb-subset.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F22DE7AD0300E95B69 /* hb-subset-cff-common.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff-common.cc"; path = "../../deps/harfbuzz/src/hb-subset-cff-common.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F32DE7AD0300E95B69 /* hb-subset-cff1.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff1.cc"; path = "../../deps/harfbuzz/src/hb-subset-cff1.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F42DE7AD0300E95B69 /* hb-subset-cff2.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff2.cc"; path = "../../deps/harfbuzz/src/hb-subset-cff2.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F52DE7AD0300E95B69 /* hb-subset-input.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-input.cc"; path = "../../deps/harfbuzz/src/hb-subset-input.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F62DE7AD0300E95B69 /* hb-subset-instancer-iup.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-instancer-iup.cc"; path = "../../deps/harfbuzz/src/hb-subset-instancer-iup.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F72DE7AD0300E95B69 /* hb-subset-instancer-solver.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-instancer-solver.cc"; path = "../../deps/harfbuzz/src/hb-subset-instancer-solver.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F82DE7AD0300E95B69 /* hb-subset-plan.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan.cc"; path = "../../deps/harfbuzz/src/hb-subset-plan.cc"; sourceTree = SOURCE_ROOT; };
-		85C721F92DE7AD0300E95B69 /* hb-subset-plan-layout.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan-layout.cc"; path = "../../deps/harfbuzz/src/hb-subset-plan-layout.cc"; sourceTree = SOURCE_ROOT; };
-		85C721FA2DE7AD0300E95B69 /* hb-subset-plan-var.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan-var.cc"; path = "../../deps/harfbuzz/src/hb-subset-plan-var.cc"; sourceTree = SOURCE_ROOT; };
-		85C721FB2DE7AD0300E95B69 /* hb-subset-serialize.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-serialize.cc"; path = "../../deps/harfbuzz/src/hb-subset-serialize.cc"; sourceTree = SOURCE_ROOT; };
-		85C7220B2DE7AD4900E95B69 /* gsubgpos-context.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gsubgpos-context.cc"; path = "../../deps/harfbuzz/src/graph/gsubgpos-context.cc"; sourceTree = SOURCE_ROOT; };
+		85C721E82DE7AC7F00E95B69 /* harfbuzz.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = harfbuzz.cc; path = ../../../deps/harfbuzz/src/harfbuzz.cc; sourceTree = SOURCE_ROOT; };
+		85C721F12DE7AD0300E95B69 /* hb-subset.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset.cc"; path = "../../../deps/harfbuzz/src/hb-subset.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F22DE7AD0300E95B69 /* hb-subset-cff-common.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff-common.cc"; path = "../../../deps/harfbuzz/src/hb-subset-cff-common.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F32DE7AD0300E95B69 /* hb-subset-cff1.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff1.cc"; path = "../../../deps/harfbuzz/src/hb-subset-cff1.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F42DE7AD0300E95B69 /* hb-subset-cff2.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-cff2.cc"; path = "../../../deps/harfbuzz/src/hb-subset-cff2.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F52DE7AD0300E95B69 /* hb-subset-input.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-input.cc"; path = "../../../deps/harfbuzz/src/hb-subset-input.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F62DE7AD0300E95B69 /* hb-subset-instancer-iup.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-instancer-iup.cc"; path = "../../../deps/harfbuzz/src/hb-subset-instancer-iup.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F72DE7AD0300E95B69 /* hb-subset-instancer-solver.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-instancer-solver.cc"; path = "../../../deps/harfbuzz/src/hb-subset-instancer-solver.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F82DE7AD0300E95B69 /* hb-subset-plan.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan.cc"; path = "../../../deps/harfbuzz/src/hb-subset-plan.cc"; sourceTree = SOURCE_ROOT; };
+		85C721F92DE7AD0300E95B69 /* hb-subset-plan-layout.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan-layout.cc"; path = "../../../deps/harfbuzz/src/hb-subset-plan-layout.cc"; sourceTree = SOURCE_ROOT; };
+		85C721FA2DE7AD0300E95B69 /* hb-subset-plan-var.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-plan-var.cc"; path = "../../../deps/harfbuzz/src/hb-subset-plan-var.cc"; sourceTree = SOURCE_ROOT; };
+		85C721FB2DE7AD0300E95B69 /* hb-subset-serialize.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "hb-subset-serialize.cc"; path = "../../../deps/harfbuzz/src/hb-subset-serialize.cc"; sourceTree = SOURCE_ROOT; };
+		85C7220B2DE7AD4900E95B69 /* gsubgpos-context.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gsubgpos-context.cc"; path = "../../../deps/harfbuzz/src/graph/gsubgpos-context.cc"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,7 +371,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/freetype/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../deps/freetype/include";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -389,7 +389,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../deps/freetype/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../deps/freetype/include";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
