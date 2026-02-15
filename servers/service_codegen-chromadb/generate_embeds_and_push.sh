@@ -67,8 +67,8 @@ done
 
 cd $GIT_REPO_ROOT/go/cu.bzh/ai/codegen/
 
-CODEGEN_DOCS_REFERENCE_DIR=$GIT_REPO_ROOT/cubzh/lua/docs/content/reference \
-CODEGEN_SAMPLE_SCRIPTS_FILE=$GIT_REPO_ROOT/cubzh/lua/docs/content/sample-scripts.yml \
+CODEGEN_DOCS_REFERENCE_DIR=$GIT_REPO_ROOT/lua/docs/content/reference \
+CODEGEN_SAMPLE_SCRIPTS_FILE=$GIT_REPO_ROOT/lua/docs/content/sample-scripts.yml \
 CODEGEN_CHROMADB_HOST=$CHROMADB_HOST \
 CODEGEN_CHROMADB_PORT=$CHROMADB_PORT \
 go run ./... --embed

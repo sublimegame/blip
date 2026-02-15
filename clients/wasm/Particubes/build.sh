@@ -56,10 +56,10 @@ mkdir -p ./build
 # --------------------------------------------------
 rm -Rf ./build/bundle
 # bundle files
-cp -R ../../cubzh/bundle ./build/bundle
-cp -R ../../cubzh/i18n ./build/bundle
+cp -R ../../../bundle ./build/bundle
+cp -R ../../../i18n ./build/bundle
 # open-source Lua modules
-cp -R ../../cubzh/lua/modules ./build/bundle
+cp -R ../../../lua/modules ./build/bundle
 
 # --------------------------------------------------
 # Execute the hasher program

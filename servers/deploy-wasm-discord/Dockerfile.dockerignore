@@ -3,11 +3,11 @@
 
 # Allow files and folders with a pattern starting with !
 !common
-!cubzh/bundle
-!cubzh/core
-!cubzh/deps
-!cubzh/lua/modules
-!cubzh/i18n
+!bundle
+!core
+!deps
+!lua/modules
+!i18n
 !deps
 !go/cu.bzh/cors
 !go/cu.bzh/wasmserver

@@ -15,7 +15,7 @@ PROJECT_ROOT=$(git rev-parse --show-toplevel)
 # The script is now executed from project root directory
 cd "$PROJECT_ROOT"
 
-MODULES="./cubzh/lua/modules"
+MODULES="./lua/modules"
 LUA_REQUIRE="./common/VXLuaSandbox/lua_require.cpp"
 
 BLOCK="// HASHES START\n\

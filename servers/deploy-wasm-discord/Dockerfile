@@ -16,12 +16,12 @@ COPY ./common/VXGameServer /repo/common/VXGameServer
 COPY ./common/VXLuaSandbox /repo/common/VXLuaSandbox
 COPY ./common/VXNetworking /repo/common/VXNetworking
 
-COPY ./cubzh/core /repo/cubzh/core
-COPY ./cubzh/deps /repo/cubzh/deps
-COPY ./cubzh/lua/modules /repo/cubzh/lua/modules
-COPY ./cubzh/i18n /repo/cubzh/i18n
-COPY ./cubzh/deps/xptools /repo/cubzh/deps/xptools
-COPY ./cubzh/bundle /repo/cubzh/bundle
+COPY ./core /repo/core
+COPY ./deps /repo/deps
+COPY ./lua/modules /repo/lua/modules
+COPY ./i18n /repo/i18n
+COPY ./deps/xptools /repo/deps/xptools
+COPY ./bundle /repo/bundle
 
 COPY ./deps /repo/deps
 COPY ./wasm/Particubes /repo/wasm/Particubes

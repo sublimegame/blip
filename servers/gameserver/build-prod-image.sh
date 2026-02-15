@@ -18,18 +18,18 @@ cd "$SCRIPT_LOCATION"
 
 # Use git command to get root project directory.
 PROJECT_ROOT=$(git rev-parse --show-toplevel)
-CONFIG_JSON="$PROJECT_ROOT/cubzh/bundle/config.json"
+CONFIG_JSON="$PROJECT_ROOT/bundle/config.json"
 
 # The script is now executed from project root directory
 cd "$PROJECT_ROOT"
 
 # Ensure the dependencies are installed
-/bin/bash -c "cd cubzh/deps/deptool/cmd && go run ./... autoconfig linux"
+/bin/bash -c "cd deps/deptool/cmd && go run ./... autoconfig linux"
 
 DIRTY=$(git diff --quiet || echo '-dirty')
 COMMIT=$(git rev-parse --short=8 HEAD)
 TAG="$COMMIT$DIRTY"
-IMAGE="registry.digitalocean.com/cubzh/gameserver:$TAG"
+IMAGE="registry.digitalocean.com/gameserver:$TAG"
 
 # build docker image for GameServer
 docker build \

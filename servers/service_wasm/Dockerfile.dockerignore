@@ -3,37 +3,37 @@
 
 # Allow files and folders with a pattern starting with !
 
-# cubzh/bundle
-!cubzh/bundle
-cubzh/bundle/shaders
-!cubzh/bundle/shaders/essl
+# bundle
+!bundle
+bundle/shaders
+!bundle/shaders/essl
 
-# cubzh/core
-!cubzh/core/*.c
-!cubzh/core/*.h
+# core
+!core/*.c
+!core/*.h
 
-# cubzh/deps
-!cubzh/deps/bgfx/bgfx/3rdparty
-!cubzh/deps/bgfx/bgfx/examples/common
-!cubzh/deps/bgfx/bgfx/include
-!cubzh/deps/bgfx/bgfx/scripts
-!cubzh/deps/bgfx/bgfx/src
-!cubzh/deps/bgfx/bimg
-!cubzh/deps/bgfx/bx
-!cubzh/deps/deptool/cmd/deptool_linux_x86_64
-!cubzh/deps/libluau/_active_/prebuilt/source
-!cubzh/deps/lpng/src
-!cubzh/deps/miniaudio
-!cubzh/deps/xptools/common
-!cubzh/deps/xptools/deps
-!cubzh/deps/xptools/include
-!cubzh/deps/xptools/web
+# deps
+!deps/bgfx/bgfx/3rdparty
+!deps/bgfx/bgfx/examples/common
+!deps/bgfx/bgfx/include
+!deps/bgfx/bgfx/scripts
+!deps/bgfx/bgfx/src
+!deps/bgfx/bimg
+!deps/bgfx/bx
+!deps/deptool/cmd/deptool_linux_x86_64
+!deps/libluau/_active_/prebuilt/source
+!deps/lpng/src
+!deps/miniaudio
+!deps/xptools/common
+!deps/xptools/deps
+!deps/xptools/include
+!deps/xptools/web
 
-# cubzh/i18n
-!cubzh/i18n/*.json
+# i18n
+!i18n/*.json
 
-# cubzh/lua/modules
-!cubzh/lua/modules/*.lua
+# lua/modules
+!lua/modules/*.lua
 
 !common
 !deps/gif_load/gif_load.h

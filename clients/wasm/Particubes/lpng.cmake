@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.20)
 
-set(LPNG_DIR "${REPO_ROOT_DIR}/cubzh/deps/lpng/src")
+set(LPNG_DIR "${REPO_ROOT_DIR}/deps/lpng/src")
 
 # common sources
 file(GLOB LPNG_SRC_COMMON

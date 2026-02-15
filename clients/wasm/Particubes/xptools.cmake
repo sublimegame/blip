@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.20)
 
-set(VXTOOLS_DIR "${REPO_ROOT_DIR}/cubzh/deps/xptools")
+set(VXTOOLS_DIR "${REPO_ROOT_DIR}/deps/xptools")
 set(VXTOOLS_DEPS_DIR "${VXTOOLS_DIR}/deps")
 set(VXTOOLS_INCLUDE_DIR "${VXTOOLS_DIR}/include")
 set(VXTOOLS_COMMON_DIR "${VXTOOLS_DIR}/common")

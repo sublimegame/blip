@@ -4,11 +4,11 @@
 # /!\ so far emsdk did not work on arm64 platform
 FROM voxowl/emsdk:4.0.4 AS wasm_build_env
 
-COPY cubzh/bundle /repo/cubzh/bundle
-COPY cubzh/core /repo/cubzh/core
-COPY cubzh/deps /repo/cubzh/deps
-COPY cubzh/i18n /repo/cubzh/i18n
-COPY cubzh/lua/modules /repo/cubzh/lua/modules
+COPY bundle /repo/bundle
+COPY core /repo/core
+COPY deps /repo/deps
+COPY i18n /repo/i18n
+COPY lua/modules /repo/lua/modules
 
 COPY common /repo/common
 COPY deps /repo/deps
@@ -43,7 +43,7 @@ CMD ["/bin/bash"]
 FROM golang:1.24.1-alpine3.21 AS http_builder
 
 # for HTTPS
-# /cubzh/certificates
+# /certificates
 
 # context is root of the git repo
 
@@ -79,7 +79,7 @@ CMD ["/server"]
 #   - a compiled copy of Cubzh wasm app
 FROM golang:1.24.1-alpine3.21 AS http_server_dev_env
 # SSL/TLS certificates for HTTPS
-# /cubzh/certificates
+# /certificates
 # context is root of the git repo
 COPY ./go/cu.bzh/wasmserver /go/cu.bzh/wasmserver
 # compiled Cubzh wasm app
