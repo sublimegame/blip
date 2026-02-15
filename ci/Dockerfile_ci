@@ -14,16 +14,16 @@ RUN echo TARGETARCH $TARGETARCH
 ENV CUBZH_TARGETARCH=$TARGETARCH
 
 # deps
-COPY cubzh/deps/libssl/linux/amd64 /cubzh/deps/libssl/linux/amd64
-COPY cubzh/deps/libwebsockets/linux/amd64 /cubzh/deps/libwebsockets/linux/amd64
-COPY cubzh/deps/libz/linux-x86_64 /cubzh/deps/libz/linux-x86_64
-COPY cubzh/deps/lpng/src /cubzh/deps/lpng/src
-COPY cubzh/deps/miniaudio /cubzh/deps/miniaudio
-COPY cubzh/deps/xptools /cubzh/deps/xptools
-COPY cubzh/deps/libluau/_active_/prebuilt/linux/x86_64 /cubzh/deps/libluau/_active_/prebuilt/linux/x86_64
+COPY deps/libssl/linux/amd64 /deps/libssl/linux/amd64
+COPY deps/libwebsockets/linux/amd64 /deps/libwebsockets/linux/amd64
+COPY deps/libz/linux-x86_64 /deps/libz/linux-x86_64
+COPY deps/lpng/src /deps/lpng/src
+COPY deps/miniaudio /deps/miniaudio
+COPY deps/xptools /deps/xptools
+COPY deps/libluau/_active_/prebuilt/linux/x86_64 /deps/libluau/_active_/prebuilt/linux/x86_64
 
 # Cubzh
-COPY cubzh/core /cubzh/core
+COPY core /core
 
 COPY ./common/VXFramework /common/VXFramework
 COPY ./common/VXLuaSandbox /common/VXLuaSandbox
@@ -32,7 +32,7 @@ COPY ./common/VXGameServer /common/VXGameServer
 COPY ./ci/C /ci
 COPY ./ci/storage /storage
 COPY ./ci/bundle /bundle
-COPY ./cubzh/lua/modules /bundle/modules
+COPY ./lua/modules /bundle/modules
 COPY ./ci/test.lua /ci/test.lua
 COPY ./ci/ci.sh /ci/ci.sh
 

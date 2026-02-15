@@ -33,21 +33,20 @@ RUN echo TARGETARCH $TARGETARCH
 ENV CUBZH_TARGETARCH=$TARGETARCH
 
 # Cubzh
-COPY ./cubzh/core /cubzh/core
-COPY ./cubzh/deps /cubzh/deps
+COPY ./core /core
+COPY ./deps /deps
 # TODO: make this dynamic
-COPY ./cubzh/deps/libz/linux-x86_64 /cubzh/deps/libz/linux-x86_64
-COPY ./cubzh/deps/libz/linux-aarch64 /cubzh/deps/libz/linux-aarch64
+COPY ./deps/libz/linux-x86_64 /deps/libz/linux-x86_64
+COPY ./deps/libz/linux-aarch64 /deps/libz/linux-aarch64
 
 COPY ./common/VXFramework /common/VXFramework
 COPY ./common/VXLuaSandbox /common/VXLuaSandbox
 COPY ./common/VXNetworking /common/VXNetworking
 COPY ./common/VXGameServer /common/VXGameServer
-COPY ./deps /deps
 COPY ./ci/C /ci
 COPY ./ci/storage /storage
 COPY ./ci/bundle /bundle
-COPY ./cubzh/lua/modules /bundle/modules
+COPY ./lua/modules /bundle/modules
 COPY ./ci/test.lua /ci/test.lua
 COPY ./ci/ci.sh /ci/ci.sh
 

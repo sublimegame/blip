@@ -14,14 +14,12 @@ COPY ./ci/bundle /bundle
 COPY ./ci/test.lua /ci/test.lua
 COPY ./ci/ci.sh /ci/ci.sh
 
-COPY ./cubzh/core /cubzh/core
-COPY ./cubzh/deps /cubzh/deps
+COPY ./core /core
+COPY ./deps /deps
 COPY ./common/VXFramework /common/VXFramework
 COPY ./common/VXGameServer /common/VXGameServer
 COPY ./common/VXLuaSandbox /common/VXLuaSandbox
 COPY ./common/VXNetworking /common/VXNetworking
-
-COPY ./deps /deps
 
 WORKDIR /ci
 

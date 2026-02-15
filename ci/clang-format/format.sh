@@ -4,11 +4,11 @@
 # considered paths
 # 
 # ./ci/C
-# ./cubzh/core
+# ./core
 
 # modify (actually format source files)
 docker run --rm -w /workdir -v $(pwd):/workdir gaetan/clang-tools sh -c "find ./ci/C -regex '.*\.\(cpp\|hpp\|c\|h\)' -print0 | xargs -0 clang-format -style=file -i"
-docker run --rm -w /workdir -v $(pwd):/workdir gaetan/clang-tools sh -c "find ./cubzh/core -regex '.*\.\(cpp\|hpp\|c\|h\)' -print0 | xargs -0 clang-format -style=file -i"
+docker run --rm -w /workdir -v $(pwd):/workdir gaetan/clang-tools sh -c "find ./core -regex '.*\.\(cpp\|hpp\|c\|h\)' -print0 | xargs -0 clang-format -style=file -i"
 
 # =================================================
 
