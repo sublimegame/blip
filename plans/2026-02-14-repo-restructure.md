@@ -63,9 +63,9 @@ Move all content from `private-repo-import/` into its target location at the roo
 - [x] 1f: Move `private-repo-import/servers/` → `servers/` (no existing servers/ on origin/main)
 - [x] 1g: Move `private-repo-import/go/` → `go/`
 - [x] 1h: Merge `private-repo-import/deps/` into `deps/` (freetype, harfbuzz, gif_load, hasher, pthread — no conflicts with existing deps)
-- [ ] 1i: Merge `private-repo-import/ci/` into `ci/`
-- [ ] 1j: Merge `private-repo-import/dockerfiles/` into `dockerfiles/`
-- [ ] 1k: Move `private-repo-import/distribution/` → `distribution/`
+- [x] 1i: Merge `private-repo-import/ci/` into `ci/` (no overlaps with existing lua_docs_deploy_prod)
+- [x] 1j: Merge `private-repo-import/dockerfiles/` into `dockerfiles/` (no overlaps with existing luadev.Dockerfile)
+- [x] 1k: Move `private-repo-import/distribution/` → `distribution/`
 - [ ] 1l: Merge `private-repo-import/misc/` into `misc/`, move `private-repo-import/graphic-assets/` → `misc/graphic-assets/`
 - [ ] 1m: Handle remaining private-repo-import files (`.clang-format`, `secure-modules.sh`, `env/`, `convert_env_to_xcconfig.sh`, `.env.example`, `.gitattributes`, `.gitignore`, `.dockerignore`, `README.md`)
 - [ ] 1n: Remove `private-repo-import/` directory
