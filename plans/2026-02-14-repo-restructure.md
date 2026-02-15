@@ -96,8 +96,8 @@ After all directories are moved, systematically update every relative path in ev
 
 With paths updated, get the Xcode workspace building for both iOS and macOS targets.
 
-- [ ] 3a: Fix Xcode file references in Blip.xcodeproj
-- [ ] 3b: Fix freetype and harfbuzz sub-projects
+- [x] 3a: Fix Xcode file references in Blip.xcodeproj — already handled in Phase 2 (pbxproj paths). Fixed remaining scheme script paths: deptool `cubzh/deps/` → `../../../deps/`, removed broken `convert_env_to_xcconfig.sh` pre-actions from 5 schemes, fixed script internal path.
+- [x] 3b: Fix freetype and harfbuzz sub-projects — already handled in Phase 2 (all `../../deps/` → `../../../deps/` changes)
 - [ ] 3c: Build and fix iOS target
 - [ ] 3d: Build and fix macOS target
 - [ ] 3e: Add build scripts

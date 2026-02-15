@@ -10,23 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# run deptool autoconfig&#10;echo &quot;&#x2b50;&#xfe0f; deptool autoconfig (macOS) ${SRCROOT} ${NATIVE_ARCH}&quot;&#10;# ./deptool_macos_${NATIVE_ARCH}&#10;cd ${SRCROOT}/../../cubzh/deps/deptool/cmd &amp;&amp; ./deptool_macos_arm64 autoconfig macos&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "10E290262DEE020900C68CCA"
-                     BuildableName = "Blip.app"
-                     BlueprintName = "macos"
-                     ReferencedContainer = "container:Blip.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "cd ${SRCROOT}/../.. &amp;&amp; ./convert_env_to_xcconfig.sh&#10;">
+               scriptText = "# run deptool autoconfig&#10;echo &quot;&#x2b50;&#xfe0f; deptool autoconfig (macOS) ${SRCROOT} ${NATIVE_ARCH}&quot;&#10;# ./deptool_macos_${NATIVE_ARCH}&#10;cd ${SRCROOT}/../../../deps/deptool/cmd &amp;&amp; ./deptool_macos_arm64 autoconfig macos&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

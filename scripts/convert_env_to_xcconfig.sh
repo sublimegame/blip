@@ -7,7 +7,7 @@ set -e
 
 # Default paths
 ENV_FILE="${1:-.env}"
-XCCONFIG_FILE="ios-macos/Particubes/env.xcconfig"
+XCCONFIG_FILE="clients/ios-macos/Particubes/env.xcconfig"
 
 # Check if .env file exists
 if [[ ! -f "$ENV_FILE" ]]; then

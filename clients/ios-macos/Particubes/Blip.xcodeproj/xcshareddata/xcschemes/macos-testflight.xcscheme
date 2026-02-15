@@ -7,22 +7,6 @@
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
       <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "cd ${SRCROOT}/../.. &amp;&amp; ./convert_env_to_xcconfig.sh&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "105CF2B12DEAABD200CEB69E"
-                     BuildableName = "Blip.app"
-                     BlueprintName = "macos-testflight"
-                     ReferencedContainer = "container:Blip.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
       </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
