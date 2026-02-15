@@ -60,8 +60,8 @@ Move all content from `private-repo-import/` into its target location at the roo
 - [x] 1c: Move `private-repo-import/android/` → `clients/android/`
 - [x] 1d: Move `private-repo-import/windows/` → `clients/windows/`
 - [x] 1e: Move `private-repo-import/wasm/` → `clients/wasm/`
-- [ ] 1f: Move `private-repo-import/servers/` → `servers/` (merge with existing)
-- [ ] 1g: Move `private-repo-import/go/` → `go/`
+- [x] 1f: Move `private-repo-import/servers/` → `servers/` (no existing servers/ on origin/main)
+- [x] 1g: Move `private-repo-import/go/` → `go/`
 - [ ] 1h: Merge `private-repo-import/deps/` into `deps/` (freetype, harfbuzz, gif_load, hasher, pthread — no conflicts with existing deps)
 - [ ] 1i: Merge `private-repo-import/ci/` into `ci/`
 - [ ] 1j: Merge `private-repo-import/dockerfiles/` into `dockerfiles/`
