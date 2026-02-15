@@ -100,7 +100,7 @@ With paths updated, get the Xcode workspace building for both iOS and macOS targ
 - [x] 3b: Fix freetype and harfbuzz sub-projects — already handled in Phase 2 (all `../../deps/` → `../../../deps/` changes)
 - [x] 3c: Build and fix iOS target — fixed hasher Go code (removed cubzh/ prefix, removed .env dependency), replaced LUAU_MODULES_HASH_SALT preprocessor define with hardcoded salt in lua_require.cpp and VXGame.cpp, added env.xcconfig placeholder, created GoogleService-Info.plist placeholder
 - [x] 3d: Build and fix macOS target — built successfully with no additional fixes needed
-- [ ] 3e: Add build scripts
+- [x] 3e: Add build scripts — created scripts/build-ios.sh and scripts/build-macos.sh as xcodebuild wrappers
 
 ## Phase 3.5: Push to GitHub
 
