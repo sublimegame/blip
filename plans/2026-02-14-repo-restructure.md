@@ -83,7 +83,7 @@ After all directories are moved, systematically update every relative path in ev
 | `private-repo-import/android/app/src/main/cpp/` | `clients/android/app/src/main/cpp/` | resolve to root | resolve to root | resolve to root |
 | `private-repo-import/ci/C/` | `ci/C/` | (Docker absolute paths) | (Docker absolute paths) | (Docker absolute paths) |
 
-- [ ] 2a: Fix Xcode project paths in `clients/ios-macos/Particubes/Blip.xcodeproj/project.pbxproj`
+- [x] 2a: Fix Xcode project paths in `clients/ios-macos/Particubes/Blip.xcodeproj/project.pbxproj` — replaced 175 lines: `../../cubzh/` → `../../../`, `../../deps|common|ci` → `../../../`, fixed group-relative asset paths and absolute `/Users/` paths
 - [ ] 2b: Fix Xcode workspace and sub-project references
 - [ ] 2c: Fix `common/VXGameServer/CMakeLists.txt` and xptools.cmake
 - [ ] 2d: Fix `clients/android/` build paths

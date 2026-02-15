@@ -1980,7 +1980,7 @@
 		10304B372A0E470F00C3DDA7 /* quad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quad.c; sourceTree = "<group>"; };
 		10304B3C2A0E47A700C3DDA7 /* lua_quad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_quad.hpp; sourceTree = "<group>"; };
 		10304B3D2A0E47A700C3DDA7 /* lua_quad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_quad.cpp; sourceTree = "<group>"; };
-		10353E3B2BB9E22E00AF167E /* i18n */ = {isa = PBXFileReference; lastKnownFileType = folder; name = i18n; path = ../../cubzh/i18n; sourceTree = "<group>"; };
+		10353E3B2BB9E22E00AF167E /* i18n */ = {isa = PBXFileReference; lastKnownFileType = folder; name = i18n; path = ../../i18n; sourceTree = "<group>"; };
 		10373DC42DD50004007952C3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		10373DE92DD58394007952C3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
 		1037611A23F56504002F2F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -2094,19 +2094,19 @@
 		104467742CAF0FC10046A500 /* notif.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notif.caf; sourceTree = "<group>"; };
 		104467752CAF0FC10046A500 /* notif_money.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notif_money.caf; sourceTree = "<group>"; };
 		1046E80B2D91DBF100636272 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = "Base.lproj/MainMenu-blip.xib"; sourceTree = "<group>"; };
-		105015FC2C07655C0047CC05 /* shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shapes; path = ../../cubzh/bundle/shapes; sourceTree = "<group>"; };
-		10502D5F2C077BFE0047CC05 /* metal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = metal; path = ../../cubzh/bundle/shaders/metal; sourceTree = "<group>"; };
+		105015FC2C07655C0047CC05 /* shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shapes; path = ../../bundle/shapes; sourceTree = "<group>"; };
+		10502D5F2C077BFE0047CC05 /* metal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = metal; path = ../../bundle/shaders/metal; sourceTree = "<group>"; };
 		10503424245577BB006C18AB /* VXCodeEditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VXCodeEditor.cpp; sourceTree = "<group>"; };
 		10503425245577BB006C18AB /* VXCodeEditor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VXCodeEditor.hpp; sourceTree = "<group>"; };
 		10503432245579AB006C18AB /* VXRootNodeCodeEditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VXRootNodeCodeEditor.cpp; sourceTree = "<group>"; };
 		10503433245579AB006C18AB /* VXRootNodeCodeEditor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VXRootNodeCodeEditor.hpp; sourceTree = "<group>"; };
 		10506E9727102C4700AB26E3 /* lua_world.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_world.cpp; sourceTree = "<group>"; };
 		10506EA027102C4700AB26E3 /* lua_world.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_world.hpp; sourceTree = "<group>"; };
-		1056B60C29F2D2CF000F00E6 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../cubzh/bundle/fonts; sourceTree = "<group>"; };
-		1056B60F29F2D2CF000F00E6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../cubzh/bundle/images; sourceTree = "<group>"; };
-		1056B61029F2D2CF000F00E6 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = ../../cubzh/bundle/audio; sourceTree = "<group>"; };
-		1056B61129F2D2CF000F00E6 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../cubzh/bundle/config.json; sourceTree = "<group>"; };
-		1056B62029F2D2EF000F00E6 /* modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = modules; path = ../../cubzh/lua/modules; sourceTree = "<group>"; };
+		1056B60C29F2D2CF000F00E6 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../bundle/fonts; sourceTree = "<group>"; };
+		1056B60F29F2D2CF000F00E6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../bundle/images; sourceTree = "<group>"; };
+		1056B61029F2D2CF000F00E6 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audio; path = ../../bundle/audio; sourceTree = "<group>"; };
+		1056B61129F2D2CF000F00E6 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../bundle/config.json; sourceTree = "<group>"; };
+		1056B62029F2D2EF000F00E6 /* modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = modules; path = ../../lua/modules; sourceTree = "<group>"; };
 		10580BEA282A958600885F84 /* lua_json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_json.hpp; sourceTree = "<group>"; };
 		10580BF1282A958600885F84 /* lua_json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_json.cpp; sourceTree = "<group>"; };
 		1058FE0728FC0CB900B8D41B /* lua_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_text.cpp; sourceTree = "<group>"; };
@@ -2116,9 +2116,9 @@
 		105BA58B26F7C25A007B23AA /* lua_collision_groups.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lua_collision_groups.cpp; sourceTree = "<group>"; };
 		105BA58C26F7C25A007B23AA /* lua_collision_groups.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lua_collision_groups.hpp; sourceTree = "<group>"; };
 		105CF3B02DEAABD200CEB69E /* Blip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		105CF3B12DEAABD200CEB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/aduermael/repos/particubes-private/ios-macos/Particubes/macos/Info.plist"; sourceTree = "<absolute>"; };
+		105CF3B12DEAABD200CEB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = macos/Info.plist; sourceTree = "<group>"; };
 		105CF4BD2DEAABD800CEB69E /* Blip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		105CF4BE2DEAABD800CEB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/aduermael/repos/particubes-private/ios-macos/Particubes/ios/Info.plist"; sourceTree = "<absolute>"; };
+		105CF4BE2DEAABD800CEB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ios/Info.plist; sourceTree = "<group>"; };
 		105E257624D3ED6300EF9CE6 /* lua_pointer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_pointer.hpp; sourceTree = "<group>"; };
 		105E257F24D3ED6300EF9CE6 /* lua_pointer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_pointer.cpp; sourceTree = "<group>"; };
 		1067D978290928BF007C5CE8 /* lua_number2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_number2.cpp; sourceTree = "<group>"; };
@@ -2284,7 +2284,7 @@
 		10E48D0E24254E070064FA22 /* VXHubClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VXHubClient.hpp; sourceTree = "<group>"; };
 		10E5A36B2875891D008C89CD /* vxconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vxconfig.h; sourceTree = "<group>"; };
 		10E5E9FC2E1EDAEC00D74B68 /* Blip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		10E5E9FF2E1EDAEE00D74B68 /* macos-testflight copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "macos-testflight copy-Info.plist"; path = "/Users/aduermael/repos/particubes-private/ios-macos/Particubes/macos-testflight copy-Info.plist"; sourceTree = "<absolute>"; };
+		10E5E9FF2E1EDAEE00D74B68 /* macos-testflight copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "macos-testflight copy-Info.plist"; path = "macos-testflight copy-Info.plist"; sourceTree = "<group>"; };
 		10EE2BCC272C22CF00EC374C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		10EE2BD6272C245C00EC374C /* ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios.entitlements; sourceTree = "<group>"; };
 		10EE2BD7272C245C00EC374C /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
@@ -2343,7 +2343,7 @@
 		85351B182615E5CE00D9A036 /* libpng-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libpng-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B4EAC260B4FDF006E33A8 /* lua_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_object.hpp; sourceTree = "<group>"; };
 		853B4EAD260B4FDF006E33A8 /* lua_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_object.cpp; sourceTree = "<group>"; };
-		853C9815286CED9A0072F14A /* xptools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = xptools.xcodeproj; path = "../../cubzh/deps/xptools/ios-macos/xptools.xcodeproj"; sourceTree = "<group>"; };
+		853C9815286CED9A0072F14A /* xptools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = xptools.xcodeproj; path = "../../../deps/xptools/ios-macos/xptools.xcodeproj"; sourceTree = "<group>"; };
 		853C9870286CF4670072F14A /* lua_environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_environment.cpp; sourceTree = "<group>"; };
 		853C9879286CF4670072F14A /* lua_environment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_environment.hpp; sourceTree = "<group>"; };
 		853F2B76245B172500BA17E1 /* VXHubRequestSender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VXHubRequestSender.cpp; sourceTree = "<group>"; };
@@ -2433,7 +2433,7 @@
 		85D2A9FF271D9D3B00F96943 /* VXLuaExecutionLimiter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VXLuaExecutionLimiter.hpp; sourceTree = "<group>"; };
 		85D3113129771149004745BB /* VXLatencyTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VXLatencyTester.cpp; sourceTree = "<group>"; };
 		85D3113229771149004745BB /* VXLatencyTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VXLatencyTester.hpp; sourceTree = "<group>"; };
-		85D412C92C748EF000862E47 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../ci/C/main.cpp; sourceTree = "<group>"; };
+		85D412C92C748EF000862E47 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../ci/C/main.cpp; sourceTree = "<group>"; };
 		85DE1683264D2B8F00A9F020 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 		85E07B9425D59FED00AD2CA6 /* animation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = animation.c; sourceTree = "<group>"; };
 		85E07B9D25D59FED00AD2CA6 /* animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = animation.h; sourceTree = "<group>"; };
@@ -2736,7 +2736,7 @@
 				85AA9CC22D79E7D400B09FA7 /* material.h */,
 			);
 			name = core;
-			path = ../../cubzh/core;
+			path = ../../../core;
 			sourceTree = "<group>";
 		};
 		1056B60729F2D280000F00E6 /* assets */ = {
@@ -2967,7 +2967,7 @@
 				85FE4AAF2534E7D700CB88DB /* scripting_server.cpp */,
 			);
 			name = VXLuaSandbox;
-			path = ../../common/VXLuaSandbox;
+			path = ../../../common/VXLuaSandbox;
 			sourceTree = "<group>";
 		};
 		1071A3D623F43630008B135C = {
@@ -3082,7 +3082,7 @@
 				858286D72C17299D00CCCDA2 /* imstb_truetype.h */,
 			);
 			name = "dear-imgui";
-			path = "../../cubzh/deps/bgfx/bgfx/3rdparty/dear-imgui";
+			path = "../../../deps/bgfx/bgfx/3rdparty/dear-imgui";
 			sourceTree = "<group>";
 		};
 		109051F623F57C660082F96D /* imgui */ = {
@@ -3092,7 +3092,7 @@
 				1090520B23F57C660082F96D /* bgfx-imgui.cpp */,
 			);
 			name = imgui;
-			path = ../../cubzh/deps/bgfx/bgfx/examples/common/imgui;
+			path = ../../../deps/bgfx/bgfx/examples/common/imgui;
 			sourceTree = "<group>";
 		};
 		10AD1F392BD0013600B4FAFE /* ios-macos */ = {
@@ -3109,7 +3109,7 @@
 				1056B60729F2D280000F00E6 /* assets */,
 			);
 			name = common;
-			path = ../../common;
+			path = ../../../common;
 			sourceTree = "<group>";
 		};
 		10DC49E72601FBD7007E1022 /* Recovered References */ = {
@@ -3237,7 +3237,7 @@
 				10FE2374269078CA00143201 /* VXVirtualKeyboardToolbar.cpp */,
 			);
 			name = VXFramework;
-			path = ../../common/VXFramework;
+			path = ../../../common/VXFramework;
 			sourceTree = "<group>";
 		};
 		10F2C1FD2C04B6FD0035E092 /* Products */ = {
@@ -3269,7 +3269,7 @@
 				850C134A253F90A8006EAF1A /* VXNetworkingUtils.hpp */,
 			);
 			name = VXNetworking;
-			path = ../../common/VXNetworking;
+			path = ../../../common/VXNetworking;
 			sourceTree = "<group>";
 		};
 		8534535C25C42F7A00D16645 /* Products */ = {
@@ -3326,7 +3326,7 @@
 				85FC5535252F062500F76ADA /* VXMessageQueues.hpp */,
 			);
 			name = VXGameServer;
-			path = ../../common/VXGameServer;
+			path = ../../../common/VXGameServer;
 			sourceTree = "<group>";
 		};
 		85C722102DE7AE5900E95B69 /* Products */ = {
@@ -3803,17 +3803,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../cubzh/bundle/config.json",
+				"${SRCROOT}/../../../bundle/config.json",
 			);
 			name = "DOWNLOAD DEPENDENCIES";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${SRCROOT}/../../cubzh/deps/libluau/_active_/",
+				"${SRCROOT}/../../../deps/libluau/_active_/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
+			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
 			showEnvVarsInLog = 0;
 		};
 		105CF2BD2DEAABD200CEB69E /* COMPUTE MODULE HASHES */ = {
@@ -3832,7 +3832,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 		105CF3C02DEAABD800CEB69E /* DOWNLOAD DEPENDENCIES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3842,17 +3842,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../cubzh/bundle/config.json",
+				"${SRCROOT}/../../../bundle/config.json",
 			);
 			name = "DOWNLOAD DEPENDENCIES";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${SRCROOT}/../../cubzh/deps/libluau/_active_/",
+				"${SRCROOT}/../../../deps/libluau/_active_/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (iOS)\"\ncd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig ios\n";
+			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (iOS)\"\ncd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig ios\n";
 			showEnvVarsInLog = 0;
 		};
 		105CF3C12DEAABD800CEB69E /* COMPUTE MODULE HASHES */ = {
@@ -3872,7 +3872,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 		105CF4B92DEAABD800CEB69E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3913,7 +3913,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nIP=$(ifconfig | grep \"inet \" | grep -Fv 127.0.0.1 | awk '{print $2}')\nIP=$( cut -d $' ' -f 1 <<< $IP )\n\nCONFIG_JSON=\"$SRCROOT/../../cubzh/bundle/config.json\"\nCONFIG_JSON_1=\"$SRCROOT/../../cubzh/bundle/config-1.json\"\nCONFIG_JSON_2=\"$SRCROOT/../../cubzh/bundle/config-2.json\"\nPORT=22222\n\nrm -f \"$CONFIG_JSON_1\"\nrm -f \"$CONFIG_JSON_2\"\n\ndocker run --rm -i -v \"$CONFIG_JSON\":/config.json imega/jq \".DebugGameServer = \\\"wss://$IP:$PORT\\\"\" /config.json \\\n    > \"$CONFIG_JSON_1\"\n\ndocker run --rm -i -v \"$CONFIG_JSON_1\":/config.json imega/jq \".DebugHubServer = \\\"http://api.cu.bzh:10082\\\"\" /config.json \\\n    > \"$CONFIG_JSON_2\"\n\nrm \"$CONFIG_JSON\"\nmv \"$CONFIG_JSON_2\" \"$CONFIG_JSON\"\n\nrm -f \"$CONFIG_JSON_1\"\nrm -f \"$CONFIG_JSON_2\"\n\nrm -f \"$BUILT_PRODUCTS_DIR/config.json\"\ncp \"$CONFIG_JSON\" \"$BUILT_PRODUCTS_DIR/config.json\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nIP=$(ifconfig | grep \"inet \" | grep -Fv 127.0.0.1 | awk '{print $2}')\nIP=$( cut -d $' ' -f 1 <<< $IP )\n\nCONFIG_JSON=\"$SRCROOT/../../../bundle/config.json\"\nCONFIG_JSON_1=\"$SRCROOT/../../../bundle/config-1.json\"\nCONFIG_JSON_2=\"$SRCROOT/../../../bundle/config-2.json\"\nPORT=22222\n\nrm -f \"$CONFIG_JSON_1\"\nrm -f \"$CONFIG_JSON_2\"\n\ndocker run --rm -i -v \"$CONFIG_JSON\":/config.json imega/jq \".DebugGameServer = \\\"wss://$IP:$PORT\\\"\" /config.json \\\n    > \"$CONFIG_JSON_1\"\n\ndocker run --rm -i -v \"$CONFIG_JSON_1\":/config.json imega/jq \".DebugHubServer = \\\"http://api.cu.bzh:10082\\\"\" /config.json \\\n    > \"$CONFIG_JSON_2\"\n\nrm \"$CONFIG_JSON\"\nmv \"$CONFIG_JSON_2\" \"$CONFIG_JSON\"\n\nrm -f \"$CONFIG_JSON_1\"\nrm -f \"$CONFIG_JSON_2\"\n\nrm -f \"$BUILT_PRODUCTS_DIR/config.json\"\ncp \"$CONFIG_JSON\" \"$BUILT_PRODUCTS_DIR/config.json\"\n";
 		};
 		10E290312DEE020900C68CCA /* DOWNLOAD DEPENDENCIES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3923,17 +3923,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../cubzh/bundle/config.json",
+				"${SRCROOT}/../../../bundle/config.json",
 			);
 			name = "DOWNLOAD DEPENDENCIES";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${SRCROOT}/../../cubzh/deps/libluau/_active_/",
+				"${SRCROOT}/../../../deps/libluau/_active_/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
+			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
 			showEnvVarsInLog = 0;
 		};
 		10E290322DEE020900C68CCA /* COMPUTE MODULE HASHES */ = {
@@ -3952,7 +3952,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 		10E291352DEE024500C68CCA /* DOWNLOAD DEPENDENCIES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3962,17 +3962,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../cubzh/bundle/config.json",
+				"${SRCROOT}/../../../bundle/config.json",
 			);
 			name = "DOWNLOAD DEPENDENCIES";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${SRCROOT}/../../cubzh/deps/libluau/_active_/",
+				"${SRCROOT}/../../../deps/libluau/_active_/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (iOS)\"\ncd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig ios\n";
+			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (iOS)\"\ncd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig ios\n";
 			showEnvVarsInLog = 0;
 		};
 		10E291362DEE024500C68CCA /* COMPUTE MODULE HASHES */ = {
@@ -3992,7 +3992,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 		10E2922E2DEE024500C68CCA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4024,17 +4024,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../cubzh/bundle/config.json",
+				"${SRCROOT}/../../../bundle/config.json",
 			);
 			name = "DOWNLOAD DEPENDENCIES";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${SRCROOT}/../../cubzh/deps/libluau/_active_/",
+				"${SRCROOT}/../../../deps/libluau/_active_/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
+			shellScript = "# run deptool autoconfig\n# echo \"⭐️ deptool autoconfig (macOS)\"\n# cd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
 			showEnvVarsInLog = 0;
 		};
 		10E5E90A2E1EDAEC00D74B68 /* COMPUTE MODULE HASHES */ = {
@@ -4053,7 +4053,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 		85085BB82D75B3640045F714 /* DOWNLOAD DEPENDENCIES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4072,7 +4072,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (macOS)\"\ncd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
+			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (macOS)\"\ncd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
 		};
 		85085BB92D75B41B0045F714 /* DOWNLOAD DEPENDENCIES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4091,7 +4091,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (macOS)\"\ncd ${SRCROOT}/../../cubzh/deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
+			shellScript = "# run deptool autoconfig\necho \"⭐️ deptool autoconfig (macOS)\"\ncd ${SRCROOT}/../../../deps/deptool/cmd && ./deptool_macos_${NATIVE_ARCH} autoconfig macos\n";
 		};
 		85EC491B2D6A7882003F0648 /* COMPUTE MODULE HASHES */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4110,7 +4110,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
+			shellScript = "# re-compute module hashes\necho \"⭐️ CURRENT_ARCH: ${NATIVE_ARCH}\"\n${SRCROOT}/../../../deps/hasher/macos/${NATIVE_ARCH}/hasher\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -5809,19 +5809,19 @@
 					__VX_PLATFORM_MACOS,
 					__VX_CI_BUNDLEPATH,
 					CLIENT_ENV,
-					"CI_TEST_LUA_FILE=\"\\\"$SRCROOT/../../ci/test.lua\\\"\"",
+					"CI_TEST_LUA_FILE=\"\\\"$SRCROOT/../../../ci/test.lua\\\"\"",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -5833,7 +5833,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include";
 			};
 			name = Debug;
 		};
@@ -5882,19 +5882,19 @@
 					P3S_CLIENT_HEADLESS,
 					__VX_PLATFORM_MACOS,
 					CLIENT_ENV,
-					"CI_TEST_LUA_FILE=\"\\\"$SRCROOT/../../ci/test.lua\\\"\"",
+					"CI_TEST_LUA_FILE=\"\\\"$SRCROOT/../../../ci/test.lua\\\"\"",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -5906,7 +5906,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include";
 			};
 			name = Release;
 		};
@@ -5967,7 +5967,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -5976,9 +5976,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -6000,10 +6000,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Debug;
@@ -6064,7 +6064,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6073,9 +6073,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -6097,10 +6097,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Release;
@@ -6159,7 +6159,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/include",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6169,9 +6169,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
 				);
 				MARKETING_VERSION = 0.1.25;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -6191,11 +6191,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../deps/libwebsockets/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
@@ -6255,7 +6255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/include",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6265,9 +6265,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
 				);
 				MARKETING_VERSION = 0.1.25;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -6287,11 +6287,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../deps/libwebsockets/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -6341,16 +6341,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bx/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bimg/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/3rdparty",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bimg/3rdparty",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/examples/common",
-					"$(PROJECT_DIR)/../../cubzh/deps/xptools/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/xptools/deps",
-					"$(PROJECT_DIR)/../../cubzh/deps/miniaudio",
-					"$(PROJECT_DIR)/../../deps/gif_load",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bx/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bimg/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/3rdparty",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bimg/3rdparty",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/examples/common",
+					"$(PROJECT_DIR)/../../../deps/xptools/include",
+					"$(PROJECT_DIR)/../../../deps/xptools/deps",
+					"$(PROJECT_DIR)/../../../deps/miniaudio",
+					"$(PROJECT_DIR)/../../../deps/gif_load",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -6408,16 +6408,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bx/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bimg/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/3rdparty",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bimg/3rdparty",
-					"$(PROJECT_DIR)/../../cubzh/deps/bgfx/bgfx/examples/common",
-					"$(PROJECT_DIR)/../../cubzh/deps/xptools/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/xptools/deps",
-					"$(PROJECT_DIR)/../../cubzh/deps/miniaudio",
-					"$(PROJECT_DIR)/../../deps/gif_load",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bx/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bimg/include",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/3rdparty",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bimg/3rdparty",
+					"$(PROJECT_DIR)/../../../deps/bgfx/bgfx/examples/common",
+					"$(PROJECT_DIR)/../../../deps/xptools/include",
+					"$(PROJECT_DIR)/../../../deps/xptools/deps",
+					"$(PROJECT_DIR)/../../../deps/miniaudio",
+					"$(PROJECT_DIR)/../../../deps/gif_load",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -6492,7 +6492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6501,9 +6501,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -6525,10 +6525,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Debug;
@@ -6589,7 +6589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6598,9 +6598,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -6622,10 +6622,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Release;
@@ -6684,7 +6684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/include",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6694,9 +6694,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
 				);
 				MARKETING_VERSION = 0.1.25;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -6716,11 +6716,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../deps/libwebsockets/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
@@ -6780,7 +6780,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/include",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6790,9 +6790,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/lib-${CONFIGURATION}",
 				);
 				MARKETING_VERSION = 0.1.25;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -6812,11 +6812,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../deps/libwebsockets/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/ios/arm64/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/ios/arm64/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -6881,7 +6881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6890,9 +6890,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -6914,10 +6914,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Debug;
@@ -6978,7 +6978,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				INFOPLIST_FILE = macos/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -6987,9 +6987,9 @@
 					"@executable_path/../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.1.25;
@@ -7011,10 +7011,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/ios/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
-					"$(PROJECT_DIR)/../../deps/harfbuzz/src",
-					"$(PROJECT_DIR)/../../deps/freetype/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/ios/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/harfbuzz/src",
+					"$(PROJECT_DIR)/../../../deps/freetype/include",
 				);
 			};
 			name = Release;
@@ -7074,12 +7074,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -7092,9 +7092,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Debug;
@@ -7152,12 +7152,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/lib",
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libluau/_active_/prebuilt/macos/universal/lib-${CONFIGURATION}",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/lib",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -7170,9 +7170,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../cubzh/deps/libwebsockets/macos/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libssl/macos/include",
-					"$(PROJECT_DIR)/../../cubzh/deps/libpng/_active_/prebuilt/macos/universal/include",
+					"$(PROJECT_DIR)/../../../deps/libwebsockets/macos/include",
+					"$(PROJECT_DIR)/../../../deps/libssl/macos/include",
+					"$(PROJECT_DIR)/../../../deps/libpng/_active_/prebuilt/macos/universal/include",
 				);
 			};
 			name = Release;
