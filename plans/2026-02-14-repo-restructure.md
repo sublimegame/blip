@@ -55,7 +55,7 @@ blip/
 
 Move all content from `private-repo-import/` into its target location at the root. No path fixes yet — just the moves. Each subtask is one git mv + commit.
 
-- [ ] 1a: Move `private-repo-import/common/` → `common/`
+- [x] 1a: Move `private-repo-import/common/` → `common/`
 - [ ] 1b: Move `private-repo-import/ios-macos/` → `clients/ios-macos/`
 - [ ] 1c: Move `private-repo-import/android/` → `clients/android/`
 - [ ] 1d: Move `private-repo-import/windows/` → `clients/windows/`
