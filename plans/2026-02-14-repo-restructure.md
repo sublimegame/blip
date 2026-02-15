@@ -68,7 +68,7 @@ Move all content from `private-repo-import/` into its target location at the roo
 - [x] 1k: Move `private-repo-import/distribution/` → `distribution/`
 - [x] 1l: Merge `private-repo-import/misc/` into `misc/`, move `private-repo-import/graphic-assets/` → `misc/graphic-assets/`
 - [x] 1m: Handle remaining files. Moved: .clang-format→root, scripts (secure-modules.sh, convert_env_to_xcconfig.sh, convert_env_to_header.*)→scripts/. Merged .gitattributes and .gitignore into root. Removed: .dockerignore, .env.example (dup), README.md
-- [ ] 1n: Remove `private-repo-import/` directory
+- [x] 1n: Remove `private-repo-import/` directory (all content moved, only empty dirs remained)
 
 ## Phase 2: Fix path references across all build systems
 
