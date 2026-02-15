@@ -57,8 +57,8 @@ Move all content from `private-repo-import/` into its target location at the roo
 
 - [x] 1a: Move `private-repo-import/common/` → `common/`
 - [x] 1b: Move `private-repo-import/ios-macos/` → `clients/ios-macos/`
-- [ ] 1c: Move `private-repo-import/android/` → `clients/android/`
-- [ ] 1d: Move `private-repo-import/windows/` → `clients/windows/`
+- [x] 1c: Move `private-repo-import/android/` → `clients/android/`
+- [x] 1d: Move `private-repo-import/windows/` → `clients/windows/`
 - [ ] 1e: Move `private-repo-import/wasm/` → `clients/wasm/`
 - [ ] 1f: Move `private-repo-import/servers/` → `servers/` (merge with existing)
 - [ ] 1g: Move `private-repo-import/go/` → `go/`
