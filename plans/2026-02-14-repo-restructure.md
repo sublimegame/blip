@@ -89,7 +89,7 @@ After all directories are moved, systematically update every relative path in ev
 - [x] 2d: Fix `clients/android/` build paths — fixed `cubzh/` in CMakeLists.txt, xptools.cmake, and build.gradle; adjusted relative depth for all paths
 - [x] 2e: Fix `ci/C/Makefile` — replaced `/cubzh/` with `/` for all Docker container absolute paths
 - [x] 2f: Fix CI Dockerfiles — removed `cubzh/` from COPY source/dest paths in 3 Dockerfiles, 2 clang-format scripts; removed duplicate COPY lines
-- [ ] 2g: Fix `dockerfiles/*.Dockerfile`
+- [x] 2g: Fix `dockerfiles/*.Dockerfile` — fixed source paths in gameserver, hub-server, parent-dashboard Dockerfiles and dockerignore files
 - [ ] 2h: Fix remaining path references across the repo
 
 ## Phase 3: Fix iOS and macOS builds

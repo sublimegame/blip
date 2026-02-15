@@ -9,7 +9,9 @@
 #
 FROM voxowl/cpp-build-env:18.1.3 AS cmake-build-cubzh-cli
 
-COPY ./cubzh /cubzh
+COPY ./core /cubzh/core
+COPY ./cli /cubzh/cli
+COPY ./deps /cubzh/deps
 
 WORKDIR /cubzh/cli/cmake
 RUN CC=clang CXX=clang++ cmake -G Ninja .

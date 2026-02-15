@@ -10,20 +10,20 @@ FROM voxowl/ubuntu:24.04 AS deps
 # Note: voxowl/ubuntu has ca-certificates package installed, which is needed by deptool
 
 # deps (sources)
-COPY ./cubzh/deps/bgfx /project/cubzh/deps/bgfx
+COPY ./deps/bgfx /project/deps/bgfx
 
 # deps (prebuilt)
-COPY ./cubzh/deps/libluau/_active_/prebuilt/linux/x86_64 /project/cubzh/deps/libluau/_active_/prebuilt/linux/x86_64
-COPY ./cubzh/deps/libpng/_active_/prebuilt/linux/x86_64 /project/cubzh/deps/libpng/_active_/prebuilt/linux/x86_64
-COPY ./cubzh/deps/libssl/linux/amd64 /project/cubzh/deps/libssl/linux/amd64
-COPY ./cubzh/deps/libwebsockets/linux/amd64 /project/cubzh/deps/libwebsockets/linux/amd64
-COPY ./cubzh/deps/libz/linux-x86_64 /project/cubzh/deps/libz/linux-x86_64
-COPY ./cubzh/deps/xptools /project/cubzh/deps/xptools
+COPY ./deps/libluau/_active_/prebuilt/linux/x86_64 /project/deps/libluau/_active_/prebuilt/linux/x86_64
+COPY ./deps/libpng/_active_/prebuilt/linux/x86_64 /project/deps/libpng/_active_/prebuilt/linux/x86_64
+COPY ./deps/libssl/linux/amd64 /project/deps/libssl/linux/amd64
+COPY ./deps/libwebsockets/linux/amd64 /project/deps/libwebsockets/linux/amd64
+COPY ./deps/libz/linux-x86_64 /project/deps/libz/linux-x86_64
+COPY ./deps/xptools /project/deps/xptools
 
 # deptoop
 # TODO: fix it. It doesn't download the files at the correct path
-# COPY ./cubzh/deps/deptool/deptool_linux_x86_64 /project/cubzh/deps/deptool/deptool_linux_x86_64
-# RUN /project/cubzh/deps/deptool/deptool_linux_x86_64 download libluau 0.661 linux
+# COPY ./deps/deptool/deptool_linux_x86_64 /project/deps/deptool/deptool_linux_x86_64
+# RUN /project/deps/deptool/deptool_linux_x86_64 download libluau 0.661 linux
 
 # --------------------------------------------------
 # Compilation environment with sources
@@ -41,11 +41,11 @@ COPY --from=deps /project /project
 ARG CUBZH_TARGETARCH
 ENV CUBZH_TARGETARCH=$CUBZH_TARGETARCH
 
-COPY ./cubzh/core /project/cubzh/core
+COPY ./core /project/core
 # avoiding main function defined twice
 # ideally we should review build scripts for the gameserver
 # not to include unit tests.
-RUN rm -rf /project/cubzh/core/tests
+RUN rm -rf /project/core/tests
 
 COPY ./common/VXFramework /project/common/VXFramework
 COPY ./common/VXGameServer /project/common/VXGameServer
@@ -73,8 +73,8 @@ FROM ubuntu:24.04 AS gameserver
 
 COPY --from=builder /project/common/VXGameServer/gameserver /gameserver
 
-COPY ./cubzh/bundle /bundle
-COPY ./cubzh/lua/modules /bundle/modules
+COPY ./bundle /bundle
+COPY ./lua/modules /bundle/modules
 
 EXPOSE 80
 

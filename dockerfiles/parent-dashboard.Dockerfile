@@ -5,7 +5,7 @@
 FROM golang:1.23.4-alpine3.21 AS builder
 
 # context is root of the git repo
-COPY ./cubzh/misc/parent-dashboard /parent-dashboard
+COPY ./misc/parent-dashboard /parent-dashboard
 
 WORKDIR /parent-dashboard
 
