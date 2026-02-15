@@ -50,7 +50,7 @@ endforeach()
 
 set(REPO_ROOT_DIR "${CMAKE_CURRENT_BINARY_DIR}/../../../../../..")
 
-set(CUBZH_CORE_DIR "${REPO_ROOT_DIR}/cubzh/core")
+set(CUBZH_CORE_DIR "${REPO_ROOT_DIR}/core")
 set(COMMON_DIR "${REPO_ROOT_DIR}/common")
 set(SBS_DIR "${COMMON_DIR}/VXLuaSandbox")
 set(LUAUTILS_DIR "${COMMON_DIR}/LuaUtils")
@@ -58,17 +58,17 @@ set(VX_DIR "${COMMON_DIR}/VXFramework")
 set(VX_SERVER_DIR "${COMMON_DIR}/VXGameServer")
 set(VXNETWORKING_DIR "${COMMON_DIR}/VXNetworking")
 
-set(BX_DIR "${REPO_ROOT_DIR}/cubzh/deps/bgfx/bx")
-set(BGFX_DIR "${REPO_ROOT_DIR}/cubzh/deps/bgfx/bgfx")
-set(BIMG_DIR "${REPO_ROOT_DIR}/cubzh/deps/bgfx/bimg")
-set(BGFX_COMMON_DIR "${REPO_ROOT_DIR}/cubzh/deps/bgfx/bgfx/examples/common")
+set(BX_DIR "${REPO_ROOT_DIR}/deps/bgfx/bx")
+set(BGFX_DIR "${REPO_ROOT_DIR}/deps/bgfx/bgfx")
+set(BIMG_DIR "${REPO_ROOT_DIR}/deps/bgfx/bimg")
+set(BGFX_COMMON_DIR "${REPO_ROOT_DIR}/deps/bgfx/bgfx/examples/common")
 set(FT_DIR "${REPO_ROOT_DIR}/deps/freetype")
 set(HB_DIR "${REPO_ROOT_DIR}/deps/harfbuzz")
 
 # libluau
 # ----------------------------------------
 set(LUAU_VERSION "_active_")
-set(LUAU_DIR "${REPO_ROOT_DIR}/cubzh/deps/libluau/${LUAU_VERSION}/prebuilt/android/${ACTIVE_ARCH}")
+set(LUAU_DIR "${REPO_ROOT_DIR}/deps/libluau/${LUAU_VERSION}/prebuilt/android/${ACTIVE_ARCH}")
 # Set LUAU_BUILD_TYPE based on CMAKE_BUILD_TYPE (Release, RelWithDebInfo, Debug, MinSizeRel, ...)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(LUAU_BUILD_TYPE "Debug")
@@ -84,7 +84,7 @@ set_property(TARGET luau PROPERTY
 
 # libpng
 # ----------------------------------------
-set(LIBPNG_DIR "${REPO_ROOT_DIR}/cubzh/deps/libpng/_active_/prebuilt/android/${ACTIVE_ARCH}")
+set(LIBPNG_DIR "${REPO_ROOT_DIR}/deps/libpng/_active_/prebuilt/android/${ACTIVE_ARCH}")
 # Set LIBPNG_BUILD_TYPE based on CMAKE_BUILD_TYPE (Release, RelWithDebInfo, Debug, MinSizeRel, ...)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(LIBPNG_BUILD_TYPE "Debug")
@@ -96,10 +96,10 @@ set_property(TARGET png PROPERTY
         IMPORTED_LOCATION ${LIBPNG_DIR}/lib-${LIBPNG_BUILD_TYPE}/libpng.a)
 
 # libssl
-set(LIBSSL_DIR "${REPO_ROOT_DIR}/cubzh/deps/libssl/android/${ACTIVE_ANDROID_ARCH}")
+set(LIBSSL_DIR "${REPO_ROOT_DIR}/deps/libssl/android/${ACTIVE_ANDROID_ARCH}")
 
 # libwebsockets
-set(LIBWEBSOCKETS_DIR "${REPO_ROOT_DIR}/cubzh/deps/libwebsockets/android/${ACTIVE_ANDROID_ARCH}")
+set(LIBWEBSOCKETS_DIR "${REPO_ROOT_DIR}/deps/libwebsockets/android/${ACTIVE_ANDROID_ARCH}")
 
 # Compile options
 add_compile_options(

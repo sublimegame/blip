@@ -90,7 +90,7 @@ android {
             deptoolCommand = ['cmd', '/c'] + deptoolCommand
         }
         def taskDeptoolAutoconfig = project.tasks.create("deptoolAutoconfig_${variant.name}", Exec)
-        taskDeptoolAutoconfig.workingDir("../../cubzh/deps/deptool/cmd")
+        taskDeptoolAutoconfig.workingDir("../../../deps/deptool/cmd")
         taskDeptoolAutoconfig.commandLine(deptoolCommand)
 
         // Update hashes for Luau modules
@@ -101,7 +101,7 @@ android {
             hashCommand = ['cmd', '/c'] + hashCommand
         }
         def taskHashLuaModules = project.tasks.create("hashModules_${variant.name}", Exec)
-        taskHashLuaModules.workingDir("../..")
+        taskHashLuaModules.workingDir("../../..")
         taskHashLuaModules.commandLine(hashCommand)
 
         // Update asset bundle
@@ -110,17 +110,17 @@ android {
         taskClean.delete("./src/main/assets")
 
         def taskCopy = project.tasks.create("copyAssets_${variant.name}", Copy)
-        taskCopy.from("./../../cubzh/bundle")
+        taskCopy.from("./../../../bundle")
         taskCopy.into("./src/main/assets")
         taskCopy.dependsOn taskClean
 
         def taskCopyI18n = project.tasks.create("copyI18nAssets_${variant.name}", Copy)
-        taskCopyI18n.from("./../../cubzh/i18n")
+        taskCopyI18n.from("./../../../i18n")
         taskCopyI18n.into("./src/main/assets/i18n")
         taskCopyI18n.dependsOn taskCopy
 
         def taskCopyLuaModules = project.tasks.create("copyAssets_ossLuaModules_${variant.name}", Copy)
-        taskCopyLuaModules.from("./../../cubzh/lua/modules")
+        taskCopyLuaModules.from("./../../../lua/modules")
         taskCopyLuaModules.into("./src/main/assets/modules")
         taskCopyLuaModules.dependsOn taskCopyI18n
 
