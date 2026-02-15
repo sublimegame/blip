@@ -4,8 +4,8 @@
 .env.*.local
 
 # Firebase/GCP config (contains API keys)
-private-repo-import/android/app/google-services.json
-private-repo-import/ios-macos/GoogleService-Info.plist
+clients/android/app/google-services.json
+clients/ios-macos/GoogleService-Info.plist
 
 # Private keys
 *.p8
@@ -49,3 +49,44 @@ private-repo-import/ios-macos/GoogleService-Info.plist
 deps/bgfx/bgfx/tools/bin/
 deps/xptools/windows/bundle_tar_gz.hpp
 bundle/private_config.json
+
+# Build objects
+*.o
+*.so
+*.so.*
+*.obj
+*.ipch
+*.db
+*.ilk
+*.aps
+
+# Go
+go/**/vendor
+go/cu.bzh/distribution/builder/xcode_build_output
+
+# Android
+clients/android/.idea/dictionaries
+clients/android/.idea/deploymentTargetDropDown.xml
+clients/android/app/release/
+
+# iOS/macOS
+clients/ios-macos/Particubes/env.xcconfig
+clients/ios-macos/deps
+clients/ios-macos/particubes.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# Windows
+clients/windows/objs
+/.vs/slnx.sqlite
+
+# Game server
+common/VXGameServer/gameserver
+common/bgfx/bgfx/tools/bin/darwin
+
+# Servers
+servers/hub-fdb/data
+
+# Environment
+scripts/envvars.h
+
+# IDE
+.vscode
