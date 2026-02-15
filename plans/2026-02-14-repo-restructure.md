@@ -1,0 +1,143 @@
+# Repository Restructure & Build Fix Plan
+
+Reorganize the repository by moving content out of `private-repo-import/`, creating a clean project structure, and fixing builds for all platforms.
+
+## Context
+
+- The private repo (`voxowl/particubes-private`) was the main repo; the public repo (`bliporg/blip`) was mounted as a git submodule at `cubzh/` inside it
+- After merging, root-level directories (`core/`, `deps/`, `shaders/`, etc.) are the former public submodule content
+- All build files inside `private-repo-import/` reference `cubzh/core/`, `cubzh/deps/` etc. via relative paths — these are now broken
+- Project has been renamed from "cubzh" to "blip"
+- On `origin/main`, the private repo was imported as `private-repo-import/` (flat copy, no history)
+
+## Previous attempt (preserved as `repo-restructure-old`)
+
+Phases 1-3 were completed on a local `main` that merged private repo with full git history. This created an incompatible history with `origin/main` (no common ancestor), making the branch unpushable (6+ GiB pack vs 2GB GitHub limit). The old branch is preserved as `repo-restructure-old` for reference — all the path fixes and build fixes documented there are being replayed here.
+
+## Target Structure
+
+```
+blip/
+├── core/                    # C/C++ engine core (already at root)
+├── common/                  # Shared C++ modules
+│   ├── VXFramework/         #   Game engine framework
+│   ├── VXLuaSandbox/        #   Lua scripting sandbox
+│   ├── VXNetworking/        #   Networking layer
+│   ├── VXGameServer/        #   Game server logic
+│   └── assets/              #   Shared assets
+├── clients/                 # Platform-specific client code
+│   ├── ios-macos/           #   Xcode workspace (iOS + macOS)
+│   ├── android/             #   Gradle project
+│   ├── windows/             #   Visual Studio project
+│   └── wasm/                #   WebAssembly (kept for future)
+├── servers/                 # Backend services & infrastructure
+├── go/                      # Go backend source code
+├── deps/                    # All external dependencies (merged)
+├── shaders/                 # BGFX shaders
+├── lua/                     # Lua modules & API docs
+├── bundle/                  # Game bundle assets
+├── mods/                    # Game mods
+├── i18n/                    # Internationalization
+├── cli/                     # CLI tools
+├── ci/                      # CI/CD infrastructure (merged)
+├── dagger/                  # Dagger pipeline
+├── dockerfiles/             # Docker build configs (merged)
+├── distribution/            # Release & distribution management
+├── misc/                    # Miscellaneous assets (merged)
+├── scripts/                 # Build & deployment scripts (new)
+├── plans/                   # Planning documentation
+├── BUILD.md
+├── README.md
+└── ...
+```
+
+## Phase 1: Move directories out of private-repo-import
+
+Move all content from `private-repo-import/` into its target location at the root. No path fixes yet — just the moves. Each subtask is one git mv + commit.
+
+- [ ] 1a: Move `private-repo-import/common/` → `common/`
+- [ ] 1b: Move `private-repo-import/ios-macos/` → `clients/ios-macos/`
+- [ ] 1c: Move `private-repo-import/android/` → `clients/android/`
+- [ ] 1d: Move `private-repo-import/windows/` → `clients/windows/`
+- [ ] 1e: Move `private-repo-import/wasm/` → `clients/wasm/`
+- [ ] 1f: Move `private-repo-import/servers/` → `servers/` (merge with existing)
+- [ ] 1g: Move `private-repo-import/go/` → `go/`
+- [ ] 1h: Merge `private-repo-import/deps/` into `deps/` (freetype, harfbuzz, gif_load, hasher, pthread — no conflicts with existing deps)
+- [ ] 1i: Merge `private-repo-import/ci/` into `ci/`
+- [ ] 1j: Merge `private-repo-import/dockerfiles/` into `dockerfiles/`
+- [ ] 1k: Move `private-repo-import/distribution/` → `distribution/`
+- [ ] 1l: Merge `private-repo-import/misc/` into `misc/`, move `private-repo-import/graphic-assets/` → `misc/graphic-assets/`
+- [ ] 1m: Handle remaining private-repo-import files (`.clang-format`, `secure-modules.sh`, `env/`, `convert_env_to_xcconfig.sh`, `.env.example`, `.gitattributes`, `.gitignore`, `.dockerignore`, `README.md`)
+- [ ] 1n: Remove `private-repo-import/` directory
+
+## Phase 2: Fix path references across all build systems
+
+After all directories are moved, systematically update every relative path in every build configuration. The key transformation: references that went through `cubzh/` (the old submodule) now point directly to root-level dirs.
+
+**Old path patterns → New path patterns** (from each build file's perspective):
+
+| Build file location (old) | Build file location (new) | `cubzh/X` becomes | `common/` becomes | `deps/` (private) becomes |
+|---|---|---|---|---|
+| `private-repo-import/ios-macos/Particubes/` | `clients/ios-macos/Particubes/` | `../../../X` | `../../../common/` | `../../../deps/` |
+| `private-repo-import/common/VXGameServer/` | `common/VXGameServer/` | `../../X` | stays `../` relative | `../../deps/` |
+| `private-repo-import/android/app/src/main/cpp/` | `clients/android/app/src/main/cpp/` | resolve to root | resolve to root | resolve to root |
+| `private-repo-import/ci/C/` | `ci/C/` | (Docker absolute paths) | (Docker absolute paths) | (Docker absolute paths) |
+
+- [ ] 2a: Fix Xcode project paths in `clients/ios-macos/Particubes/Blip.xcodeproj/project.pbxproj`
+- [ ] 2b: Fix Xcode workspace and sub-project references
+- [ ] 2c: Fix `common/VXGameServer/CMakeLists.txt` and xptools.cmake
+- [ ] 2d: Fix `clients/android/` build paths
+- [ ] 2e: Fix `ci/C/Makefile`
+- [ ] 2f: Fix CI Dockerfiles
+- [ ] 2g: Fix `dockerfiles/*.Dockerfile`
+- [ ] 2h: Fix remaining path references across the repo
+
+## Phase 3: Fix iOS and macOS builds
+
+With paths updated, get the Xcode workspace building for both iOS and macOS targets.
+
+- [ ] 3a: Fix Xcode file references in Blip.xcodeproj
+- [ ] 3b: Fix freetype and harfbuzz sub-projects
+- [ ] 3c: Build and fix iOS target
+- [ ] 3d: Build and fix macOS target
+- [ ] 3e: Add build scripts
+
+## Phase 3.5: Push to GitHub
+
+- [ ] 3.5: Push `repo-restructure` branch to origin — should work since branch is based on `origin/main`
+
+## Phase 4: Fix server builds
+
+Get the game server and backend services building.
+
+- [ ] 4a: Fix and test `common/VXGameServer/` CMake build (Linux cross-compilation from macOS or native Linux build)
+- [ ] 4b: Fix and test Go service builds — verify `go build` works for key services in `go/cu.bzh/` (hub, gameserver management, fileserver, etc.)
+- [ ] 4c: Fix and test Docker builds for backend services using updated Dockerfiles and docker-compose
+- [ ] 4d: Create `scripts/build-gameserver.sh` — script to build the C++ game server
+- [ ] 4e: Create `scripts/build-services.sh` — script to build/start backend services via docker-compose
+
+## Phase 5: Documentation and build scripts
+
+- [ ] 5a: Update `README.md` with new repository structure, getting started guide, and platform build overview
+- [ ] 5b: Update `BUILD.md` with detailed build instructions for each platform (iOS, macOS, servers)
+- [ ] 5c: Add a root `scripts/README.md` documenting all available build scripts and their usage
+- [ ] 5d: Document server deployment process (Docker-based, docker-compose, environment setup)
+
+## Phase 6: Fix Android build (deferred — needs Android Studio environment)
+
+- [ ] 6a: Fix `clients/android/` Gradle and CMake paths
+- [ ] 6b: Build and fix the Android app until it compiles
+- [ ] 6c: Create `scripts/build-android.sh`
+
+## Phase 7: Fix Windows build (deferred — needs Windows machine)
+
+- [ ] 7a: Fix `clients/windows/` Visual Studio project paths
+- [ ] 7b: Build and fix the Windows app until it compiles
+- [ ] 7c: Create `scripts/build-windows.bat`
+
+## Notes
+
+- Phases 6 and 7 are deferred until the appropriate build environments are available
+- The WASM/web target is kept in `clients/wasm/` for reference but is not a priority to fix
+- The old `repo-restructure-old` branch has all the path fixes for reference
+- Secret removal (Phase 2 of the open-sourcing plan) should be completed before pushing to remote
