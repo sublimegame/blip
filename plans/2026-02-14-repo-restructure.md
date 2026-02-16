@@ -106,6 +106,12 @@ With paths updated, get the Xcode workspace building for both iOS and macOS targ
 
 - [x] 3.5: Push `repo-restructure` branch to origin — pushed successfully (4 commits, small diff since origin/main already had Phases 1-2)
 
+## Phase 3.6: Fix runtime issues in clients
+
+Fix remaining path issues that prevent clients from running (not just building).
+
+- [x] 3.6a: Fix xptools PROJECT_LUA_MODULES_PATH, PROJECT_BUNDLE_PATH, and CI paths — still referenced `cubzh/` in preprocessor defines, causing `openBundleFile` to return NULL at runtime
+
 ## Phase 4: Fix server builds
 
 Get the game server and backend services building.
