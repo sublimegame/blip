@@ -89,3 +89,4 @@ scripts/envvars.h
 
 # IDE
 .vscode
+.claude/settings.local.json
