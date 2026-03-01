@@ -13,7 +13,7 @@ plugins {
 }
 
 // Parse .env variables (once per gradle sync)
-def envFile = rootProject.file("../.env")
+def envFile = rootProject.file("../../.env")
 def env = [:]
 if (envFile.exists()) {
     envFile.eachLine { line ->
@@ -28,13 +28,13 @@ if (envFile.exists()) {
 android {
     signingConfigs {
         release {
-            storeFile file('.\\..\\..\\pcubes-keystore.jks')
+            storeFile file('../../pcubes-keystore.jks')
             storePassword findProperty("storePassword") // it is in ~/.gradle/gradle.properties
             keyAlias 'release'
             keyPassword findProperty("keyPassword") // it is in ~/.gradle/gradle.properties
         }
         debug {
-            storeFile file('.\\..\\voxowl_debug.jks')
+            storeFile file('../voxowl_debug.jks')
             storePassword 'elleestoulapoulette'
             keyAlias 'debug'
             keyPassword 'elleestoulapoulette'
