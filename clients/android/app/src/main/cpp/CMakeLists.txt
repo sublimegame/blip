@@ -48,7 +48,7 @@ foreach (v ${vars})
     endif()
 endforeach()
 
-set(REPO_ROOT_DIR "${CMAKE_CURRENT_BINARY_DIR}/../../../../../..")
+set(REPO_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../..")
 
 set(CUBZH_CORE_DIR "${REPO_ROOT_DIR}/core")
 set(COMMON_DIR "${REPO_ROOT_DIR}/common")

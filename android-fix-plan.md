@@ -17,8 +17,8 @@ The repository was recently restructured (PR #947 `repo-restructure`), moving th
 
 ## Phase 3: Verification
 
-- [ ] **3a.** Run `cd clients/android && ./gradlew assembleDebug` and confirm the build completes (or identify further C++ issues).
-- [ ] **3b.** Verify APK is generated at `clients/android/app/build/outputs/apk/debug/`.
+- [x] **3a.** Run `cd clients/android && ./gradlew assembleDebug` — initial run revealed CMake path errors: `REPO_ROOT_DIR` in `CMakeLists.txt` and `xptools.cmake` used `CMAKE_CURRENT_BINARY_DIR` which resolved incorrectly after the repo restructure. Fixed both to use `CMAKE_CURRENT_SOURCE_DIR`. Build then completed successfully.
+- [x] **3b.** APK generated at `clients/android/app/build/outputs/apk/debug/app-debug.apk` (~121 MB).
 
 ## Files to Modify
 

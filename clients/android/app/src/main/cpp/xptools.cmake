@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.20)
 # project(xptools)
 
 #
-set(REPO_ROOT_DIR "${CMAKE_CURRENT_BINARY_DIR}/../../../../../..")
+set(REPO_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../..")
 set(VXTOOLS_DIR "${REPO_ROOT_DIR}/deps/xptools")
 set(VXTOOLS_INCLUDE_DIR "${VXTOOLS_DIR}/include")
 set(VXTOOLS_COMMON_DIR "${VXTOOLS_DIR}/common")
