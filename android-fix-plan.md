@@ -13,7 +13,7 @@ The repository was recently restructured (PR #947 `repo-restructure`), moving th
 
 ## Phase 2: Clean up stale root directory
 
-- [ ] **2a.** Delete the root `android/` directory (old build artifacts: `.gradle/`, `.idea/`, `build/` caches).
+- [x] **2a.** Delete the root `android/` directory (old build artifacts: `.gradle/`, `.idea/`, `build/` caches). Removed 936K of stale files.
 
 ## Phase 3: Verification
 
