@@ -2,7 +2,6 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
     // Add the Google services Gradle plugin
     // Needed for Push Notifications.
     id 'com.google.gms.google-services'
@@ -23,6 +22,24 @@ if (envFile.exists()) {
             env[key.trim()] = value.trim()
         }
     }
+}
+
+// Detect OS (invariant across variants)
+def hostOs = ""
+if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+    hostOs = "windows"
+} else if (Os.isFamily(Os.FAMILY_MAC)) {
+    hostOs = "macos"
+} else if (Os.isFamily(Os.FAMILY_UNIX)) {
+    hostOs = "linux"
+}
+
+// Detect native architecture
+def hostArch = System.getProperty("os.arch")
+if (hostArch == "aarch64") {
+    hostArch = "arm64"
+} else if (hostArch == "amd64") {
+    hostArch = "x86_64"
 }
 
 android {
@@ -57,84 +74,6 @@ android {
                 arguments += env.collect { k, v -> "-DENVVAR_${k}=${v}" }
             }
         }
-    }
-    android.applicationVariants.configureEach { variant ->
-
-        // Detect OS
-        def os = ""
-        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-            os = "windows"
-        } else if (Os.isFamily(Os.FAMILY_MAC)) {
-            os = "macos"
-        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-            os = "linux"
-        } else {
-            // TODO: abort build process
-        }
-
-        // Detect native architecture
-        def arch = System.getProperty("os.arch")
-        if (arch == "aarch64") {
-            arch = "arm64"
-        } else if (arch == "amd64") {
-            arch = "x86_64"
-        } else {
-            // TODO: abort build process
-        }
-
-        // Make sure dependencies are up to date (deptool)
-
-        def deptoolCommand = ["./deptool_${os}_${arch}", "autoconfig", "android"]
-        if (os == 'windows') {
-            deptoolCommand[0] = "deptool_${os}_${arch}.exe"
-            deptoolCommand = ['cmd', '/c'] + deptoolCommand
-        }
-        def taskDeptoolAutoconfig = project.tasks.create("deptoolAutoconfig_${variant.name}", Exec)
-        taskDeptoolAutoconfig.workingDir("../../../deps/deptool/cmd")
-        taskDeptoolAutoconfig.commandLine(deptoolCommand)
-
-        // Update hashes for Luau modules
-
-        def hashCommand = ["./deps/hasher/${os}/${arch}/hasher"]
-        if (os == 'windows') {
-            hashCommand[0] = "deps\\hasher\\${os}\\${arch}\\hasher.exe"
-            hashCommand = ['cmd', '/c'] + hashCommand
-        }
-        def taskHashLuaModules = project.tasks.create("hashModules_${variant.name}", Exec)
-        taskHashLuaModules.workingDir("../../..")
-        taskHashLuaModules.commandLine(hashCommand)
-
-        // Update asset bundle
-
-        def taskClean = project.tasks.create("cleanAssets_${variant.name}", Delete)
-        taskClean.delete("./src/main/assets")
-
-        def taskCopy = project.tasks.create("copyAssets_${variant.name}", Copy)
-        taskCopy.from("./../../../bundle")
-        taskCopy.into("./src/main/assets")
-        taskCopy.dependsOn taskClean
-
-        def taskCopyI18n = project.tasks.create("copyI18nAssets_${variant.name}", Copy)
-        taskCopyI18n.from("./../../../i18n")
-        taskCopyI18n.into("./src/main/assets/i18n")
-        taskCopyI18n.dependsOn taskCopy
-
-        def taskCopyLuaModules = project.tasks.create("copyAssets_ossLuaModules_${variant.name}", Copy)
-        taskCopyLuaModules.from("./../../../lua/modules")
-        taskCopyLuaModules.into("./src/main/assets/modules")
-        taskCopyLuaModules.dependsOn taskCopyI18n
-
-        def taskShaders = project.tasks.create("cleanShaders_${variant.name}", Delete)
-        taskShaders.delete("./src/main/assets/shaders/dx9")
-        taskShaders.delete("./src/main/assets/shaders/dx11")
-        taskShaders.delete("./src/main/assets/shaders/glsl")
-        taskShaders.delete("./src/main/assets/shaders/metal")
-        taskShaders.dependsOn taskCopyLuaModules
-
-        def provider = variant.getPreBuildProvider()
-        provider.get().dependsOn taskShaders
-        provider.get().dependsOn taskHashLuaModules
-        provider.get().dependsOn(taskDeptoolAutoconfig)
     }
     buildTypes {
         release {
@@ -184,17 +123,82 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    packagingOptions {
+    packaging {
         resources.excludes.add("META-INF/*")
     }
 }
 
-tasks.configureEach { task ->
-    bundleRelease
-    if (task.name == 'bundleRelease') {
-        task.finalizedBy uploadCrashlyticsSymbolFileRelease
-    } else if (task.name == 'assembleRelease') {
-        task.finalizedBy uploadCrashlyticsSymbolFileRelease
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        def variantName = variant.name
+
+        // Make sure dependencies are up to date (deptool)
+        def deptoolCommand = ["./deptool_${hostOs}_${hostArch}", "autoconfig", "android"]
+        if (hostOs == 'windows') {
+            deptoolCommand[0] = "deptool_${hostOs}_${hostArch}.exe"
+            deptoolCommand = ['cmd', '/c'] + deptoolCommand
+        }
+        tasks.register("deptoolAutoconfig_${variantName}", Exec) {
+            workingDir("../../../deps/deptool/cmd")
+            commandLine(deptoolCommand)
+        }
+
+        // Update hashes for Luau modules
+        def hashCommand = ["./deps/hasher/${hostOs}/${hostArch}/hasher"]
+        if (hostOs == 'windows') {
+            hashCommand[0] = "deps\\hasher\\${hostOs}\\${hostArch}\\hasher.exe"
+            hashCommand = ['cmd', '/c'] + hashCommand
+        }
+        tasks.register("hashModules_${variantName}", Exec) {
+            workingDir("../../..")
+            commandLine(hashCommand)
+        }
+
+        // Update asset bundle
+        tasks.register("cleanAssets_${variantName}", Delete) {
+            delete("./src/main/assets")
+        }
+
+        tasks.register("copyAssets_${variantName}", Copy) {
+            from("./../../../bundle")
+            into("./src/main/assets")
+            dependsOn "cleanAssets_${variantName}"
+        }
+
+        tasks.register("copyI18nAssets_${variantName}", Copy) {
+            from("./../../../i18n")
+            into("./src/main/assets/i18n")
+            dependsOn "copyAssets_${variantName}"
+        }
+
+        tasks.register("copyAssets_ossLuaModules_${variantName}", Copy) {
+            from("./../../../lua/modules")
+            into("./src/main/assets/modules")
+            dependsOn "copyI18nAssets_${variantName}"
+        }
+
+        tasks.register("cleanShaders_${variantName}", Delete) {
+            delete("./src/main/assets/shaders/dx9")
+            delete("./src/main/assets/shaders/dx11")
+            delete("./src/main/assets/shaders/glsl")
+            delete("./src/main/assets/shaders/metal")
+            dependsOn "copyAssets_ossLuaModules_${variantName}"
+        }
+
+        // Wire to preBuild (deferred, as preBuild tasks are created later)
+        project.afterEvaluate {
+            tasks.named("pre${variantName.capitalize()}Build").configure {
+                dependsOn "cleanShaders_${variantName}"
+                dependsOn "hashModules_${variantName}"
+                dependsOn "deptoolAutoconfig_${variantName}"
+            }
+        }
+    }
+}
+
+afterEvaluate {
+    tasks.matching { it.name == 'bundleRelease' || it.name == 'assembleRelease' }.configureEach {
+        finalizedBy "uploadCrashlyticsSymbolFileRelease"
     }
 }
 
@@ -223,10 +227,6 @@ dependencies {
 }
 
 // Report use of deprecated APIs
-allprojects {
-    tasks.withType(JavaCompile).tap {
-        configureEach {
-            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-        }
-    }
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
 }
